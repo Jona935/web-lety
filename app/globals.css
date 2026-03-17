@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ─── */
+:root {
+  --color-primary: hsl(355, 30%, 65%);
+  --color-primary-dark: hsl(355, 45%, 40%);
+  --color-primary-light: hsl(355, 35%, 82%);
+  --color-wine: hsl(340, 42%, 20%);
+  --color-gold: hsl(42, 78%, 55%);
+  --color-cream: hsl(38, 45%, 96%);
+  --color-cream-warm: hsl(35, 40%, 90%);
+  --color-charcoal: hsl(220, 15%, 14%);
+  --color-text-muted: hsl(220, 8%, 55%);
+
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-dm-sans);
+
+  scroll-behavior: smooth;
+}
+
+/* ─── Base Styles ─── */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-sans;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+
+  ::selection {
+    background: hsl(355, 35%, 82%);
+    color: hsl(340, 42%, 20%);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(38, 45%, 96%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(355, 30%, 65%);
+    border-radius: 4px;
+  }
+}
+
+/* ─── Component Utilities ─── */
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-5 md:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-5 md:px-8;
+  }
+
+  /* Decorative gold line */
+  .gold-line {
+    @apply block h-px bg-gold w-16 mx-auto;
+  }
+
+  .gold-line-left {
+    @apply block h-px bg-gold w-16;
+  }
+
+  /* Tag / overline label */
+  .overline-label {
+    @apply text-xs tracking-ultra-wide uppercase font-sans font-medium text-gold;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-primary text-white
+      px-8 py-3.5 text-sm tracking-widest uppercase font-sans font-medium
+      transition-all duration-300 hover:bg-primary-dark
+      focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-charcoal text-charcoal
+      px-8 py-3.5 text-sm tracking-widest uppercase font-sans font-medium
+      transition-all duration-300 hover:bg-charcoal hover:text-cream
+      focus:outline-none focus:ring-2 focus:ring-charcoal focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-charcoal
+      px-0 py-2 text-sm tracking-widest uppercase font-sans font-medium
+      transition-all duration-300 hover:text-primary
+      border-b border-transparent hover:border-primary;
+  }
+
+  .btn-wine {
+    @apply inline-flex items-center gap-2 bg-wine text-cream
+      px-8 py-3.5 text-sm tracking-widest uppercase font-sans font-medium
+      transition-all duration-300 hover:bg-wine-light
+      focus:outline-none focus:ring-2 focus:ring-wine focus:ring-offset-2;
+  }
+
+  /* Form inputs */
+  .input-field {
+    @apply w-full bg-transparent border-b border-charcoal/30 py-3 px-0
+      text-charcoal font-sans text-sm placeholder:text-charcoal-muted
+      focus:outline-none focus:border-primary transition-colors duration-300;
+  }
+
+  .input-label {
+    @apply block text-xs tracking-widest uppercase font-sans font-medium
+      text-charcoal-light mb-2;
+  }
+
+  /* Nav link */
+  .nav-link {
+    @apply text-xs tracking-extra-wide uppercase font-medium transition-colors
+      duration-200 hover:text-primary relative
+      after:absolute after:bottom-0 after:left-0 after:h-px after:w-0
+      after:bg-primary after:transition-all after:duration-300
+      hover:after:w-full;
+  }
+}
+
+/* ─── Animations ─── */
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Delay utilities */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-700 { animation-delay: 700ms; }
+
+  /* opacity-0 initial state for animation */
+  .opacity-init {
+    opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .animate-fade-in {
+      animation: none;
+      opacity: 1;
+    }
+  }
+}

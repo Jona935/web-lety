@@ -1,0 +1,245 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { CheckCircle2, Award, Heart, Users } from "lucide-react";
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import SectionHeading from "@/components/shared/SectionHeading";
+
+export const metadata: Metadata = {
+  title: "Sobre Nosotros",
+  description:
+    "Conoce a Lety Maldonado, wedding planner con más de 10 años de experiencia en Monclova, Cuatrociénegas y Minas de Mármol.",
+};
+
+const values = [
+  {
+    icon: Heart,
+    title: "Pasión",
+    description:
+      "Cada evento lo tratamos como si fuera el nuestro. Tu felicidad es nuestra motivación.",
+  },
+  {
+    icon: Award,
+    title: "Excelencia",
+    description:
+      "No nos conformamos con lo bueno cuando podemos crear algo extraordinario.",
+  },
+  {
+    icon: Users,
+    title: "Compromiso",
+    description:
+      "Estamos contigo desde la primera llamada hasta que la última vela se apaga.",
+  },
+];
+
+const milestones = [
+  { year: "2014", event: "Fundación de Lety Maldonado Eventos" },
+  { year: "2016", event: "Primer gran evento en Cuatrociénegas" },
+  { year: "2018", event: "Expansión a Minas de Mármol" },
+  { year: "2020", event: "Superamos los 200 eventos realizados" },
+  { year: "2022", event: "Premio a mejor event planner en Coahuila" },
+  { year: "2024", event: "+500 eventos y seguimos creciendo" },
+];
+
+export default function NosotrosPage() {
+  return (
+    <>
+      {/* Page Header */}
+      <section
+        className="pt-36 pb-20 bg-charcoal relative overflow-hidden"
+        aria-labelledby="nosotros-heading"
+      >
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-wine/30 to-charcoal"
+          aria-hidden="true"
+        />
+        <div className="container-narrow relative z-10 text-center">
+          <AnimatedSection>
+            <p className="overline-label text-gold mb-4">Quiénes somos</p>
+            <h1
+              id="nosotros-heading"
+              className="font-serif text-display-lg text-cream font-light leading-tight"
+            >
+              Una historia de{" "}
+              <span className="italic text-primary-light">amor</span> por los eventos
+            </h1>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Main Story */}
+      <section className="section-padding bg-cream">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <AnimatedSection>
+              <div className="relative aspect-[3/4] bg-wine/20 overflow-hidden">
+                {/* Replace with real image */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-wine/50 flex items-center justify-center">
+                  <p className="text-cream/40 text-sm text-center px-6">
+                    [ Fotografía de Lety Maldonado ]
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={200}>
+              <p className="overline-label text-gold mb-4">Mi historia</p>
+              <h2 className="font-serif text-display-sm text-charcoal font-light mb-6">
+                Hola, soy <span className="italic text-primary">Lety Maldonado</span>
+              </h2>
+              <span className="gold-line-left mb-6" aria-hidden="true" />
+
+              <div className="space-y-5 text-charcoal-muted leading-relaxed">
+                <p>
+                  Desde pequeña soñé con crear momentos que la gente recordara para
+                  siempre. Hoy, después de más de 10 años organizando eventos en el
+                  norte de México, puedo decir que vivo mi sueño cada día.
+                </p>
+                <p>
+                  Mi empresa nació en Monclova con una misión simple: que cada pareja,
+                  cada familia, cada persona que confíe en nosotros tenga el evento
+                  que siempre soñó — sin el estrés de coordinar todo sola.
+                </p>
+                <p>
+                  Hoy atendemos bodas, quinceañeras y eventos especiales en Monclova,
+                  Cuatrociénegas y Minas de Mármol. Con un equipo comprometido, un
+                  catálogo amplio de mobiliario y mantelería, y alianzas con los
+                  mejores proveedores de la región.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6 mt-10">
+                {[
+                  { value: "500+", label: "Eventos realizados" },
+                  { value: "10+", label: "Años de experiencia" },
+                  { value: "3", label: "Ciudades atendidas" },
+                  { value: "100%", label: "Clientes satisfechos" },
+                ].map((stat) => (
+                  <div key={stat.label} className="border-l-2 border-gold pl-4">
+                    <p className="font-serif text-3xl text-charcoal font-light">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs tracking-widest uppercase text-charcoal-muted mt-1 font-sans">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="section-padding bg-cream-warm" aria-labelledby="values-heading">
+        <div className="container-wide">
+          <SectionHeading
+            overline="Nuestros valores"
+            title="Lo que nos"
+            titleItalic="define"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {values.map((value, i) => {
+              const Icon = value.icon;
+              return (
+                <AnimatedSection key={value.title} delay={i * 120} className="text-center">
+                  <div
+                    className="w-14 h-14 border border-gold/30 flex items-center justify-center mx-auto mb-6"
+                    aria-hidden="true"
+                  >
+                    <Icon size={22} className="text-gold" />
+                  </div>
+                  <h3 className="font-serif text-2xl text-charcoal mb-3">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm text-charcoal-muted leading-relaxed">
+                    {value.description}
+                  </p>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="section-padding bg-charcoal" aria-labelledby="timeline-heading">
+        <div className="container-narrow">
+          <SectionHeading
+            overline="Nuestra trayectoria"
+            title="Años de"
+            titleItalic="historia"
+            light={true}
+          />
+          <div className="relative">
+            <div
+              className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gold/20"
+              aria-hidden="true"
+            />
+            <div className="space-y-10">
+              {milestones.map((milestone, i) => (
+                <AnimatedSection
+                  key={milestone.year}
+                  delay={i * 100}
+                  className={`relative flex ${
+                    i % 2 === 0
+                      ? "md:flex-row"
+                      : "md:flex-row-reverse"
+                  } items-center gap-8`}
+                >
+                  <div className={`hidden md:block flex-1 ${i % 2 === 0 ? "text-right" : "text-left"}`}>
+                    {i % 2 === 0 && (
+                      <div>
+                        <p className="font-serif text-4xl text-gold/40 font-light">
+                          {milestone.year}
+                        </p>
+                        <p className="text-cream/70 text-sm mt-1">{milestone.event}</p>
+                      </div>
+                    )}
+                  </div>
+                  {/* Dot */}
+                  <div
+                    className="w-3 h-3 rounded-full bg-gold shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 z-10 ml-2.5 md:ml-0"
+                    aria-hidden="true"
+                  />
+                  <div className={`flex-1 pl-6 md:pl-0 ${i % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
+                    <div className="md:hidden">
+                      <p className="font-serif text-3xl text-gold/40 font-light">{milestone.year}</p>
+                      <p className="text-cream/70 text-sm mt-1">{milestone.event}</p>
+                    </div>
+                    {i % 2 !== 0 && (
+                      <div className="hidden md:block">
+                        <p className="font-serif text-4xl text-gold/40 font-light">
+                          {milestone.year}
+                        </p>
+                        <p className="text-cream/70 text-sm mt-1">{milestone.event}</p>
+                      </div>
+                    )}
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding-sm bg-primary">
+        <div className="container-narrow text-center">
+          <AnimatedSection>
+            <h2 className="font-serif text-display-sm text-cream font-light mb-6">
+              ¿Listas para crear algo{" "}
+              <span className="italic">inolvidable</span>?
+            </h2>
+            <Link
+              href="/contacto"
+              className="btn-wine"
+            >
+              Agendar consulta gratuita
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+    </>
+  );
+}

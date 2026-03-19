@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-19T17:53:29.617Z",
+  "projectRoot": "/home/jonar935/Documentos/agente para paginas web/proyectos/LETY MALDONADO/lety-eventos",
+  "structure": {
+    "hasPackageJson": true,
+    "hasTsConfig": true,
+    "hasClaudeConfig": true,
+    "hasClaudeFlow": true
+  },
+  "scannedAt": 1773942809617
+}

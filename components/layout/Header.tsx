@@ -2,88 +2,77 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/", label: "Inicio", labelEn: "Home" },
-  { href: "/nosotros", label: "Nosotros", labelEn: "About" },
-  { href: "/servicios", label: "Servicios", labelEn: "Services" },
-  { href: "/portafolio", label: "Portafolio", labelEn: "Portfolio" },
-  { href: "/precios", label: "Precios", labelEn: "Pricing" },
-  { href: "/faq", label: "FAQ", labelEn: "FAQ" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/portafolio", label: "Portafolio" },
+  { href: "/precios", label: "Precios" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
+  useEffect(() => { setMobileOpen(false); }, [pathname]);
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  const headerBg = isHome
-    ? isScrolled
-      ? "bg-cream/95 backdrop-blur-md shadow-sm"
-      : "bg-transparent"
-    : "bg-cream/95 backdrop-blur-md shadow-sm";
-
-  const textColor = isHome && !isScrolled ? "text-white" : "text-charcoal";
+  const transparent = isHome && !scrolled;
 
   return (
     <>
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-          headerBg
+          transparent
+            ? "bg-transparent"
+            : "bg-cream-light/95 backdrop-blur-md border-b border-ebony/5"
         )}
       >
         <div className="container-wide">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo / Brand */}
-            <Link
-              href="/"
-              className={cn(
-                "flex flex-col items-start transition-colors duration-300",
-                textColor
-              )}
-              aria-label="Lety Maldonado Eventos — Ir al inicio"
-            >
-              <span className="font-serif text-xl md:text-2xl font-light tracking-widest leading-none">
-                Lety Maldonado
-              </span>
-              <span className="text-[9px] tracking-ultra-wide uppercase font-sans font-medium text-gold mt-0.5">
-                Eventos
-              </span>
+
+            {/* Logo */}
+            <Link href="/" aria-label="La Magnolia Eventos — Inicio">
+              <Image
+                src="/images/logo.png"
+                alt="La Magnolia Wedding Planners"
+                width={90}
+                height={60}
+                className={cn(
+                  "object-contain transition-all duration-500",
+                  transparent ? "brightness-0 invert" : "brightness-0"
+                )}
+                priority
+              />
             </Link>
 
             {/* Desktop Nav */}
-            <nav
-              className="hidden lg:flex items-center gap-8"
-              aria-label="Navegación principal"
-            >
+            <nav className="hidden lg:flex items-center gap-10" aria-label="Principal">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "nav-link text-[10px]",
-                    textColor,
-                    pathname === link.href && "text-primary after:w-full"
+                    "nav-link",
+                    transparent ? "text-cream-light after:bg-cream-light" : "text-ebony",
+                    pathname === link.href && "text-taupe after:w-full"
                   )}
                 >
                   {link.label}
@@ -91,89 +80,66 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Desktop CTA */}
-            <div className="hidden lg:flex items-center gap-5">
-              <a
-                href="tel:+528661395734"
+            {/* CTA */}
+            <div className="hidden lg:flex items-center gap-6">
+              <Link
+                href="/contacto"
                 className={cn(
-                  "flex items-center gap-2 text-xs font-medium transition-colors duration-200 hover:text-primary",
-                  textColor
+                  transparent ? "btn-outline-light" : "btn-dark"
                 )}
-                aria-label="Llamar a Lety Maldonado"
               >
-                <Phone size={14} aria-hidden="true" />
-                <span className="tracking-wider">(866) 139-5734</span>
-              </a>
-              <Link href="/contacto" className="btn-primary text-[10px] py-2.5">
                 Cotizar
               </Link>
             </div>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile toggle */}
             <button
               className={cn(
-                "lg:hidden p-2 transition-colors duration-200 hover:text-primary",
-                textColor
+                "lg:hidden p-2 transition-colors",
+                transparent ? "text-cream-light" : "text-ebony"
               )}
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={mobileOpen}
             >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-cream flex flex-col justify-center transition-all duration-500",
-          mobileOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+          "fixed inset-0 z-40 bg-cream-light flex flex-col items-center justify-center transition-opacity duration-500",
+          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
-        <nav
-          className="flex flex-col items-center gap-8 px-8"
-          aria-label="Menú móvil"
-        >
-          <div className="mb-4">
-            <span className="font-serif text-3xl font-light tracking-widest text-charcoal">
-              Lety Maldonado
-            </span>
-            <span className="block text-center text-[9px] tracking-ultra-wide uppercase font-sans text-gold mt-1">
-              Eventos
-            </span>
-          </div>
-
-          {navLinks.map((link, i) => (
+        <div className="mb-12">
+          <Image
+            src="/images/logo.png"
+            alt="La Magnolia Wedding Planners"
+            width={100}
+            height={70}
+            className="brightness-0 object-contain"
+          />
+        </div>
+        <nav className="flex flex-col items-center gap-8" aria-label="Menú móvil">
+          {[{ href: "/", label: "Inicio" }, ...navLinks].map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={cn(
-                "text-2xl font-serif font-light text-charcoal hover:text-primary transition-colors duration-200",
-                pathname === link.href && "text-primary"
-              )}
-              style={{ transitionDelay: mobileOpen ? `${i * 60}ms` : "0ms" }}
+              className="font-serif text-2xl font-light text-ebony hover:text-taupe transition-colors"
             >
               {link.label}
             </Link>
           ))}
-
-          <div className="mt-6 flex flex-col items-center gap-4">
-            <Link href="/contacto" className="btn-primary">
-              Cotizar mi evento
-            </Link>
-            <a
-              href="tel:+528661395734"
-              className="flex items-center gap-2 text-sm text-charcoal-light hover:text-primary transition-colors"
-            >
-              <Phone size={14} aria-hidden="true" />
-              (866) 139-5734
-            </a>
-          </div>
         </nav>
+        <div className="mt-10">
+          <Link href="/contacto" className="btn-dark">
+            Solicitar cotización
+          </Link>
+        </div>
       </div>
     </>
   );

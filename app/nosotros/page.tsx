@@ -134,7 +134,7 @@ export default function NosotrosPage() {
       <section className="section-padding bg-cream-warm" aria-labelledby="values-heading">
         <div className="container-wide">
           <SectionHeading
-            overline="Nuestros valores"
+            script="Nuestros valores"
             title="Lo que nos"
             titleItalic="define"
           />
@@ -166,7 +166,7 @@ export default function NosotrosPage() {
       <section className="section-padding bg-charcoal" aria-labelledby="timeline-heading">
         <div className="container-narrow">
           <SectionHeading
-            overline="Nuestra trayectoria"
+            script="Nuestra trayectoria"
             title="Años de"
             titleItalic="historia"
             light={true}

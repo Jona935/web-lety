@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import AnimatedSection from "./AnimatedSection";
 
 interface SectionHeadingProps {
-  overline?: string;
+  script?: string;         // Decorative script word (e.g. "Bienvenida")
   title: string;
   titleItalic?: string;
   subtitle?: string;
@@ -12,7 +12,7 @@ interface SectionHeadingProps {
 }
 
 export default function SectionHeading({
-  overline,
+  script,
   title,
   titleItalic,
   subtitle,
@@ -20,37 +20,33 @@ export default function SectionHeading({
   light = false,
   className,
 }: SectionHeadingProps) {
-  const textAlign = align === "center" ? "text-center" : "text-left";
-  const titleColor = light ? "text-cream" : "text-charcoal";
-  const overlineColor = light ? "text-gold/80" : "text-gold";
-  const subtitleColor = light ? "text-cream/65" : "text-charcoal-muted";
-  const lineAlign = align === "center" ? "mx-auto" : "";
+  const center = align === "center";
+  const titleColor = light ? "text-cream-light" : "text-ebony";
+  const scriptColor = light ? "text-cream/60" : "text-taupe";
+  const subtitleColor = light ? "text-cream/55" : "text-ebony-muted";
+  const dividerColor = light ? "bg-taupe-light" : "bg-taupe";
 
   return (
-    <AnimatedSection className={cn("mb-14 md:mb-20", textAlign, className)}>
-      {overline && (
-        <p className={cn("overline-label mb-4", overlineColor)}>{overline}</p>
+    <AnimatedSection
+      className={cn("mb-16 md:mb-24", center ? "text-center" : "text-left", className)}
+    >
+      {script && (
+        <p className={cn("font-script text-script-md mb-2", scriptColor)}>
+          {script}
+        </p>
       )}
-      <h2
-        className={cn(
-          "font-serif text-display-md font-light leading-tight mb-4",
-          titleColor
-        )}
-      >
+      <h2 className={cn("font-serif text-display-md font-light leading-tight", titleColor)}>
         {title}{" "}
         {titleItalic && (
-          <span className="italic text-primary">{titleItalic}</span>
+          <span className="italic">{titleItalic}</span>
         )}
       </h2>
-      <span className={cn("gold-line mb-6", lineAlign)} aria-hidden="true" />
+      <span
+        className={cn("block h-px w-12 mt-5 mb-5", dividerColor, center && "mx-auto")}
+        aria-hidden="true"
+      />
       {subtitle && (
-        <p
-          className={cn(
-            "text-base leading-relaxed mt-4 max-w-2xl",
-            subtitleColor,
-            align === "center" && "mx-auto"
-          )}
-        >
+        <p className={cn("text-base leading-relaxed max-w-xl", subtitleColor, center && "mx-auto")}>
           {subtitle}
         </p>
       )}

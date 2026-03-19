@@ -16,6 +16,14 @@ const serviceLinks = [
   { href: "/service-page/coordinacion-produccion-y-diseno", label: "Coordinación y Diseño" },
 ];
 
+const locationLinks = [
+  { href: "/bodas-cuatro-cienegas", label: "Bodas en Cuatrociénegas" },
+  { href: "/eventos-monclova", label: "Eventos en Monclova" },
+  { href: "/wedding-planner-monclova", label: "Wedding Planner Monclova" },
+  { href: "/organizadores-bodas-monclova", label: "Organizadores de Bodas" },
+  { href: "/diseno-eventos", label: "Diseño de Eventos" },
+];
+
 const navLinks = [
   { href: "/nosotros", label: "Nosotros" },
   { href: "/portafolio", label: "Portafolio" },
@@ -27,6 +35,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [locationOpen, setLocationOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -117,6 +126,41 @@ export default function Header() {
                 )}
               </div>
 
+              {/* Cobertura dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setLocationOpen(true)}
+                onMouseLeave={() => setLocationOpen(false)}
+              >
+                <button
+                  className={cn(
+                    "nav-link flex items-center gap-1",
+                    transparent ? "text-cream-light after:bg-cream-light" : "text-ebony",
+                    (pathname === "/bodas-cuatro-cienegas" || pathname === "/eventos-monclova" || pathname === "/wedding-planner-monclova" || pathname === "/organizadores-bodas-monclova" || pathname === "/diseno-eventos") && "text-taupe after:w-full"
+                  )}
+                  aria-expanded={locationOpen}
+                  aria-haspopup="true"
+                >
+                  Cuatrociénegas
+                  <ChevronDown size={13} className={cn("transition-transform duration-200", locationOpen && "rotate-180")} aria-hidden="true" />
+                </button>
+                {locationOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50">
+                    <div className="bg-cream-light border border-ebony/8 shadow-lg min-w-[230px] py-2">
+                      {locationLinks.map((s) => (
+                        <Link
+                          key={s.href}
+                          href={s.href}
+                          className="block px-5 py-2.5 text-sm text-ebony-muted hover:text-ebony hover:bg-cream-warm transition-colors"
+                        >
+                          {s.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -187,11 +231,18 @@ export default function Header() {
             </Link>
             <div className="flex flex-col items-center gap-1">
               {serviceLinks.map((s) => (
-                <Link
-                  key={s.href}
-                  href={s.href}
-                  className="text-sm text-ebony-muted hover:text-ebony transition-colors"
-                >
+                <Link key={s.href} href={s.href} className="text-sm text-ebony-muted hover:text-ebony transition-colors">
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          {/* Cobertura group */}
+          <div className="flex flex-col items-center gap-2 w-full">
+            <span className="font-serif text-2xl font-light text-ebony">Cuatrociénegas</span>
+            <div className="flex flex-col items-center gap-1">
+              {locationLinks.map((s) => (
+                <Link key={s.href} href={s.href} className="text-sm text-ebony-muted hover:text-ebony transition-colors">
                   {s.label}
                 </Link>
               ))}

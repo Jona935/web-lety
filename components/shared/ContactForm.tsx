@@ -3,8 +3,9 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useState } from "react";
-import { Send, CheckCircle2 } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "528662532615"; // (866) 253-26-15
 
 const contactSchema = z.object({
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
@@ -25,50 +26,46 @@ const eventTypes = [
   "Otro tipo de evento",
 ];
 
-export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+function buildWhatsAppMessage(data: ContactFormData): string {
+  const lines = [
+    "¡Hola Lety! Me gustaría solicitar información sobre mis evento. 🌸",
+    "",
+    `👤 *Nombre:* ${data.name}`,
+    `📧 *Email:* ${data.email}`,
+    `📱 *Teléfono:* ${data.phone}`,
+    `🎉 *Tipo de evento:* ${data.eventType}`,
+    data.eventDate ? `📅 *Fecha aproximada:* ${data.eventDate}` : null,
+    data.guestCount ? `👥 *Número de invitados:* ${data.guestCount}` : null,
+    "",
+    `💬 *Mensaje:*`,
+    data.message,
+    "",
+    "_Enviado desde letymaldonadoeventos.com_",
+  ];
 
+  return lines.filter((l) => l !== null).join("\n");
+}
+
+export default function ContactForm() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-    reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: ContactFormData) => {
-    // Simulate form submission — replace with actual API call
-    await new Promise((resolve) => setTimeout(resolve, 1200));
-    setSubmitted(true);
-    reset();
+  const onSubmit = (data: ContactFormData) => {
+    const message = buildWhatsAppMessage(data);
+    const encoded = encodeURIComponent(message);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, "_blank", "noopener,noreferrer");
   };
-
-  if (submitted) {
-    return (
-      <div className="text-center py-12">
-        <CheckCircle2 size={48} className="text-gold mx-auto mb-4" aria-hidden="true" />
-        <h3 className="font-serif text-2xl text-charcoal mb-3">
-          ¡Mensaje enviado!
-        </h3>
-        <p className="text-charcoal-muted">
-          Gracias por contactarnos. Te responderemos en menos de 24 horas.
-        </p>
-        <button
-          onClick={() => setSubmitted(false)}
-          className="btn-ghost mt-6"
-        >
-          Enviar otro mensaje
-        </button>
-      </div>
-    );
-  }
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      aria-label="Formulario de contacto"
+      aria-label="Formulario de contacto vía WhatsApp"
       className="space-y-8"
     >
       {/* Name & Email */}
@@ -78,9 +75,7 @@ export default function ContactForm() {
             Nombre completo <span aria-hidden="true">*</span>
           </label>
           <input
-            id="name"
-            type="text"
-            autoComplete="name"
+            id="name" type="text" autoComplete="name"
             placeholder="Tu nombre"
             className="input-field"
             aria-required="true"
@@ -98,9 +93,7 @@ export default function ContactForm() {
             Email <span aria-hidden="true">*</span>
           </label>
           <input
-            id="email"
-            type="email"
-            autoComplete="email"
+            id="email" type="email" autoComplete="email"
             placeholder="tu@email.com"
             className="input-field"
             aria-required="true"
@@ -119,12 +112,10 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="phone" className="input-label">
-            Teléfono <span aria-hidden="true">*</span>
+            Tu WhatsApp <span aria-hidden="true">*</span>
           </label>
           <input
-            id="phone"
-            type="tel"
-            autoComplete="tel"
+            id="phone" type="tel" autoComplete="tel"
             placeholder="(866) 000-0000"
             className="input-field"
             aria-required="true"
@@ -150,9 +141,7 @@ export default function ContactForm() {
           >
             <option value="">Selecciona una opción</option>
             {eventTypes.map((t) => (
-              <option key={t} value={t}>
-                {t}
-              </option>
+              <option key={t} value={t}>{t}</option>
             ))}
           </select>
           {errors.eventType && (
@@ -170,8 +159,7 @@ export default function ContactForm() {
             Fecha aproximada del evento
           </label>
           <input
-            id="eventDate"
-            type="date"
+            id="eventDate" type="date"
             className="input-field"
             {...register("eventDate")}
           />
@@ -181,9 +169,7 @@ export default function ContactForm() {
             Número aproximado de invitados
           </label>
           <input
-            id="guestCount"
-            type="number"
-            min="1"
+            id="guestCount" type="number" min="1"
             placeholder="Ej: 150"
             className="input-field"
             {...register("guestCount")}
@@ -197,9 +183,8 @@ export default function ContactForm() {
           Cuéntanos sobre tu evento <span aria-hidden="true">*</span>
         </label>
         <textarea
-          id="message"
-          rows={5}
-          placeholder="¿Qué tienes en mente? ¿Qué servicios necesitas? ¿Tienes alguna visión o inspiración?"
+          id="message" rows={4}
+          placeholder="¿Qué servicios necesitas? ¿Tienes alguna visión o inspiración?"
           className="input-field resize-none"
           aria-required="true"
           aria-describedby={errors.message ? "message-error" : undefined}
@@ -212,19 +197,19 @@ export default function ContactForm() {
         )}
       </div>
 
+      {/* WhatsApp hint */}
+      <p className="text-xs text-ebony-muted flex items-center gap-2">
+        <MessageCircle size={13} className="text-[#25D366] shrink-0" aria-hidden="true" />
+        Al enviar, se abrirá WhatsApp con tu mensaje listo para enviarlo a Lety.
+      </p>
+
       <button
         type="submit"
         disabled={isSubmitting}
-        className="btn-primary w-full sm:w-auto disabled:opacity-60 disabled:cursor-not-allowed"
+        className="btn-dark w-full sm:w-auto flex items-center gap-3 disabled:opacity-60"
       >
-        {isSubmitting ? (
-          "Enviando..."
-        ) : (
-          <>
-            Enviar solicitud
-            <Send size={14} aria-hidden="true" />
-          </>
-        )}
+        <MessageCircle size={14} aria-hidden="true" />
+        Enviar por WhatsApp
       </button>
     </form>
   );

@@ -4,12 +4,20 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+const serviceLinks = [
+  { href: "/service-page/bodas-y-xv-anos", label: "Bodas y XV Años" },
+  { href: "/service-page/diseno-floral", label: "Diseño Floral" },
+  { href: "/service-page/renta-de-mobiliario", label: "Renta de Mobiliario" },
+  { href: "/service-page/eventos-corporativos", label: "Eventos Corporativos" },
+  { href: "/service-page/graduaciones-y-todo-evento-social", label: "Graduaciones" },
+  { href: "/service-page/coordinacion-produccion-y-diseno", label: "Coordinación y Diseño" },
+];
 
 const navLinks = [
   { href: "/nosotros", label: "Nosotros" },
-  { href: "/servicios", label: "Servicios" },
   { href: "/portafolio", label: "Portafolio" },
   { href: "/precios", label: "Precios" },
   { href: "/faq", label: "FAQ" },
@@ -18,6 +26,7 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -65,6 +74,49 @@ export default function Header() {
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-10" aria-label="Principal">
+              {/* Servicios dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                <button
+                  className={cn(
+                    "nav-link flex items-center gap-1",
+                    transparent ? "text-cream-light after:bg-cream-light" : "text-ebony",
+                    pathname.startsWith("/service-page") && "text-taupe after:w-full"
+                  )}
+                  aria-expanded={servicesOpen}
+                  aria-haspopup="true"
+                >
+                  Servicios
+                  <ChevronDown size={13} className={cn("transition-transform duration-200", servicesOpen && "rotate-180")} aria-hidden="true" />
+                </button>
+                {servicesOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50">
+                    <div className="bg-cream-light border border-ebony/8 shadow-lg min-w-[220px] py-2">
+                      {serviceLinks.map((s) => (
+                        <Link
+                          key={s.href}
+                          href={s.href}
+                          className="block px-5 py-2.5 text-sm text-ebony-muted hover:text-ebony hover:bg-cream-warm transition-colors"
+                        >
+                          {s.label}
+                        </Link>
+                      ))}
+                      <div className="border-t border-ebony/8 mt-2 pt-2">
+                        <Link
+                          href="/servicios"
+                          className="block px-5 py-2.5 text-xs text-taupe hover:text-ebony transition-colors font-medium"
+                        >
+                          Ver todos los servicios →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -124,8 +176,28 @@ export default function Header() {
             className="brightness-0 object-contain"
           />
         </div>
-        <nav className="flex flex-col items-center gap-8" aria-label="Menú móvil">
-          {[{ href: "/", label: "Inicio" }, ...navLinks].map((link) => (
+        <nav className="flex flex-col items-center gap-6 w-full px-8" aria-label="Menú móvil">
+          <Link href="/" className="font-serif text-2xl font-light text-ebony hover:text-taupe transition-colors">
+            Inicio
+          </Link>
+          {/* Servicios group */}
+          <div className="flex flex-col items-center gap-2 w-full">
+            <Link href="/servicios" className="font-serif text-2xl font-light text-ebony hover:text-taupe transition-colors">
+              Servicios
+            </Link>
+            <div className="flex flex-col items-center gap-1">
+              {serviceLinks.map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="text-sm text-ebony-muted hover:text-ebony transition-colors"
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}

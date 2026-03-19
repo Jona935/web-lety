@@ -13,9 +13,20 @@ const pages = [
 ];
 
 const services = [
-  "Wedding Planner", "Event Planner",
-  "Decoración", "Banquetes",
-  "Renta de Mobiliario", "Mantelería",
+  { label: "Bodas y XV Años", href: "/service-page/bodas-y-xv-anos" },
+  { label: "Diseño Floral", href: "/service-page/diseno-floral" },
+  { label: "Renta de Mobiliario", href: "/service-page/renta-de-mobiliario" },
+  { label: "Eventos Corporativos", href: "/service-page/eventos-corporativos" },
+  { label: "Graduaciones", href: "/service-page/graduaciones-y-todo-evento-social" },
+  { label: "Coordinación y Diseño", href: "/service-page/coordinacion-produccion-y-diseno" },
+];
+
+const seoPages = [
+  { label: "Bodas en Cuatrociénegas", href: "/bodas-cuatro-cienegas" },
+  { label: "Eventos en Monclova", href: "/eventos-monclova" },
+  { label: "Diseño de Eventos", href: "/diseno-eventos" },
+  { label: "Organizadores de Bodas", href: "/organizadores-bodas-monclova" },
+  { label: "Wedding Planner Monclova", href: "/wedding-planner-monclova" },
 ];
 
 export default function Footer() {
@@ -42,7 +53,7 @@ export default function Footer() {
 
       {/* Main footer */}
       <div className="container-wide py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
           {/* Brand */}
           <div>
@@ -73,9 +84,23 @@ export default function Footer() {
             <p className="label text-taupe-light mb-5">Servicios</p>
             <ul className="space-y-2.5">
               {services.map((s) => (
-                <li key={s}>
-                  <Link href="/servicios" className="text-sm text-cream/40 hover:text-cream transition-colors">
-                    {s}
+                <li key={s.href}>
+                  <Link href={s.href} className="text-sm text-cream/40 hover:text-cream transition-colors">
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* SEO Pages */}
+          <div>
+            <p className="label text-taupe-light mb-5">Cobertura</p>
+            <ul className="space-y-2.5">
+              {seoPages.map((p) => (
+                <li key={p.href}>
+                  <Link href={p.href} className="text-sm text-cream/40 hover:text-cream transition-colors">
+                    {p.label}
                   </Link>
                 </li>
               ))}

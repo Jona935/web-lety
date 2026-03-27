@@ -8,11 +8,12 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/wedding-planner-monclova", label: "Wedding Planner Monclova" },
+  { href: "/wedding-planner-monclova", label: "Wedding Planner" },
   { href: "/diseno-eventos", label: "Diseño Eventos" },
-  { href: "/bodas-cuatro-cienegas", label: "Bodas Cuatro Ciénegas" },
-  { href: "/organizadores-bodas-monclova", label: "Organizadores Bodas Monclova" },
+  { href: "/bodas-cuatro-cienegas", label: "Bodas Cuatrociénegas" },
+  { href: "/organizadores-bodas-monclova", label: "Organizadores" },
   { href: "/eventos-monclova", label: "Eventos Monclova" },
+  { href: "/contacto", label: "Contacto" },
 ];
 
 export default function Header() {
@@ -64,7 +65,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-8" aria-label="Principal">
+            <nav className="hidden xl:flex items-center gap-6" aria-label="Principal">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -83,7 +84,7 @@ export default function Header() {
             {/* Mobile toggle */}
             <button
               className={cn(
-                "lg:hidden p-2 transition-colors",
+                "xl:hidden p-2 transition-colors",
                 transparent ? "text-cream-light" : "text-ebony"
               )}
               onClick={() => setMobileOpen(!mobileOpen)}

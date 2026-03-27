@@ -6,6 +6,14 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 export default function CTASection() {
   return (
     <section className="section-padding bg-ebony relative overflow-hidden" aria-labelledby="cta-heading">
+      {/* Background image */}
+      <Image
+        src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80"
+        alt=""
+        fill
+        className="object-cover opacity-15"
+        aria-hidden="true"
+      />
       {/* Watermark */}
       <span className="lm-watermark-light left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">LM</span>
 

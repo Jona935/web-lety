@@ -2,16 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 
 export default function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    videoRef.current?.play().catch(() => {});
-  }, []);
-
   return (
     <section
       className="relative min-h-screen flex flex-col overflow-hidden bg-ebony"
@@ -19,23 +12,22 @@ export default function HeroSection() {
     >
       {/* Background media */}
       <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
-          loop muted playsInline
-          poster="/images/hero-poster.jpg"
+        <Image
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80"
+          alt=""
+          fill
+          className="object-cover opacity-30"
+          priority
           aria-hidden="true"
-        >
-          {/* <source src="/video/hero.mp4" type="video/mp4" /> */}
-        </video>
-        {/* Fallback rich dark gradient */}
+        />
+        {/* Dark overlay for contrast */}
         <div
-          className="absolute inset-0 bg-gradient-to-br from-ebony via-ebony-light to-[#1a1410]"
+          className="absolute inset-0 bg-ebony/50"
           aria-hidden="true"
         />
         {/* Bottom fade */}
         <div
-          className="absolute inset-0 bg-gradient-to-t from-ebony/90 via-transparent to-ebony/30"
+          className="absolute inset-0 bg-gradient-to-t from-ebony/90 via-transparent to-ebony/40"
           aria-hidden="true"
         />
       </div>

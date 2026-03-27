@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 
@@ -20,19 +21,14 @@ export default function AboutPreview() {
 
           {/* Image area */}
           <AnimatedSection className="relative">
-            {/* Main photo placeholder */}
+            {/* Main photo */}
             <div className="relative aspect-[3/4] bg-cream-warm overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cream-warm to-cream-dark flex items-center justify-center">
-                <div className="text-center p-8">
-                  <p className="font-serif text-5xl text-taupe/30 mb-4">LM</p>
-                  <p className="text-[10px] tracking-mega uppercase text-taupe/50">
-                    Fotografía de Lety Maldonado
-                  </p>
-                </div>
-              </div>
-              {/*
-              <Image src="/images/lety.jpg" alt="Lety Maldonado" fill className="object-cover" />
-              */}
+              <Image
+                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80"
+                alt="Lety Maldonado coordinando un evento"
+                fill
+                className="object-cover"
+              />
             </div>
 
             {/* Floating accent */}

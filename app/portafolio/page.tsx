@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedSection from "@/components/shared/AnimatedSection";
-import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Portafolio",
@@ -20,7 +20,7 @@ const portfolioItems = [
     year: "2024",
     description: "Ceremonia al aire libre con decoración floral en tonos blanco y verde sage",
     span: "md:col-span-2",
-    bgClass: "from-wine/50 to-primary/30",
+    img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const portfolioItems = [
     year: "2024",
     description: "Temática de estrellas en azul marino y dorado",
     span: "",
-    bgClass: "from-charcoal/60 to-wine/40",
+    img: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const portfolioItems = [
     year: "2024",
     description: "30 invitados en un jardín privado con decoración boho",
     span: "",
-    bgClass: "from-taupe/30 to-gold/20",
+    img: "https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=800&q=80",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const portfolioItems = [
     year: "2023",
     description: "200 invitados, decoración en rosas y champagne",
     span: "",
-    bgClass: "from-taupe-light/50 to-ebony/30",
+    img: "https://images.unsplash.com/photo-1478146059778-26028b07395a?w=800&q=80",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const portfolioItems = [
     year: "2023",
     description: "Cena de aniversario empresarial para 150 personas",
     span: "md:col-span-2",
-    bgClass: "from-charcoal/70 to-gold/20",
+    img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80",
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const portfolioItems = [
     year: "2023",
     description: "Paisaje natural de las minas como telón de fondo",
     span: "",
-    bgClass: "from-gold/30 to-wine/40",
+    img: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80",
   },
 ];
 
@@ -130,9 +130,11 @@ export default function PortafolioPage() {
                 delay={i * 80}
                 className={`relative overflow-hidden group cursor-pointer ${item.span}`}
               >
-                {/* Background placeholder / real image */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${item.bgClass}`}
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Hover overlay */}
@@ -149,7 +151,7 @@ export default function PortafolioPage() {
                 </div>
 
                 {/* Always visible label (bottom) */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-charcoal/60 to-transparent group-hover:opacity-0 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-ebony/70 to-transparent group-hover:opacity-0 transition-opacity duration-300">
                   <p className="text-[10px] tracking-widest uppercase text-cream/70">
                     {item.category}
                   </p>

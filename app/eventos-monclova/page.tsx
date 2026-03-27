@@ -5,9 +5,9 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Eventos en Monclova | La Magnolia Eventos",
+  title: "Eventos en Monclova | Lety Maldonado Eventos",
   description:
-    "Organizadora de eventos en Monclova, Coahuila. Bodas, quinceañeras, eventos corporativos y sociales. La Magnolia, la empresa líder en eventos de Monclova.",
+    "Organizadora de eventos en Monclova, Coahuila. Bodas, quinceañeras, eventos corporativos y sociales. Lety Maldonado Eventos, la empresa líder en eventos de Monclova.",
 };
 
 const services = [
@@ -46,7 +46,7 @@ export default function EventosMonclovaPage() {
             <div className="lg:col-span-2 space-y-14">
               <AnimatedSection>
                 <p className="text-ebony-muted leading-relaxed text-base">
-                  Con más de 10 años de trayectoria, La Magnolia es la empresa organizadora de eventos de mayor renombre en Monclova, Coahuila. Hemos celebrado cientos de bodas, quinceañeras, eventos corporativos y sociales en toda la región.
+                  Con más de 10 años de trayectoria, Lety Maldonado Eventos es la empresa organizadora de eventos de mayor renombre en Monclova, Coahuila. Hemos celebrado cientos de bodas, quinceañeras, eventos corporativos y sociales en toda la región.
                 </p>
                 <p className="text-ebony-muted leading-relaxed text-base mt-4">
                   Conocemos Monclova: sus venues, sus proveedores, sus tiempos y su gente. Esa experiencia local es lo que nos permite ofrecer una coordinación sin imprevistos y un resultado que supera las expectativas.

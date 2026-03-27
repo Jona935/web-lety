@@ -5,9 +5,9 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Wedding Planner en Monclova | La Magnolia Eventos",
+  title: "Wedding Planner en Monclova | Lety Maldonado Eventos",
   description:
-    "Wedding planner profesional en Monclova, Coahuila. La Magnolia: planificación integral de bodas, diseño floral, coordinación y producción de eventos. Consulta gratuita.",
+    "Wedding planner profesional en Monclova, Coahuila. Lety Maldonado Eventos: planificación integral de bodas, diseño floral, coordinación y producción de eventos. Consulta gratuita.",
 };
 
 const timeline = [
@@ -56,13 +56,13 @@ export default function WeddingPlannerMonclovaPage() {
             <div className="lg:col-span-2 space-y-14">
               <AnimatedSection>
                 <p className="text-ebony-muted leading-relaxed text-base">
-                  Un wedding planner profesional no es un lujo: es la diferencia entre una boda que fluye perfectamente y una que consume todo tu tiempo y energía durante meses. En La Magnolia somos ese equipo que convierte tu visión en realidad mientras tú te enfocas en disfrutar el proceso.
+                  Un wedding planner profesional no es un lujo: es la diferencia entre una boda que fluye perfectamente y una que consume todo tu tiempo y energía durante meses. En Lety Maldonado Eventos somos ese equipo que convierte tu visión en realidad mientras tú te enfocas en disfrutar el proceso.
                 </p>
                 <p className="text-ebony-muted leading-relaxed text-base mt-4">
                   Como wedding planners con base en Monclova y cobertura en toda Coahuila, conocemos los mejores venues, tenemos relaciones consolidadas con los proveedores más confiables y sabemos anticipar y resolver los imprevistos antes de que se conviertan en problemas.
                 </p>
                 <p className="text-ebony-muted leading-relaxed text-base mt-4">
-                  Trabajamos con un número limitado de bodas por año para garantizar la atención personalizada que cada pareja merece. Cuando trabajas con La Magnolia, eres nuestra prioridad.
+                  Trabajamos con un número limitado de bodas por año para garantizar la atención personalizada que cada pareja merece. Cuando trabajas con Lety Maldonado Eventos, eres nuestra prioridad.
                 </p>
               </AnimatedSection>
 
@@ -92,7 +92,7 @@ export default function WeddingPlannerMonclovaPage() {
               </AnimatedSection>
 
               <AnimatedSection delay={150}>
-                <SectionHeading script="Por qué" title="La Magnolia" />
+                <SectionHeading script="Por qué" title="Lety Maldonado Eventos" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
                   {[
                     {

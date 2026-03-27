@@ -28,30 +28,32 @@ const pinyon = Pinyon_Script({
 
 export const metadata: Metadata = {
   title: {
-    default: "La Magnolia | Wedding & Event Planner · Monclova",
-    template: "%s | La Magnolia Eventos",
+    default: "Lety Maldonado Eventos | Wedding & Event Planner · Monclova",
+    template: "%s | Lety Maldonado Eventos",
   },
   description:
-    "Soluciones integrales para tu evento en Monclova y Cuatrociénegas. Planeación, organización, decoración, renta de mobiliario, mantelería y banquetes para bodas y quinceañeras.",
+    "Soluciones integrales para tu evento en Monclova y Cuatrociénegas. Planeación, Organización, Logística, Decoración, Renta de Mobiliario, Mantelería y Banquetes.",
   keywords: [
     "wedding planner Monclova",
-    "La Magnolia eventos",
+    "Lety Maldonado eventos",
     "organizadora de bodas Monclova",
     "eventos Cuatrociénegas",
     "decoración de bodas Coahuila",
     "quinceañeras Monclova",
     "banquetes Monclova",
-    "Casa LM Monclova",
+    "bodas Cuatro Ciénegas",
     "Lety Maldonado",
+    "eventos Monclova",
+    "bodas destino Coahuila",
   ],
-  authors: [{ name: "La Magnolia Wedding Planners" }],
+  authors: [{ name: "Lety Maldonado Eventos" }],
   metadataBase: new URL("https://letymaldonadoeventos.com"),
   openGraph: {
-    title: "La Magnolia | Wedding & Event Planner · Monclova",
+    title: "Lety Maldonado Eventos | Wedding & Event Planner · Monclova",
     description:
-      "Transformamos tu visión en una celebración perfecta. Bodas, quinceañeras y eventos especiales en Monclova, Cuatrociénegas y Minas de Mármol.",
+      "Planeación, Organización, Logística, Decoración, Renta de Mobiliario, Mantelería y Banquetes. Bodas y eventos en Monclova, Cuatrociénegas y Minas de Mármol.",
     url: "https://letymaldonadoeventos.com",
-    siteName: "La Magnolia Eventos",
+    siteName: "Lety Maldonado Eventos",
     locale: "es_MX",
     type: "website",
   },

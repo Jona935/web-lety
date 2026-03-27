@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/shared/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Graduaciones y Eventos Sociales | La Magnolia Eventos Monclova",
+  title: "Graduaciones y Eventos Sociales | Lety Maldonado Eventos Monclova",
   description:
     "Organización de graduaciones, bautizos, cumpleaños y todo tipo de evento social en Monclova y Coahuila. Coordinación completa con decoración y logística.",
 };
@@ -13,7 +13,7 @@ export default function GraduacionesPage() {
       heroTag="Graduaciones · Eventos Sociales · Monclova"
       title="Graduaciones y Todo Evento Social"
       subtitle="Cada celebración merece ser especial"
-      description={`Más allá de las bodas, en La Magnolia organizamos todo tipo de evento social con el mismo nivel de cuidado y atención al detalle. Graduaciones, bautizos, baby showers, cumpleaños especiales y cualquier celebración que merezca ser memorable.
+      description={`Más allá de las bodas, en Lety Maldonado Eventos organizamos todo tipo de evento social con el mismo nivel de cuidado y atención al detalle. Graduaciones, bautizos, baby showers, cumpleaños especiales y cualquier celebración que merezca ser memorable.
 
 Nos encargamos de la planeación, coordinación de proveedores, decoración y logística para que tú y tus invitados puedan disfrutar al máximo. Desde eventos íntimos de 20 personas hasta celebraciones de más de 500 invitados en Monclova, Cuatrociénegas y la región.`}
       includes={[

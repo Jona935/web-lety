@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // La Magnolia brand palette
+        // Lety Maldonado Eventos brand palette
         cream: {
           DEFAULT: "#F0EBE3",   // Warm linen cream
           light: "#F7F4F0",      // Near-white cream

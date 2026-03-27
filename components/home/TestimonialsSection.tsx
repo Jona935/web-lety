@@ -14,9 +14,9 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Fernanda Rodríguez",
-    event: "Quinceañera · Cuatrociénegas, 2024",
-    text: "La quinceañera de mi hija fue absolutamente mágica. El equipo de La Magnolia se encargó de absolutamente todo. No tuvimos que preocuparnos por nada.",
+    name: "Paty Rodríguez",
+    event: "Boda · Monclova",
+    text: "Recomendaría a Lety Maldonado a cualquiera que busque tener una boda hermosa y feliz. Su equipo se encargó de absolutamente todo. No tuvimos que preocuparnos por nada.",
   },
   {
     id: 3,

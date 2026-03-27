@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex flex-col overflow-hidden bg-ebony"
-      aria-label="La Magnolia — Wedding & Event Planner"
+      aria-label="Lety Maldonado Eventos — Wedding & Event Planner"
     >
       {/* Background media */}
       <div className="absolute inset-0 z-0">
@@ -61,7 +61,7 @@ export default function HeroSection() {
         >
           <Image
             src="/images/logo.png"
-            alt="La Magnolia Wedding Planners"
+            alt="Lety Maldonado Eventos"
             width={130}
             height={90}
             className="brightness-0 invert mx-auto object-contain"
@@ -85,7 +85,7 @@ export default function HeroSection() {
           className="font-script text-script-md text-cream/80 mb-4"
           style={{ opacity: 0, animation: "fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.9s forwards" }}
         >
-          Casa de Eventos
+          Soluciones para Tu Evento
         </p>
 
         {/* Main headline */}
@@ -129,7 +129,7 @@ export default function HeroSection() {
           <div className="grid grid-cols-3 divide-x divide-cream/10">
             {[
               { value: "500+", label: "Eventos realizados" },
-              { value: "10+", label: "Años de experiencia" },
+              { value: "11+", label: "Años de experiencia" },
               { value: "3", label: "Ciudades atendidas" },
             ].map((s) => (
               <div key={s.label} className="text-center px-4">

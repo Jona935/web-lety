@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Bodas en Cuatrociénegas | La Magnolia Wedding Planners",
+  title: "Bodas en Cuatrociénegas | Lety Maldonado Eventos",
   description:
     "Organizadora de bodas en Cuatrociénegas, Coahuila. Planeación integral, decoración y coordinación para tu boda en el Desierto de los Leones y región de Cuatrociénegas.",
 };
@@ -49,7 +49,7 @@ export default function BodasCuatrocienegasPage() {
                   Cuatrociénegas es uno de los destinos más únicos de México para celebrar una boda. Con sus paisajes desérticos, pozas de aguas cristalinas y cielos estrellados incomparables, ofrece un escenario natural que pocos lugares del mundo pueden igualar.
                 </p>
                 <p className="text-ebony-muted leading-relaxed text-base mt-4">
-                  En La Magnolia conocemos la región a la perfección. Hemos organizado bodas en haciendas históricas, ranchos privados, jardines bajo las estrellas y espacios al aire libre que aprovechan al máximo la belleza natural del desierto coahuilense.
+                  En Lety Maldonado Eventos conocemos la región a la perfección. Hemos organizado bodas en haciendas históricas, ranchos privados, jardines bajo las estrellas y espacios al aire libre que aprovechan al máximo la belleza natural del desierto coahuilense.
                 </p>
                 <p className="text-ebony-muted leading-relaxed text-base mt-4">
                   Nos encargamos de absolutamente todo: desde la búsqueda del venue perfecto hasta la coordinación de proveedores locales, la logística de transporte para tus invitados y la decoración que se integra armoniosamente con el entorno.

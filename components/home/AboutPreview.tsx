@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const highlights = [
-  "Más de 10 años organizando bodas y eventos en Coahuila",
+  "Más de 11 años organizando bodas y eventos en Coahuila",
   "Metodología de 6 citas — sin improvisaciones, sin estrés",
   "Acompañamiento personalizado por WhatsApp entre citas",
   "Servicio en Monclova, Cuatrociénegas y Minas de Mármol",
@@ -37,7 +37,7 @@ export default function AboutPreview() {
 
             {/* Floating accent */}
             <div className="absolute -bottom-6 -right-4 md:-right-8 bg-ebony p-7 md:p-9">
-              <p className="font-script text-3xl text-cream/80">10+</p>
+              <p className="font-script text-3xl text-cream/80">11+</p>
               <p className="label-light text-[9px] mt-1">años de experiencia</p>
             </div>
           </AnimatedSection>

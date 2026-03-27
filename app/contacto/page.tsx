@@ -13,23 +13,30 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Teléfono",
-    value: "(866) 139-5734",
-    href: "tel:+528661395734",
-    description: "Llamadas y WhatsApp",
+    value: "(866) 633-5252",
+    href: "tel:+528666335252",
+    description: "Llamadas",
+  },
+  {
+    icon: Phone,
+    label: "WhatsApp",
+    value: "(866) 253-2615",
+    href: "https://wa.me/528662532615",
+    description: "Te respondemos muy rápido",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "jonarios2511@gmail.com",
-    href: "mailto:jonarios2511@gmail.com",
+    value: "eventosletymaldonado@gmail.com",
+    href: "mailto:eventosletymaldonado@gmail.com",
     description: "Respuesta en 24 horas",
   },
   {
     icon: MapPin,
-    label: "Área de servicio",
-    value: "Monclova, Coahuila",
+    label: "Dirección",
+    value: "Cuauhtémoc 119, Col. El Pueblo",
     href: null,
-    description: "Cuatrociénegas y Minas de Mármol",
+    description: "C.P. 25730 Monclova, Coahuila",
   },
   {
     icon: Clock,
@@ -109,7 +116,7 @@ export default function ContactoPage() {
                   <p className="overline-label text-gold mb-4">Redes sociales</p>
                   <div className="flex gap-4">
                     <a
-                      href="https://www.facebook.com"
+                      href="https://www.facebook.com/letymaldonadoeventos"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Facebook de Lety Maldonado Eventos"
@@ -119,7 +126,7 @@ export default function ContactoPage() {
                       Facebook
                     </a>
                     <a
-                      href="https://www.instagram.com"
+                      href="https://www.instagram.com/letymaldonado/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram de Lety Maldonado Eventos"
@@ -183,7 +190,7 @@ export default function ContactoPage() {
               conocernos y hablar sobre tu evento sin compromiso.
             </p>
             <a
-              href="tel:+528661395734"
+              href="tel:+528666335252"
               className="btn-primary bg-gold hover:bg-gold-dark text-charcoal"
             >
               <Phone size={14} aria-hidden="true" />

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 
 const pages = [
   { href: "/nosotros", label: "Nosotros" },
@@ -57,26 +57,36 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <Link href="/" aria-label="La Magnolia Eventos">
+            <Link href="/" aria-label="Lety Maldonado Eventos">
               <Image
                 src="/images/logo.png"
-                alt="La Magnolia Wedding Planners"
+                alt="Lety Maldonado Eventos"
                 width={80}
                 height={56}
                 className="brightness-0 invert opacity-70 object-contain mb-5"
               />
             </Link>
             <p className="text-sm leading-relaxed text-cream/40 mb-6">
-              Wedding & Event Planner en Monclova, Cuatrociénegas y Minas de Mármol, Coahuila.
+              Planeación, Organización, Logística, Decoración, Renta de Mobiliario, Mantelería y Banquetes en Monclova, Cuatrociénegas y Minas de Mármol, Coahuila.
             </p>
-            <a
-              href="https://instagram.com/letymaldonado"
-              target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram @letymaldonado"
-              className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-cream/40 hover:text-cream transition-colors"
-            >
-              <Instagram size={13} aria-hidden="true" /> @letymaldonado
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/letymaldonadoeventos"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook Lety Maldonado Eventos"
+                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-cream/40 hover:text-cream transition-colors"
+              >
+                <Facebook size={13} aria-hidden="true" /> Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/letymaldonado/"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram @letymaldonado"
+                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-cream/40 hover:text-cream transition-colors"
+              >
+                <Instagram size={13} aria-hidden="true" /> @letymaldonado
+              </a>
+            </div>
           </div>
 
           {/* Services */}
@@ -126,15 +136,15 @@ export default function Footer() {
             <p className="label text-taupe-light mb-5">Contacto</p>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+528661430043" className="flex items-start gap-3 text-sm text-cream/40 hover:text-cream transition-colors">
+                <a href="tel:+528666335252" className="flex items-start gap-3 text-sm text-cream/40 hover:text-cream transition-colors">
                   <Phone size={13} className="shrink-0 mt-0.5 text-taupe" aria-hidden="true" />
-                  (866) 143-00-43
+                  (866) 633-5252
                 </a>
               </li>
               <li>
                 <a href="https://wa.me/528662532615" className="flex items-start gap-3 text-sm text-cream/40 hover:text-cream transition-colors">
                   <Phone size={13} className="shrink-0 mt-0.5 text-taupe" aria-hidden="true" />
-                  WhatsApp (866) 253-26-15
+                  WhatsApp (866) 253-2615
                 </a>
               </li>
               <li>
@@ -146,7 +156,7 @@ export default function Footer() {
               <li>
                 <span className="flex items-start gap-3 text-sm text-cream/40">
                   <MapPin size={13} className="shrink-0 mt-0.5 text-taupe" aria-hidden="true" />
-                  Monterrey 806 Col. Guadalupe<br />Monclova, Coahuila
+                  Cuauhtémoc 119, Col. El Pueblo<br />C.P. 25730 Monclova, Coahuila
                 </span>
               </li>
             </ul>
@@ -158,7 +168,7 @@ export default function Footer() {
       <div className="border-t border-cream/8">
         <div className="container-wide py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs text-cream/25">
-            © {year} La Magnolia Wedding Planners · Lety Maldonado Eventos
+            © {year} Lety Maldonado Eventos
           </p>
           <p className="text-xs text-cream/25">
             Monclova, Coahuila · México

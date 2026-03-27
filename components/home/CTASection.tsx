@@ -15,7 +15,7 @@ export default function CTASection() {
           <div className="mb-10 flex justify-center">
             <Image
               src="/images/logo.png"
-              alt="La Magnolia Wedding Planners"
+              alt="Lety Maldonado Eventos"
               width={80}
               height={56}
               className="brightness-0 invert opacity-60 object-contain"

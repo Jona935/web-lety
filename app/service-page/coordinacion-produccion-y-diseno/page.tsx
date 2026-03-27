@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/shared/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Coordinación, Producción y Diseño | La Magnolia Eventos Monclova",
+  title: "Coordinación, Producción y Diseño | Lety Maldonado Eventos Monclova",
   description:
     "Servicio integral de coordinación, producción y diseño de eventos en Monclova. Concepto visual, dirección creativa, producción de escenografía y coordinación del día.",
 };

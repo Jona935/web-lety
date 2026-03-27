@@ -91,27 +91,33 @@ export default function NosotrosPage() {
 
               <div className="space-y-5 text-charcoal-muted leading-relaxed">
                 <p>
-                  Desde pequeña soñé con crear momentos que la gente recordara para
-                  siempre. Hoy, después de más de 10 años organizando eventos en el
-                  norte de México, puedo decir que vivo mi sueño cada día.
+                  Me encanta decorar eventos, hacerlos únicos y memorables, llenos de
+                  detalles espectaculares. Siempre con el gusto por crear espacios lindos,
+                  mientras terminaba mi carrera de Derecho, tomé un diplomado en Decoración
+                  de Interiores.
                 </p>
                 <p>
-                  Mi empresa nació en Monclova con una misión simple: que cada pareja,
-                  cada familia, cada persona que confíe en nosotros tenga el evento
-                  que siempre soñó — sin el estrés de coordinar todo sola.
+                  Pero quería más conocimientos así que estudié la carrera de Diseño Floral
+                  en el Instituto Mexicano Técnico Floral. Durante dos años iba y venía de
+                  Monclova a Monterrey, me levantaba a las 4am para llegar a tiempo a mis
+                  clases. Así logré terminar y crecer mis conocimientos en el tema.
                 </p>
                 <p>
-                  Hoy atendemos bodas, quinceañeras y eventos especiales en Monclova,
-                  Cuatrociénegas y Minas de Mármol. Con un equipo comprometido, un
-                  catálogo amplio de mobiliario y mantelería, y alianzas con los
-                  mejores proveedores de la región.
+                  Como me encantan los retos, obtuve una certificación por el AIFD (American
+                  Institute of Floral Designers). Mi última certificación fue en junio 2021
+                  con la Association of Bridal Consultants como Certified Wedding Planner.
+                </p>
+                <p>
+                  Llevo más de 11 años dedicándome a la decoración de eventos, cientos de
+                  bodas exitosas y todo tipo de eventos, siempre aprendiendo cosas nuevas,
+                  asistiendo a congresos y cursos para ofrecerte las más nuevas tendencias.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-6 mt-10">
                 {[
                   { value: "500+", label: "Eventos realizados" },
-                  { value: "10+", label: "Años de experiencia" },
+                  { value: "11+", label: "Años de experiencia" },
                   { value: "3", label: "Ciudades atendidas" },
                   { value: "100%", label: "Clientes satisfechos" },
                 ].map((stat) => (

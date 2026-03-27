@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Diseño de Eventos | La Magnolia Monclova",
+  title: "Diseño de Eventos | Lety Maldonado Eventos Monclova",
   description:
     "Servicio de diseño de eventos en Monclova. Dirección creativa, concepto visual, decoración floral, escenografía y producción para bodas y eventos especiales en Coahuila.",
 };
@@ -40,7 +40,7 @@ export default function DisenoEventosPage() {
                   El diseño de un evento va mucho más allá de la decoración. Es la creación de una experiencia sensorial completa: la paleta de colores que establece el estado de ánimo, las flores que cuentan una historia, la iluminación que transforma un espacio ordinario en algo extraordinario.
                 </p>
                 <p className="text-ebony-muted leading-relaxed text-base mt-4">
-                  En La Magnolia aplicamos una metodología de diseño que parte de tu personalidad, tu historia y tu visión. El resultado es un evento que se siente auténticamente tuyo, no un catálogo de opciones prefabricadas.
+                  En Lety Maldonado Eventos aplicamos una metodología de diseño que parte de tu personalidad, tu historia y tu visión. El resultado es un evento que se siente auténticamente tuyo, no un catálogo de opciones prefabricadas.
                 </p>
               </AnimatedSection>
 

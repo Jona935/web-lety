@@ -8,9 +8,9 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import CTASection from "@/components/home/CTASection";
 
 export const metadata: Metadata = {
-  title: "Lety Maldonado Eventos | Wedding & Event Planner Monclova",
+  title: "Lety Maldonado Eventos | Bodas y Eventos Monclova y Cuatrociénegas",
   description:
-    "Soluciones integrales para tu evento en Monclova y Cuatrociénegas. Bodas, quinceañeras, planeación, decoración y banquetes.",
+    "Soluciones Integrales para Tu Evento. Planeación, Organización, Logística, Decoración, Renta de Mobiliario, Mantelería y Banquetes en Monclova y Cuatrociénegas.",
 };
 
 export default function HomePage() {

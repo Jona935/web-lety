@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/shared/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Eventos Corporativos | La Magnolia Eventos Monclova",
+  title: "Eventos Corporativos | Lety Maldonado Eventos Monclova",
   description:
     "Organización de eventos corporativos en Monclova y Coahuila. Congresos, cenas de gala, lanzamientos de producto, team building y más con producción profesional.",
 };

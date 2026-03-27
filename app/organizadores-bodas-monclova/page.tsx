@@ -5,9 +5,9 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Organizadores de Bodas en Monclova | La Magnolia",
+  title: "Organizadores de Bodas en Monclova | Lety Maldonado Eventos",
   description:
-    "Los mejores organizadores de bodas en Monclova, Coahuila. La Magnolia: más de 10 años planeando bodas únicas con atención personalizada y coordinación integral.",
+    "Los mejores organizadores de bodas en Monclova, Coahuila. Lety Maldonado Eventos: más de 10 años planeando bodas únicas con atención personalizada y coordinación integral.",
 };
 
 const faqs = [
@@ -56,7 +56,7 @@ export default function OrganizadoresBodasMonclovaPage() {
             <div className="lg:col-span-2 space-y-14">
               <AnimatedSection>
                 <p className="text-ebony-muted leading-relaxed text-base">
-                  Somos La Magnolia, el equipo de organizadores de bodas de mayor trayectoria en Monclova, Coahuila. Con más de una década de experiencia, hemos acompañado a cientos de parejas en uno de los días más importantes de sus vidas.
+                  Somos Lety Maldonado Eventos, el equipo de organizadores de bodas de mayor trayectoria en Monclova, Coahuila. Con más de una década de experiencia, hemos acompañado a cientos de parejas en uno de los días más importantes de sus vidas.
                 </p>
                 <p className="text-ebony-muted leading-relaxed text-base mt-4">
                   Organizamos bodas con un enfoque completamente personalizado: cada boda que coordinamos es única, refleja la personalidad de la pareja y está pensada hasta el último detalle para que todo fluya perfectamente el día del evento.

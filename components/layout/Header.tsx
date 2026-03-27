@@ -67,10 +67,10 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
 
             {/* Logo */}
-            <Link href="/" aria-label="La Magnolia Eventos — Inicio">
+            <Link href="/" aria-label="Lety Maldonado Eventos — Inicio">
               <Image
                 src="/images/logo.png"
-                alt="La Magnolia Wedding Planners"
+                alt="Lety Maldonado Eventos"
                 width={90}
                 height={60}
                 className={cn(
@@ -214,7 +214,7 @@ export default function Header() {
         <div className="mb-12">
           <Image
             src="/images/logo.png"
-            alt="La Magnolia Wedding Planners"
+            alt="Lety Maldonado Eventos"
             width={100}
             height={70}
             className="brightness-0 object-contain"

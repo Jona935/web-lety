@@ -165,7 +165,7 @@ export default function FAQPage() {
             <p className="text-ebony-muted text-sm mb-6">
               No hay pregunta pequeña cuando se trata de tu evento especial.
             </p>
-            <Link href="/contacto" className="btn-primary">
+            <Link href="/contacto" className="btn-dark">
               Enviar mi pregunta
             </Link>
           </AnimatedSection>

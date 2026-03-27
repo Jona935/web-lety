@@ -154,7 +154,7 @@ export default function CatalogoPage() {
             <p className="text-ebony-muted text-base mb-6">
               ¿Buscas algo que no ves en el catálogo? Cuéntanos y lo conseguimos.
             </p>
-            <Link href="/contacto" className="btn-primary">
+            <Link href="/contacto" className="btn-dark">
               Solicitar cotización de renta
             </Link>
           </AnimatedSection>

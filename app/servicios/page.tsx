@@ -127,7 +127,7 @@ export default function ServiciosPage() {
       {/* Hero */}
       <section className="pt-36 pb-20 bg-ebony relative overflow-hidden">
         <div
-          className="absolute inset-0 bg-gradient-to-br from-primary/20 to-charcoal"
+          className="absolute inset-0 bg-gradient-to-br from-taupe/20 to-ebony"
           aria-hidden="true"
         />
         <div className="container-narrow relative z-10 text-center">
@@ -185,7 +185,7 @@ export default function ServiciosPage() {
                     <p className="text-ebony-muted leading-relaxed mb-8">
                       {service.description}
                     </p>
-                    <Link href="/contacto" className="btn-primary">
+                    <Link href="/contacto" className="btn-dark">
                       Cotizar este servicio
                     </Link>
                   </div>
@@ -225,7 +225,7 @@ export default function ServiciosPage() {
             <p className="text-cream/60 mb-8">
               Contáctanos y creamos un paquete 100% personalizado para tu evento.
             </p>
-            <Link href="/contacto" className="btn-primary">
+            <Link href="/contacto" className="btn-dark">
               Hablar con Lety
             </Link>
           </AnimatedSection>

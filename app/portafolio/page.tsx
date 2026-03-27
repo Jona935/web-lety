@@ -50,7 +50,7 @@ const portfolioItems = [
     year: "2023",
     description: "200 invitados, decoración en rosas y champagne",
     span: "",
-    bgClass: "from-primary-light/50 to-wine/30",
+    bgClass: "from-taupe-light/50 to-ebony/30",
   },
   {
     id: 5,
@@ -174,7 +174,7 @@ export default function PortafolioPage() {
             <p className="text-ebony-muted mb-6">
               ¿Te imaginas tu evento en esta galería?
             </p>
-            <Link href="/contacto" className="btn-primary">
+            <Link href="/contacto" className="btn-dark">
               Comencemos a planear
             </Link>
           </AnimatedSection>

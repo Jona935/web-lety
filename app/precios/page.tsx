@@ -221,7 +221,7 @@ export default function PreciosPage() {
           </AnimatedSection>
 
           <AnimatedSection delay={400} className="mt-10 text-center">
-            <Link href="/contacto" className="btn-primary">
+            <Link href="/contacto" className="btn-dark">
               Solicitar cotización personalizada gratuita
             </Link>
           </AnimatedSection>

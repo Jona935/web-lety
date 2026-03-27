@@ -50,7 +50,7 @@ export default function NosotrosPage() {
         aria-labelledby="nosotros-heading"
       >
         <div
-          className="absolute inset-0 bg-gradient-to-br from-taupe/30 to-charcoal"
+          className="absolute inset-0 bg-gradient-to-br from-taupe/30 to-ebony"
           aria-hidden="true"
         />
         <div className="container-narrow relative z-10 text-center">
@@ -73,12 +73,12 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <div className="relative aspect-[3/4] bg-ebony/20 overflow-hidden">
-                {/* Replace with real image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-taupe/30 to-ebony/50 flex items-center justify-center">
-                  <p className="text-cream/40 text-sm text-center px-6">
-                    [ Fotografía de Lety Maldonado ]
-                  </p>
-                </div>
+                <Image
+                  src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80"
+                  alt="Lety Maldonado — Wedding & Event Planner"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </AnimatedSection>
 
@@ -230,7 +230,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding-sm bg-primary">
+      <section className="section-padding-sm bg-taupe">
         <div className="container-narrow text-center">
           <AnimatedSection>
             <h2 className="font-serif text-display-sm text-cream font-light mb-6">

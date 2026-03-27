@@ -40,7 +40,7 @@ const portfolioItems = [
     year: "2024",
     description: "30 invitados en un jardín privado con decoración boho",
     span: "",
-    bgClass: "from-primary/30 to-gold/20",
+    bgClass: "from-taupe/30 to-gold/20",
   },
   {
     id: 4,
@@ -81,12 +81,12 @@ export default function PortafolioPage() {
       <section className="pt-36 pb-20 bg-cream-warm">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="overline-label text-gold mb-4">Nuestro trabajo</p>
-            <h1 className="font-serif text-display-lg text-charcoal font-light">
+            <p className="label text-taupe mb-4">Nuestro trabajo</p>
+            <h1 className="font-serif text-display-lg text-ebony font-light">
               Momentos que{" "}
-              <span className="italic text-primary">perduran</span>
+              <span className="italic text-taupe">perduran</span>
             </h1>
-            <p className="text-charcoal-muted mt-6 max-w-lg mx-auto leading-relaxed">
+            <p className="text-ebony-muted mt-6 max-w-lg mx-auto leading-relaxed">
               Cada evento que organizamos es único. Aquí una muestra del amor
               que ponemos en cada celebración.
             </p>
@@ -109,8 +109,8 @@ export default function PortafolioPage() {
                 aria-selected={cat === "Todos"}
                 className={`text-xs tracking-widest uppercase font-medium shrink-0 pb-1 transition-colors duration-200 ${
                   cat === "Todos"
-                    ? "text-primary border-b border-primary"
-                    : "text-charcoal-muted hover:text-charcoal"
+                    ? "text-taupe border-b border-taupe"
+                    : "text-ebony-muted hover:text-ebony"
                 }`}
               >
                 {cat}
@@ -136,8 +136,8 @@ export default function PortafolioPage() {
                 />
 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-charcoal/70 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-6">
-                  <span className="overline-label text-gold mb-2">
+                <div className="absolute inset-0 bg-ebony/70 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-6">
+                  <span className="label text-taupe mb-2">
                     {item.category} · {item.location} · {item.year}
                   </span>
                   <h3 className="font-serif text-2xl text-cream font-light mb-2">
@@ -160,9 +160,9 @@ export default function PortafolioPage() {
           </div>
 
           {/* Note about real photos */}
-          <AnimatedSection delay={300} className="mt-8 p-5 bg-cream-warm border-l-2 border-gold/40">
-            <p className="text-sm text-charcoal-muted">
-              <strong className="text-charcoal">Nota:</strong> Las imágenes de
+          <AnimatedSection delay={300} className="mt-8 p-5 bg-cream-warm border-l-2 border-taupe/40">
+            <p className="text-sm text-ebony-muted">
+              <strong className="text-ebony">Nota:</strong> Las imágenes de
               portafolio serán reemplazadas con las fotografías profesionales de
               tus eventos reales. Esta es la estructura de galería lista para
               recibir tu contenido.
@@ -171,7 +171,7 @@ export default function PortafolioPage() {
 
           {/* CTA */}
           <AnimatedSection delay={400} className="mt-12 text-center">
-            <p className="text-charcoal-muted mb-6">
+            <p className="text-ebony-muted mb-6">
               ¿Te imaginas tu evento en esta galería?
             </p>
             <Link href="/contacto" className="btn-primary">

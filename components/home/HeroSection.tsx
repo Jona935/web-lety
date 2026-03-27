@@ -137,7 +137,7 @@ export default function HeroSection() {
       <button
         onClick={() => window.scrollBy({ top: window.innerHeight, behavior: "smooth" })}
         className="absolute bottom-28 right-8 z-10 flex flex-col items-center gap-2 text-cream/30 hover:text-cream/60 transition-colors"
-        aria-label="Desplazar hacia abajo"
+        aria-label="Scroll — Desplazar hacia abajo"
         style={{ opacity: 0, animation: "fadeIn 1s ease 2.2s forwards" }}
       >
         <span className="text-[8px] tracking-ultra uppercase rotate-90 origin-center mb-1">scroll</span>

@@ -91,13 +91,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         aria-controls={`answer-${id}`}
         id={`question-${id}`}
       >
-        <span className="font-sans text-sm font-medium text-charcoal leading-relaxed pr-4">
+        <span className="font-sans text-sm font-medium text-ebony leading-relaxed pr-4">
           {question}
         </span>
         <ChevronDown
           size={16}
           className={cn(
-            "shrink-0 text-gold mt-0.5 transition-transform duration-300",
+            "shrink-0 text-taupe mt-0.5 transition-transform duration-300",
             open && "rotate-180"
           )}
           aria-hidden="true"
@@ -112,7 +112,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           open ? "max-h-96 pb-5" : "max-h-0"
         )}
       >
-        <p className="text-sm text-charcoal-muted leading-relaxed">{answer}</p>
+        <p className="text-sm text-ebony-muted leading-relaxed">{answer}</p>
       </div>
     </div>
   );
@@ -122,13 +122,13 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-charcoal">
+      <section className="pt-36 pb-20 bg-ebony">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="overline-label text-gold mb-4">Resolvemos tus dudas</p>
+            <p className="label text-taupe mb-4">Resolvemos tus dudas</p>
             <h1 className="font-serif text-display-lg text-cream font-light">
               Preguntas{" "}
-              <span className="italic text-primary-light">frecuentes</span>
+              <span className="italic text-taupe-light">frecuentes</span>
             </h1>
           </AnimatedSection>
         </div>
@@ -140,7 +140,7 @@ export default function FAQPage() {
           <div className="space-y-14">
             {faqs.map((section, i) => (
               <AnimatedSection key={section.category} delay={i * 100}>
-                <h2 className="font-serif text-2xl text-charcoal mb-6 pb-2 border-b-2 border-gold/20">
+                <h2 className="font-serif text-2xl text-ebony mb-6 pb-2 border-b-2 border-taupe/20">
                   {section.category}
                 </h2>
                 <div>
@@ -158,11 +158,11 @@ export default function FAQPage() {
 
           {/* Still have questions? */}
           <AnimatedSection delay={400} className="mt-16 text-center p-10 bg-cream-warm border border-cream-warm">
-            <p className="overline-label text-gold mb-3">¿Aún tienes dudas?</p>
-            <h2 className="font-serif text-2xl text-charcoal font-light mb-4">
+            <p className="label text-taupe mb-3">¿Aún tienes dudas?</p>
+            <h2 className="font-serif text-2xl text-ebony font-light mb-4">
               Escríbenos directamente
             </h2>
-            <p className="text-charcoal-muted text-sm mb-6">
+            <p className="text-ebony-muted text-sm mb-6">
               No hay pregunta pequeña cuando se trata de tu evento especial.
             </p>
             <Link href="/contacto" className="btn-primary">

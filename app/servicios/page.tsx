@@ -125,17 +125,17 @@ export default function ServiciosPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-charcoal relative overflow-hidden">
+      <section className="pt-36 pb-20 bg-ebony relative overflow-hidden">
         <div
           className="absolute inset-0 bg-gradient-to-br from-primary/20 to-charcoal"
           aria-hidden="true"
         />
         <div className="container-narrow relative z-10 text-center">
           <AnimatedSection>
-            <p className="overline-label text-gold mb-4">Lo que ofrecemos</p>
+            <p className="label text-taupe mb-4">Lo que ofrecemos</p>
             <h1 className="font-serif text-display-lg text-cream font-light">
               Servicios{" "}
-              <span className="italic text-primary-light">integrales</span>
+              <span className="italic text-taupe-light">integrales</span>
             </h1>
             <p className="text-cream/60 text-base mt-6 max-w-xl mx-auto leading-relaxed">
               Todo lo que necesitas para tu evento perfecto, en un solo lugar.
@@ -163,7 +163,7 @@ export default function ServiciosPage() {
                   {/* Content */}
                   <div>
                     {service.tag && (
-                      <span className="inline-block bg-gold/10 text-gold text-[10px] tracking-widest uppercase px-3 py-1 mb-4 font-sans">
+                      <span className="inline-block bg-taupe/10 text-taupe text-[10px] tracking-widest uppercase px-3 py-1 mb-4 font-sans">
                         {service.tag}
                       </span>
                     )}
@@ -171,18 +171,18 @@ export default function ServiciosPage() {
                       className="flex items-center gap-3 mb-4"
                       aria-hidden="true"
                     >
-                      <div className="w-10 h-10 border border-gold/30 flex items-center justify-center">
-                        <Icon size={18} className="text-gold" />
+                      <div className="w-10 h-10 border border-taupe/30 flex items-center justify-center">
+                        <Icon size={18} className="text-taupe" />
                       </div>
-                      <span className="h-px w-8 bg-gold/30" />
+                      <span className="h-px w-8 bg-taupe/30" />
                     </div>
-                    <h2 className="font-serif text-display-sm text-charcoal font-light mb-2">
+                    <h2 className="font-serif text-display-sm text-ebony font-light mb-2">
                       {service.title}
                     </h2>
-                    <p className="overline-label text-primary mb-4">
+                    <p className="label text-taupe mb-4">
                       {service.subtitle}
                     </p>
-                    <p className="text-charcoal-muted leading-relaxed mb-8">
+                    <p className="text-ebony-muted leading-relaxed mb-8">
                       {service.description}
                     </p>
                     <Link href="/contacto" className="btn-primary">
@@ -192,15 +192,15 @@ export default function ServiciosPage() {
 
                   {/* Includes list */}
                   <div className="bg-cream-warm p-8 md:p-10">
-                    <p className="overline-label text-gold mb-6">Incluye</p>
+                    <p className="label text-taupe mb-6">Incluye</p>
                     <ul className="space-y-4">
                       {service.includes.map((item) => (
                         <li
                           key={item}
-                          className="flex items-start gap-3 text-sm text-charcoal"
+                          className="flex items-start gap-3 text-sm text-ebony"
                         >
                           <span
-                            className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2"
+                            className="w-1.5 h-1.5 rounded-full bg-taupe shrink-0 mt-2"
                             aria-hidden="true"
                           />
                           {item}
@@ -216,7 +216,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding-sm bg-wine">
+      <section className="section-padding-sm bg-ebony">
         <div className="container-narrow text-center">
           <AnimatedSection>
             <h2 className="font-serif text-display-sm text-cream font-light mb-4">

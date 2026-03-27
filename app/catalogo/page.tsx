@@ -97,12 +97,12 @@ export default function CatalogoPage() {
       <section className="pt-36 pb-20 bg-cream-warm">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="overline-label text-gold mb-4">Renta de artículos</p>
-            <h1 className="font-serif text-display-lg text-charcoal font-light">
+            <p className="label text-taupe mb-4">Renta de artículos</p>
+            <h1 className="font-serif text-display-lg text-ebony font-light">
               Catálogo de{" "}
-              <span className="italic text-primary">mobiliario</span>
+              <span className="italic text-taupe">mobiliario</span>
             </h1>
-            <p className="text-charcoal-muted text-base mt-6 max-w-xl mx-auto leading-relaxed">
+            <p className="text-ebony-muted text-base mt-6 max-w-xl mx-auto leading-relaxed">
               Encuentra todo lo que necesitas para vestir tu evento con elegancia.
               Entrega, instalación y retiro incluidos.
             </p>
@@ -111,10 +111,10 @@ export default function CatalogoPage() {
       </section>
 
       {/* Note */}
-      <div className="bg-gold/10 border-y border-gold/20">
+      <div className="bg-taupe/10 border-y border-taupe/20">
         <div className="container-wide py-4 flex items-center gap-3">
-          <span className="w-2 h-2 rounded-full bg-gold shrink-0" aria-hidden="true" />
-          <p className="text-sm text-charcoal-light">
+          <span className="w-2 h-2 rounded-full bg-taupe shrink-0" aria-hidden="true" />
+          <p className="text-sm text-ebony-muted">
             <strong>Disponibilidad sujeta a fechas.</strong> Para confirmar
             disponibilidad y precios, solicita tu cotización personalizada.
           </p>
@@ -133,14 +133,14 @@ export default function CatalogoPage() {
                 key={cat.id}
                 id={cat.id}
                 delay={i * 80}
-                className="border border-cream-warm hover:border-gold/30 transition-colors duration-300 p-8"
+                className="border border-cream-warm hover:border-taupe/30 transition-colors duration-300 p-8"
               >
-                <h2 className="font-serif text-2xl text-charcoal mb-1">{cat.title}</h2>
-                <span className="gold-line-left mb-5" aria-hidden="true" />
+                <h2 className="font-serif text-2xl text-ebony mb-1">{cat.title}</h2>
+                <span className="divider mb-5" aria-hidden="true" />
                 <ul className="space-y-2.5">
                   {cat.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm text-charcoal-muted">
-                      <span className="w-1 h-1 rounded-full bg-gold shrink-0 mt-2" aria-hidden="true" />
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-ebony-muted">
+                      <span className="w-1 h-1 rounded-full bg-taupe shrink-0 mt-2" aria-hidden="true" />
                       {item}
                     </li>
                   ))}
@@ -151,7 +151,7 @@ export default function CatalogoPage() {
 
           {/* CTA */}
           <AnimatedSection delay={300} className="mt-16 text-center">
-            <p className="text-charcoal-muted text-base mb-6">
+            <p className="text-ebony-muted text-base mb-6">
               ¿Buscas algo que no ves en el catálogo? Cuéntanos y lo conseguimos.
             </p>
             <Link href="/contacto" className="btn-primary">

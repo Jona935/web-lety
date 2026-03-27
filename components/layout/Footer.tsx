@@ -41,7 +41,7 @@ export default function Footer() {
             <p className="font-script text-script-md text-taupe-light">
               Hagamos algo extraordinario
             </p>
-            <p className="text-sm text-cream/40 mt-1">
+            <p className="text-sm text-cream/60 mt-1">
               La primera consulta es gratuita y sin compromiso.
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function Footer() {
                 className="brightness-0 invert opacity-70 object-contain mb-5"
               />
             </Link>
-            <p className="text-sm leading-relaxed text-cream/40 mb-6">
+            <p className="text-sm leading-relaxed text-cream/60 mb-6">
               Planeación, Organización, Logística, Decoración, Renta de Mobiliario, Mantelería y Banquetes en Monclova, Cuatrociénegas y Minas de Mármol, Coahuila.
             </p>
             <div className="flex items-center gap-4">
@@ -74,7 +74,7 @@ export default function Footer() {
                 href="https://www.facebook.com/letymaldonadoeventos"
                 target="_blank" rel="noopener noreferrer"
                 aria-label="Facebook Lety Maldonado Eventos"
-                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-cream/40 hover:text-cream transition-colors"
+                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-cream/60 hover:text-cream transition-colors"
               >
                 <Facebook size={13} aria-hidden="true" /> Facebook
               </a>
@@ -82,7 +82,7 @@ export default function Footer() {
                 href="https://www.instagram.com/letymaldonado/"
                 target="_blank" rel="noopener noreferrer"
                 aria-label="Instagram @letymaldonado"
-                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-cream/40 hover:text-cream transition-colors"
+                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-cream/60 hover:text-cream transition-colors"
               >
                 <Instagram size={13} aria-hidden="true" /> @letymaldonado
               </a>
@@ -95,7 +95,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.href}>
-                  <Link href={s.href} className="text-sm text-cream/40 hover:text-cream transition-colors">
+                  <Link href={s.href} className="text-sm text-cream/60 hover:text-cream transition-colors">
                     {s.label}
                   </Link>
                 </li>
@@ -109,7 +109,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {seoPages.map((p) => (
                 <li key={p.href}>
-                  <Link href={p.href} className="text-sm text-cream/40 hover:text-cream transition-colors">
+                  <Link href={p.href} className="text-sm text-cream/60 hover:text-cream transition-colors">
                     {p.label}
                   </Link>
                 </li>
@@ -123,7 +123,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {pages.map((p) => (
                 <li key={p.href}>
-                  <Link href={p.href} className="text-sm text-cream/40 hover:text-cream transition-colors">
+                  <Link href={p.href} className="text-sm text-cream/60 hover:text-cream transition-colors">
                     {p.label}
                   </Link>
                 </li>
@@ -136,25 +136,25 @@ export default function Footer() {
             <p className="label text-taupe-light mb-5">Contacto</p>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+528666335252" className="flex items-start gap-3 text-sm text-cream/40 hover:text-cream transition-colors">
+                <a href="tel:+528666335252" className="flex items-start gap-3 text-sm text-cream/60 hover:text-cream transition-colors">
                   <Phone size={13} className="shrink-0 mt-0.5 text-taupe" aria-hidden="true" />
                   (866) 633-5252
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/528662532615" className="flex items-start gap-3 text-sm text-cream/40 hover:text-cream transition-colors">
+                <a href="https://wa.me/528662532615" className="flex items-start gap-3 text-sm text-cream/60 hover:text-cream transition-colors">
                   <Phone size={13} className="shrink-0 mt-0.5 text-taupe" aria-hidden="true" />
                   WhatsApp (866) 253-2615
                 </a>
               </li>
               <li>
-                <a href="mailto:eventosletymaldonado@gmail.com" className="flex items-start gap-3 text-sm text-cream/40 hover:text-cream transition-colors">
+                <a href="mailto:eventosletymaldonado@gmail.com" className="flex items-start gap-3 text-sm text-cream/60 hover:text-cream transition-colors">
                   <Mail size={13} className="shrink-0 mt-0.5 text-taupe" aria-hidden="true" />
                   eventosletymaldonado@gmail.com
                 </a>
               </li>
               <li>
-                <span className="flex items-start gap-3 text-sm text-cream/40">
+                <span className="flex items-start gap-3 text-sm text-cream/60">
                   <MapPin size={13} className="shrink-0 mt-0.5 text-taupe" aria-hidden="true" />
                   Cuauhtémoc 119, Col. El Pueblo<br />C.P. 25730 Monclova, Coahuila
                 </span>

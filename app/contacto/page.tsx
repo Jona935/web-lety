@@ -54,12 +54,12 @@ export default function ContactoPage() {
       <section className="pt-36 pb-20 bg-cream-warm">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="overline-label text-gold mb-4">Hablemos</p>
-            <h1 className="font-serif text-display-lg text-charcoal font-light">
+            <p className="label text-taupe mb-4">Hablemos</p>
+            <h1 className="font-serif text-display-lg text-ebony font-light">
               Comencemos a{" "}
-              <span className="italic text-primary">planear</span> juntos
+              <span className="italic text-taupe">planear</span> juntos
             </h1>
-            <p className="text-charcoal-muted mt-6 max-w-lg mx-auto leading-relaxed">
+            <p className="text-ebony-muted mt-6 max-w-lg mx-auto leading-relaxed">
               La primera consulta es completamente gratuita y sin compromiso.
               Cuéntanos tu sueño y lo haremos realidad.
             </p>
@@ -74,35 +74,35 @@ export default function ContactoPage() {
             {/* Contact Info Sidebar */}
             <div className="lg:col-span-2">
               <AnimatedSection>
-                <p className="overline-label text-gold mb-6">Información de contacto</p>
+                <p className="label text-taupe mb-6">Información de contacto</p>
                 <div className="space-y-6 mb-10">
                   {contactInfo.map((info) => {
                     const Icon = info.icon;
                     return (
                       <div key={info.label} className="flex items-start gap-4">
                         <div
-                          className="w-9 h-9 border border-gold/30 flex items-center justify-center shrink-0"
+                          className="w-9 h-9 border border-taupe/30 flex items-center justify-center shrink-0"
                           aria-hidden="true"
                         >
-                          <Icon size={14} className="text-gold" />
+                          <Icon size={14} className="text-taupe" />
                         </div>
                         <div>
-                          <p className="text-[10px] tracking-widest uppercase font-medium text-charcoal-muted mb-0.5">
+                          <p className="text-[10px] tracking-widest uppercase font-medium text-ebony-muted mb-0.5">
                             {info.label}
                           </p>
                           {info.href ? (
                             <a
                               href={info.href}
-                              className="text-sm font-medium text-charcoal hover:text-primary transition-colors duration-200"
+                              className="text-sm font-medium text-ebony hover:text-taupe transition-colors duration-200"
                             >
                               {info.value}
                             </a>
                           ) : (
-                            <p className="text-sm font-medium text-charcoal">
+                            <p className="text-sm font-medium text-ebony">
                               {info.value}
                             </p>
                           )}
-                          <p className="text-xs text-charcoal-muted mt-0.5">
+                          <p className="text-xs text-ebony-muted mt-0.5">
                             {info.description}
                           </p>
                         </div>
@@ -113,14 +113,14 @@ export default function ContactoPage() {
 
                 {/* Social */}
                 <div>
-                  <p className="overline-label text-gold mb-4">Redes sociales</p>
+                  <p className="label text-taupe mb-4">Redes sociales</p>
                   <div className="flex gap-4">
                     <a
                       href="https://www.facebook.com/letymaldonadoeventos"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Facebook de Lety Maldonado Eventos"
-                      className="flex items-center gap-2 text-xs text-charcoal hover:text-primary transition-colors duration-200 tracking-wider uppercase"
+                      className="flex items-center gap-2 text-xs text-ebony hover:text-taupe transition-colors duration-200 tracking-wider uppercase"
                     >
                       <Facebook size={14} aria-hidden="true" />
                       Facebook
@@ -130,7 +130,7 @@ export default function ContactoPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram de Lety Maldonado Eventos"
-                      className="flex items-center gap-2 text-xs text-charcoal hover:text-primary transition-colors duration-200 tracking-wider uppercase"
+                      className="flex items-center gap-2 text-xs text-ebony hover:text-taupe transition-colors duration-200 tracking-wider uppercase"
                     >
                       <Instagram size={14} aria-hidden="true" />
                       Instagram
@@ -140,7 +140,7 @@ export default function ContactoPage() {
 
                 {/* Map placeholder */}
                 <div className="mt-10">
-                  <p className="overline-label text-gold mb-4">Área de servicio</p>
+                  <p className="label text-taupe mb-4">Área de servicio</p>
                   <div
                     className="aspect-[4/3] bg-cream-warm border border-cream-warm flex items-center justify-center"
                     role="img"
@@ -148,13 +148,13 @@ export default function ContactoPage() {
                   >
                     {/* Replace with actual Google Maps embed */}
                     <div className="text-center p-6">
-                      <MapPin size={24} className="text-gold/40 mx-auto mb-2" aria-hidden="true" />
-                      <p className="text-xs text-charcoal-muted">
+                      <MapPin size={24} className="text-taupe/40 mx-auto mb-2" aria-hidden="true" />
+                      <p className="text-xs text-ebony-muted">
                         Monclova · Cuatrociénegas
                         <br />
                         Minas de Mármol · Coahuila
                       </p>
-                      <p className="text-[10px] text-charcoal-muted/60 mt-2">
+                      <p className="text-[10px] text-ebony-muted/60 mt-2">
                         [Agregar Google Maps embed aquí]
                       </p>
                     </div>
@@ -166,8 +166,8 @@ export default function ContactoPage() {
             {/* Form */}
             <div className="lg:col-span-3">
               <AnimatedSection delay={200}>
-                <p className="overline-label text-gold mb-6">Solicitar cotización</p>
-                <h2 className="font-serif text-2xl text-charcoal font-light mb-8">
+                <p className="label text-taupe mb-6">Solicitar cotización</p>
+                <h2 className="font-serif text-2xl text-ebony font-light mb-8">
                   Cuéntanos sobre tu evento
                 </h2>
                 <ContactForm />
@@ -178,10 +178,10 @@ export default function ContactoPage() {
       </section>
 
       {/* Booking section */}
-      <section className="section-padding-sm bg-wine">
+      <section className="section-padding-sm bg-ebony">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="overline-label text-gold/80 mb-3">Agenda tu consulta</p>
+            <p className="label text-taupe/80 mb-3">Agenda tu consulta</p>
             <h2 className="font-serif text-display-sm text-cream font-light mb-4">
               Consulta inicial gratuita
             </h2>
@@ -191,7 +191,7 @@ export default function ContactoPage() {
             </p>
             <a
               href="tel:+528666335252"
-              className="btn-primary bg-gold hover:bg-gold-dark text-charcoal"
+              className="btn-dark"
             >
               <Phone size={14} aria-hidden="true" />
               Llamar para agendar

@@ -46,22 +46,22 @@ export default function NosotrosPage() {
     <>
       {/* Page Header */}
       <section
-        className="pt-36 pb-20 bg-charcoal relative overflow-hidden"
+        className="pt-36 pb-20 bg-ebony relative overflow-hidden"
         aria-labelledby="nosotros-heading"
       >
         <div
-          className="absolute inset-0 bg-gradient-to-br from-wine/30 to-charcoal"
+          className="absolute inset-0 bg-gradient-to-br from-taupe/30 to-charcoal"
           aria-hidden="true"
         />
         <div className="container-narrow relative z-10 text-center">
           <AnimatedSection>
-            <p className="overline-label text-gold mb-4">Quiénes somos</p>
+            <p className="label text-taupe mb-4">Quiénes somos</p>
             <h1
               id="nosotros-heading"
               className="font-serif text-display-lg text-cream font-light leading-tight"
             >
               Una historia de{" "}
-              <span className="italic text-primary-light">amor</span> por los eventos
+              <span className="italic text-taupe-light">amor</span> por los eventos
             </h1>
           </AnimatedSection>
         </div>
@@ -72,9 +72,9 @@ export default function NosotrosPage() {
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
-              <div className="relative aspect-[3/4] bg-wine/20 overflow-hidden">
+              <div className="relative aspect-[3/4] bg-ebony/20 overflow-hidden">
                 {/* Replace with real image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-wine/50 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-taupe/30 to-ebony/50 flex items-center justify-center">
                   <p className="text-cream/40 text-sm text-center px-6">
                     [ Fotografía de Lety Maldonado ]
                   </p>
@@ -83,13 +83,13 @@ export default function NosotrosPage() {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <p className="overline-label text-gold mb-4">Mi historia</p>
-              <h2 className="font-serif text-display-sm text-charcoal font-light mb-6">
-                Hola, soy <span className="italic text-primary">Lety Maldonado</span>
+              <p className="label text-taupe mb-4">Mi historia</p>
+              <h2 className="font-serif text-display-sm text-ebony font-light mb-6">
+                Hola, soy <span className="italic text-taupe">Lety Maldonado</span>
               </h2>
-              <span className="gold-line-left mb-6" aria-hidden="true" />
+              <span className="divider mb-6" aria-hidden="true" />
 
-              <div className="space-y-5 text-charcoal-muted leading-relaxed">
+              <div className="space-y-5 text-ebony-muted leading-relaxed">
                 <p>
                   Me encanta decorar eventos, hacerlos únicos y memorables, llenos de
                   detalles espectaculares. Siempre con el gusto por crear espacios lindos,
@@ -121,11 +121,11 @@ export default function NosotrosPage() {
                   { value: "3", label: "Ciudades atendidas" },
                   { value: "100%", label: "Clientes satisfechos" },
                 ].map((stat) => (
-                  <div key={stat.label} className="border-l-2 border-gold pl-4">
-                    <p className="font-serif text-3xl text-charcoal font-light">
+                  <div key={stat.label} className="border-l-2 border-taupe pl-4">
+                    <p className="font-serif text-3xl text-ebony font-light">
                       {stat.value}
                     </p>
-                    <p className="text-xs tracking-widest uppercase text-charcoal-muted mt-1 font-sans">
+                    <p className="text-xs tracking-widest uppercase text-ebony-muted mt-1 font-sans">
                       {stat.label}
                     </p>
                   </div>
@@ -150,15 +150,15 @@ export default function NosotrosPage() {
               return (
                 <AnimatedSection key={value.title} delay={i * 120} className="text-center">
                   <div
-                    className="w-14 h-14 border border-gold/30 flex items-center justify-center mx-auto mb-6"
+                    className="w-14 h-14 border border-taupe/30 flex items-center justify-center mx-auto mb-6"
                     aria-hidden="true"
                   >
-                    <Icon size={22} className="text-gold" />
+                    <Icon size={22} className="text-taupe" />
                   </div>
-                  <h3 className="font-serif text-2xl text-charcoal mb-3">
+                  <h3 className="font-serif text-2xl text-ebony mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-sm text-charcoal-muted leading-relaxed">
+                  <p className="text-sm text-ebony-muted leading-relaxed">
                     {value.description}
                   </p>
                 </AnimatedSection>
@@ -169,7 +169,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding bg-charcoal" aria-labelledby="timeline-heading">
+      <section className="section-padding bg-ebony" aria-labelledby="timeline-heading">
         <div className="container-narrow">
           <SectionHeading
             script="Nuestra trayectoria"
@@ -179,7 +179,7 @@ export default function NosotrosPage() {
           />
           <div className="relative">
             <div
-              className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gold/20"
+              className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-taupe/20"
               aria-hidden="true"
             />
             <div className="space-y-10">
@@ -196,7 +196,7 @@ export default function NosotrosPage() {
                   <div className={`hidden md:block flex-1 ${i % 2 === 0 ? "text-right" : "text-left"}`}>
                     {i % 2 === 0 && (
                       <div>
-                        <p className="font-serif text-4xl text-gold/40 font-light">
+                        <p className="font-serif text-4xl text-taupe/40 font-light">
                           {milestone.year}
                         </p>
                         <p className="text-cream/70 text-sm mt-1">{milestone.event}</p>
@@ -205,17 +205,17 @@ export default function NosotrosPage() {
                   </div>
                   {/* Dot */}
                   <div
-                    className="w-3 h-3 rounded-full bg-gold shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 z-10 ml-2.5 md:ml-0"
+                    className="w-3 h-3 rounded-full bg-taupe shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 z-10 ml-2.5 md:ml-0"
                     aria-hidden="true"
                   />
                   <div className={`flex-1 pl-6 md:pl-0 ${i % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
                     <div className="md:hidden">
-                      <p className="font-serif text-3xl text-gold/40 font-light">{milestone.year}</p>
+                      <p className="font-serif text-3xl text-taupe/40 font-light">{milestone.year}</p>
                       <p className="text-cream/70 text-sm mt-1">{milestone.event}</p>
                     </div>
                     {i % 2 !== 0 && (
                       <div className="hidden md:block">
-                        <p className="font-serif text-4xl text-gold/40 font-light">
+                        <p className="font-serif text-4xl text-taupe/40 font-light">
                           {milestone.year}
                         </p>
                         <p className="text-cream/70 text-sm mt-1">{milestone.event}</p>
@@ -239,7 +239,7 @@ export default function NosotrosPage() {
             </h2>
             <Link
               href="/contacto"
-              className="btn-wine"
+              className="btn-dark"
             >
               Agendar consulta gratuita
             </Link>

@@ -79,13 +79,13 @@ export default function PreciosPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-charcoal">
+      <section className="pt-36 pb-20 bg-ebony">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="overline-label text-gold mb-4">Inversión en tu evento</p>
+            <p className="label text-taupe mb-4">Inversión en tu evento</p>
             <h1 className="font-serif text-display-lg text-cream font-light">
               Paquetes a tu{" "}
-              <span className="italic text-primary-light">medida</span>
+              <span className="italic text-taupe-light">medida</span>
             </h1>
             <p className="text-cream/60 text-base mt-6 max-w-xl mx-auto">
               Todos los precios son orientativos. Cada evento es único y recibe
@@ -105,13 +105,13 @@ export default function PreciosPage() {
                 delay={i * 120}
                 className={`relative flex flex-col border ${
                   pkg.featured
-                    ? "border-gold bg-wine text-cream shadow-2xl scale-[1.02]"
+                    ? "border-taupe bg-ebony text-cream shadow-2xl scale-[1.02]"
                     : "border-cream-warm bg-cream"
                 }`}
               >
                 {pkg.featured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-gold text-charcoal text-[9px] tracking-ultra-wide uppercase px-4 py-1 font-sans font-medium">
+                    <span className="bg-taupe text-cream-light text-[9px] tracking-widest uppercase px-4 py-1 font-sans font-medium">
                       Más popular
                     </span>
                   </div>
@@ -119,32 +119,32 @@ export default function PreciosPage() {
 
                 <div className="p-8 md:p-10 flex-1">
                   <p
-                    className={`overline-label mb-2 ${pkg.featured ? "text-gold" : "text-gold"}`}
+                    className={`label mb-2 ${pkg.featured ? "text-taupe" : "text-taupe"}`}
                   >
                     {pkg.tagline}
                   </p>
                   <h2
                     className={`font-serif text-3xl font-light mb-4 ${
-                      pkg.featured ? "text-cream" : "text-charcoal"
+                      pkg.featured ? "text-cream" : "text-ebony"
                     }`}
                   >
                     {pkg.name}
                   </h2>
                   <div
-                    className={`h-px w-10 mb-6 ${pkg.featured ? "bg-gold" : "bg-gold"}`}
+                    className={`h-px w-10 mb-6 ${pkg.featured ? "bg-taupe" : "bg-taupe"}`}
                     aria-hidden="true"
                   />
 
                   <p
                     className={`font-serif text-4xl font-light mb-1 ${
-                      pkg.featured ? "text-gold" : "text-primary"
+                      pkg.featured ? "text-taupe" : "text-taupe"
                     }`}
                   >
                     {pkg.price}
                   </p>
                   <p
                     className={`text-xs tracking-widest uppercase mb-6 ${
-                      pkg.featured ? "text-cream/50" : "text-charcoal-muted"
+                      pkg.featured ? "text-cream/50" : "text-ebony-muted"
                     }`}
                   >
                     {pkg.currency} · precio orientativo
@@ -152,7 +152,7 @@ export default function PreciosPage() {
 
                   <p
                     className={`text-sm leading-relaxed mb-8 ${
-                      pkg.featured ? "text-cream/70" : "text-charcoal-muted"
+                      pkg.featured ? "text-cream/70" : "text-ebony-muted"
                     }`}
                   >
                     {pkg.description}
@@ -164,11 +164,11 @@ export default function PreciosPage() {
                         <Check
                           size={14}
                           className={`shrink-0 mt-0.5 ${
-                            pkg.featured ? "text-gold" : "text-gold"
+                            pkg.featured ? "text-taupe" : "text-taupe"
                           }`}
                           aria-hidden="true"
                         />
-                        <span className={pkg.featured ? "text-cream/80" : "text-charcoal"}>
+                        <span className={pkg.featured ? "text-cream/80" : "text-ebony"}>
                           {feature}
                         </span>
                       </li>
@@ -179,7 +179,7 @@ export default function PreciosPage() {
                         className="flex items-start gap-3 text-sm opacity-40"
                       >
                         <span className="w-3.5 h-0.5 bg-current shrink-0 mt-2" aria-hidden="true" />
-                        <span className={pkg.featured ? "text-cream" : "text-charcoal"}>
+                        <span className={pkg.featured ? "text-cream" : "text-ebony"}>
                           {item}
                         </span>
                       </li>
@@ -192,8 +192,8 @@ export default function PreciosPage() {
                     href="/contacto"
                     className={`w-full flex items-center justify-center gap-2 py-3.5 text-sm tracking-widest uppercase font-sans font-medium transition-all duration-300 ${
                       pkg.featured
-                        ? "bg-gold text-charcoal hover:bg-gold-dark"
-                        : "border border-charcoal text-charcoal hover:bg-charcoal hover:text-cream"
+                        ? "bg-taupe text-cream-light hover:bg-taupe-dark"
+                        : "border border-charcoal text-ebony hover:bg-ebony hover:text-cream"
                     }`}
                   >
                     {pkg.cta}
@@ -204,14 +204,14 @@ export default function PreciosPage() {
           </div>
 
           {/* Note */}
-          <AnimatedSection delay={300} className="mt-12 p-6 bg-cream-warm border-l-2 border-gold">
+          <AnimatedSection delay={300} className="mt-12 p-6 bg-cream-warm border-l-2 border-taupe">
             <div className="flex items-start gap-3">
-              <HelpCircle size={16} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
+              <HelpCircle size={16} className="text-taupe shrink-0 mt-0.5" aria-hidden="true" />
               <div>
-                <p className="text-sm font-medium text-charcoal mb-1">
+                <p className="text-sm font-medium text-ebony mb-1">
                   ¿Por qué los precios son orientativos?
                 </p>
-                <p className="text-sm text-charcoal-muted leading-relaxed">
+                <p className="text-sm text-ebony-muted leading-relaxed">
                   Cada evento es único: número de invitados, venue, temporada, servicios
                   adicionales y distancia afectan el precio final. Por eso ofrecemos
                   cotizaciones 100% personalizadas sin costo ni compromiso.

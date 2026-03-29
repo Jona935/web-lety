@@ -34,6 +34,14 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
+  // Close mobile menu when viewport grows past lg breakpoint
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const handler = () => { if (mq.matches) setMobileOpen(false); };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   const transparent = isHome && !scrolled;
 
   return (
@@ -65,7 +73,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden xl:flex items-center gap-6" aria-label="Principal">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6" aria-label="Principal">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -84,7 +92,7 @@ export default function Header() {
             {/* Mobile toggle */}
             <button
               className={cn(
-                "xl:hidden p-2 transition-colors",
+                "lg:hidden p-2 transition-colors",
                 transparent ? "text-cream-light" : "text-ebony"
               )}
               onClick={() => setMobileOpen(!mobileOpen)}

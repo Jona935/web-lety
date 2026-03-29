@@ -108,7 +108,7 @@ export default function Header() {
       {/* Mobile overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-ebony flex flex-col transition-all duration-500",
+          "fixed inset-0 z-[60] bg-ebony flex flex-col transition-all duration-500",
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >

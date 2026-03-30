@@ -8,11 +8,10 @@ import { Menu, X, Phone, Instagram, Facebook } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/wedding-planner-monclova", label: "Wedding Planner" },
-  { href: "/diseno-eventos", label: "Diseño Eventos" },
-  { href: "/bodas-cuatro-cienegas", label: "Bodas Cuatrociénegas" },
-  { href: "/organizadores-bodas-monclova", label: "Organizadores" },
-  { href: "/eventos-monclova", label: "Eventos Monclova" },
+  { href: "/nosotros", label: "Quién Soy?" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/bodas-cuatro-cienegas", label: "Eventos Cuatro Ciénegas" },
+  { href: "/portafolio", label: "Galería" },
   { href: "/contacto", label: "Contacto" },
 ];
 

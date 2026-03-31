@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import MagneticButton from "@/components/shared/MagneticButton";
 
 const pages = [
   { href: "/nosotros", label: "Nosotros" },
@@ -45,9 +48,9 @@ export default function Footer() {
               La primera consulta es gratuita y sin compromiso.
             </p>
           </div>
-          <Link href="/contacto" className="btn-outline-light shrink-0">
+          <MagneticButton as="a" href="/contacto" className="btn-outline-light shrink-0">
             Cotizar mi evento
-          </Link>
+          </MagneticButton>
         </div>
       </div>
 

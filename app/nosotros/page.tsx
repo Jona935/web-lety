@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Award, Heart, Users, GraduationCap } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeading from "@/components/shared/SectionHeading";
+import StatsCounter from "@/components/nosotros/StatsCounter";
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros",
@@ -117,23 +118,7 @@ export default function NosotrosPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6 mt-10">
-                {[
-                  { value: "500+", label: "Eventos realizados" },
-                  { value: "11+", label: "Años de experiencia" },
-                  { value: "3", label: "Ciudades atendidas" },
-                  { value: "100%", label: "Clientes satisfechos" },
-                ].map((stat) => (
-                  <div key={stat.label} className="border-l-2 border-taupe pl-4">
-                    <p className="font-serif text-3xl text-ebony font-light">
-                      {stat.value}
-                    </p>
-                    <p className="text-xs tracking-widest uppercase text-ebony-muted mt-1 font-sans">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <StatsCounter />
             </AnimatedSection>
           </div>
         </div>

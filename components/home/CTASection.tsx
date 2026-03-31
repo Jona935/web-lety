@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Instagram, Facebook } from "lucide-react";
+import { Phone, Instagram } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
+import MagneticButton from "@/components/shared/MagneticButton";
 
 export default function CTASection() {
   return (
@@ -42,13 +45,13 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-            <Link href="/contacto" className="btn-outline-light">
+            <MagneticButton as="a" href="/contacto" className="btn-outline-light">
               Solicitar cotización gratuita
-            </Link>
-            <a href="tel:+528661430043" className="btn-ghost-light">
+            </MagneticButton>
+            <MagneticButton as="a" href="tel:+528661430043" className="btn-ghost-light">
               <Phone size={12} aria-hidden="true" />
               (866) 143-00-43
-            </a>
+            </MagneticButton>
           </div>
 
           {/* Socials */}

@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Users\\\\USUARIO\\\\Documents\\\\proyectos\\\\lety\")",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Read(//c/Users/USUARIO/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1/**)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"wedding planner events elegant luxury service\" --design-system -p \"Lety Maldonado Eventos\")",
+      "Bash(python \"C:/Users/USUARIO/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1/src/ui-ux-pro-max/scripts/search.py\" \"wedding planner events elegant luxury service\" --design-system -p \"Lety Maldonado Eventos\")",
+      "Bash(npx next:*)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_pages",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__navigate_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__lighthouse_audit",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_screenshot",
+      "Bash(python -c \":*)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__emulate",
+      "Bash(for file:*)",
+      "Bash(do)",
+      "Bash(sed -i -e 's/text-charcoal-muted/text-ebony-muted/g' -e 's/text-charcoal-light/text-ebony-muted/g' -e 's/text-charcoal/text-ebony/g' -e 's/bg-charcoal/bg-ebony/g' -e 's/text-primary-light/text-taupe-light/g' -e 's/text-primary/text-taupe/g' -e 's/border-primary/border-taupe/g' -e 's/overline-label/label/g' -e 's/gold-line-left/divider/g' -e 's/bg-wine/bg-ebony/g' -e 's/btn-wine/btn-dark/g' -e 's/btn-primary bg-gold hover:bg-gold-dark text-ebony/btn-dark/g' -e 's/hover:text-primary/hover:text-taupe/g' -e 's/hover:bg-ebony-dark/hover:bg-ebony-light/g' -e 's/bg-gold text-ebony/bg-taupe text-cream-light/g' -e 's/bg-gold/bg-taupe/g' -e 's/hover:bg-gold-dark/hover:bg-ebony-light/g' -e 's/border-gold/border-taupe/g' -e 's/text-gold/text-taupe/g' -e 's/bg-wine\\\\/20/bg-taupe\\\\/20/g' -e 's/from-wine\\\\/30/from-taupe\\\\/30/g' -e 's/from-primary\\\\/30/from-taupe\\\\/30/g' -e 's/to-wine\\\\/50/to-ebony\\\\/50/g' \"$file\")",
+      "Bash(echo \"Fixed: $file\")",
+      "Bash(done)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(taskkill //F //IM chrome.exe)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__evaluate_script",
+      "Bash(cp \"C:/Users/USUARIO/Downloads/bodas-en-cuatrocienegas.avif\" \"C:/Users/USUARIO/Documents/proyectos/lety/public/images/cert-aifd.avif\")",
+      "Bash(cp \"C:/Users/USUARIO/Downloads/Bodas-Cuatro-Cienegas.avif\" \"C:/Users/USUARIO/Documents/proyectos/lety/public/images/cert-abc.avif\")",
+      "Bash(cp \"C:/Users/USUARIO/Downloads/bodas-en-cuatrocienegas.avif\" \"C:/Users/USUARIO/Documents/proyectos/lety/public/images/cert-abc-documento.avif\")",
+      "Bash(cp \"C:/Users/USUARIO/Downloads/Bodas-Cuatro-Cienegas.avif\" \"C:/Users/USUARIO/Documents/proyectos/lety/public/images/cert-abc-sello.avif\")",
+      "Bash(npx skills:*)"
+    ]
+  }
+}

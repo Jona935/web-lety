@@ -79,7 +79,7 @@ export default function PreciosPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-ebony">
+      <section className="pt-36 pb-20 bg-cream-warm">
         <div className="container-narrow text-center">
           <AnimatedSection>
             <p className="label text-taupe mb-4">Inversión en tu evento</p>
@@ -193,7 +193,7 @@ export default function PreciosPage() {
                     className={`w-full flex items-center justify-center gap-2 py-3.5 text-sm tracking-widest uppercase font-sans font-medium transition-all duration-300 ${
                       pkg.featured
                         ? "bg-taupe text-cream-light hover:bg-taupe-dark"
-                        : "border border-charcoal text-ebony hover:bg-ebony hover:text-cream"
+                        : "border border-ebony/30 text-ebony hover:bg-ebony hover:text-cream"
                     }`}
                   >
                     {pkg.cta}

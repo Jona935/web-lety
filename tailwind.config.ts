@@ -54,11 +54,16 @@ const config: Config = {
       animation: {
         "fade-up": "fadeUp 1s cubic-bezier(0.16,1,0.3,1) forwards",
         "fade-in": "fadeIn 1.2s ease forwards",
+        "marquee": "marquee 28s linear infinite",
       },
       keyframes: {
         fadeUp: {
           "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         fadeIn: {
           "0%": { opacity: "0" },

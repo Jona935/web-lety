@@ -138,26 +138,24 @@ export default function ContactoPage() {
                   </div>
                 </div>
 
-                {/* Map placeholder */}
+                {/* Coverage area */}
                 <div className="mt-10">
                   <p className="label text-taupe mb-4">Área de servicio</p>
-                  <div
-                    className="aspect-[4/3] bg-cream-warm border border-cream-warm flex items-center justify-center"
-                    role="img"
-                    aria-label="Mapa de área de servicio: Monclova, Cuatrociénegas y Minas de Mármol"
-                  >
-                    {/* Replace with actual Google Maps embed */}
-                    <div className="text-center p-6">
-                      <MapPin size={24} className="text-taupe/40 mx-auto mb-2" aria-hidden="true" />
-                      <p className="text-xs text-ebony-muted">
-                        Monclova · Cuatrociénegas
-                        <br />
-                        Minas de Mármol · Coahuila
-                      </p>
-                      <p className="text-[10px] text-ebony-muted/60 mt-2">
-                        [Agregar Google Maps embed aquí]
-                      </p>
-                    </div>
+                  <div className="space-y-3">
+                    {[
+                      { city: "Monclova", detail: "Ciudad base · amplia red de proveedores" },
+                      { city: "Cuatrociénegas", detail: "Bodas destino · paisajes únicos" },
+                      { city: "Minas de Mármol", detail: "Espacios naturales exclusivos" },
+                      { city: "Región Noreste", detail: "Coahuila · Saltillo · Monterrey" },
+                    ].map((item) => (
+                      <div key={item.city} className="flex items-start gap-3 py-3 border-b border-cream-dark/40 last:border-0">
+                        <MapPin size={13} className="text-taupe shrink-0 mt-0.5" aria-hidden="true" />
+                        <div>
+                          <p className="text-sm font-medium text-ebony">{item.city}</p>
+                          <p className="text-xs text-ebony-muted mt-0.5">{item.detail}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </AnimatedSection>
@@ -178,14 +176,14 @@ export default function ContactoPage() {
       </section>
 
       {/* Booking section */}
-      <section className="section-padding-sm bg-ebony">
+      <section className="section-padding-sm bg-cream-warm">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="label text-taupe/80 mb-3">Agenda tu consulta</p>
-            <h2 className="font-serif text-display-sm text-cream font-light mb-4">
+            <p className="label text-taupe mb-3">Agenda tu consulta</p>
+            <h2 className="font-serif text-display-sm text-ebony font-light mb-4">
               Consulta inicial gratuita
             </h2>
-            <p className="text-cream/60 text-sm mb-6 max-w-md mx-auto">
+            <p className="text-ebony-muted text-sm mb-6 max-w-md mx-auto">
               Agenda una videollamada o cita presencial de 30 minutos para
               conocernos y hablar sobre tu evento sin compromiso.
             </p>

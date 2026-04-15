@@ -11,7 +11,7 @@ export default function CTASection() {
     <section className="section-padding bg-ebony relative overflow-hidden" aria-labelledby="cta-heading">
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80"
+        src="/images/real/salon-noche-alberca.jpg"
         alt=""
         fill
         className="object-cover opacity-15"
@@ -22,15 +22,10 @@ export default function CTASection() {
 
       <div className="container-narrow relative z-10 text-center">
         <AnimatedSection>
-          {/* Logo */}
-          <div className="mb-10 flex justify-center">
-            <Image
-              src="/images/logo.png"
-              alt="Lety Maldonado Eventos"
-              width={80}
-              height={56}
-              className="brightness-0 invert opacity-60 object-contain"
-            />
+          {/* Logo text */}
+          <div className="mb-10 flex flex-col items-center leading-none gap-1">
+            <span className="font-serif text-2xl tracking-widest text-cream/80">Lety Maldonado</span>
+            <span className="font-script text-xl text-taupe-light">Wedding Planner</span>
           </div>
 
           <p className="font-script text-script-md text-taupe-light mb-4">¿Lista para comenzar?</p>
@@ -48,9 +43,9 @@ export default function CTASection() {
             <MagneticButton as="a" href="/contacto" className="btn-outline-light">
               Solicitar cotización gratuita
             </MagneticButton>
-            <MagneticButton as="a" href="tel:+528661430043" className="btn-ghost-light">
+            <MagneticButton as="a" href="tel:+528666335252" className="btn-ghost-light">
               <Phone size={12} aria-hidden="true" />
-              (866) 143-00-43
+              (866) 633-5252
             </MagneticButton>
           </div>
 

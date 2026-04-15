@@ -8,9 +8,9 @@ import SectionHeading from "@/components/shared/SectionHeading";
 const testimonials = [
   {
     id: 1,
-    name: "Ana & Roberto García",
-    event: "Boda · Monclova, 2024",
-    text: "Lety convirtió nuestra boda en algo más hermoso de lo que jamás imaginamos. Su metodología nos dio tranquilidad desde el primer día. Cada momento estuvo perfectamente coordinado.",
+    name: "Stephanie & Hector",
+    event: "Boda Destino · Cuatrociénegas",
+    text: "Con toda tranquilidad dejé todo en manos de Lety, lo más importante de mi boda. Ella se encargó de todo y fue una noche absolutamente mágica. Cuatro Ciénegas fue el escenario perfecto.",
   },
   {
     id: 2,
@@ -20,9 +20,15 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Carlos & Valentina Morales",
-    event: "Boda · Minas de Mármol, 2023",
-    text: "Viajamos desde Monterrey para casarnos y Lety coordinó todo a la perfección. El servicio fue completamente integral y siempre estuvo disponible cuando la necesitamos.",
+    name: "Ana & Roberto García",
+    event: "Boda · Monclova, 2024",
+    text: "Lety convirtió nuestra boda en algo más hermoso de lo que jamás imaginamos. Su metodología de 6 citas nos dio tranquilidad desde el primer día. Cada momento estuvo perfectamente coordinado.",
+  },
+  {
+    id: 4,
+    name: "Familia Martínez",
+    event: "XV Años · Cuatrociénegas",
+    text: "Organizamos la quinceañera de nuestra hija en Cuatro Ciénegas y fue un sueño hecho realidad. Lety manejó cada detalle con una profesionalidad y calidez que nos dejó sin palabras.",
   },
 ];
 

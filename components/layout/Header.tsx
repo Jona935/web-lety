@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Instagram, Facebook } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -56,19 +55,21 @@ export default function Header() {
         <div className="container-wide">
           <div className="flex items-center justify-between h-16 md:h-20">
 
-            {/* Logo */}
-            <Link href="/" aria-label="Lety Maldonado Eventos — Inicio">
-              <Image
-                src="/images/logo.png"
-                alt="Lety Maldonado Eventos"
-                width={90}
-                height={60}
-                className={cn(
-                  "object-contain transition-all duration-500",
-                  transparent ? "brightness-0 invert" : "brightness-0"
-                )}
-                priority
-              />
+            {/* Logo — hidden on home hero, fades in on scroll */}
+            <Link
+              href="/"
+              aria-label="Lety Maldonado Eventos — Inicio"
+              className={cn(
+                "flex flex-col leading-none transition-all duration-700",
+                transparent ? "opacity-0 pointer-events-none" : "opacity-100"
+              )}
+            >
+              <span className="font-serif text-lg tracking-wide text-ebony">
+                Lety Maldonado
+              </span>
+              <span className="font-script text-base text-taupe">
+                Wedding Planner
+              </span>
             </Link>
 
             {/* Desktop Nav */}
@@ -78,8 +79,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "nav-link",
-                    transparent ? "text-cream-light after:bg-cream-light" : "text-ebony",
+                    "nav-link text-ebony",
                     pathname === link.href && "text-taupe after:w-full"
                   )}
                 >
@@ -90,10 +90,7 @@ export default function Header() {
 
             {/* Mobile toggle */}
             <button
-              className={cn(
-                "lg:hidden p-2 transition-colors",
-                transparent ? "text-cream-light" : "text-ebony"
-              )}
+              className="lg:hidden p-2 text-ebony transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={mobileOpen}
@@ -107,22 +104,19 @@ export default function Header() {
       {/* Mobile overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-[60] bg-ebony flex flex-col transition-all duration-500",
+          "fixed inset-0 z-[60] bg-cream-light flex flex-col transition-all duration-500",
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
-        {/* Close button - top right */}
+        {/* Header row */}
         <div className="flex items-center justify-between px-6 pt-5 pb-4">
-          <Image
-            src="/images/logo.png"
-            alt="Lety Maldonado Eventos"
-            width={70}
-            height={48}
-            className="brightness-0 invert opacity-60 object-contain"
-          />
+          <div className="flex flex-col leading-none">
+            <span className="font-serif text-lg tracking-wide text-ebony/80">Lety Maldonado</span>
+            <span className="font-script text-base text-taupe">Wedding Planner</span>
+          </div>
           <button
             onClick={() => setMobileOpen(false)}
-            className="w-10 h-10 flex items-center justify-center border border-cream/20 text-cream/70 hover:text-cream hover:border-cream/40 transition-colors"
+            className="w-10 h-10 flex items-center justify-center border border-ebony/15 text-ebony/50 hover:text-ebony hover:border-ebony/30 transition-colors"
             aria-label="Cerrar menú"
           >
             <X size={18} />
@@ -130,7 +124,7 @@ export default function Header() {
         </div>
 
         {/* Divider */}
-        <div className="mx-6 h-px bg-cream/10" aria-hidden="true" />
+        <div className="mx-6 h-px bg-ebony/8" aria-hidden="true" />
 
         {/* Nav links */}
         <nav className="flex-1 flex flex-col justify-center px-10 gap-1" aria-label="Menú móvil">
@@ -138,10 +132,10 @@ export default function Header() {
             href="/"
             className={cn(
               "group flex items-center gap-4 py-3 transition-colors",
-              pathname === "/" ? "text-taupe-light" : "text-cream/50 hover:text-cream"
+              pathname === "/" ? "text-taupe" : "text-ebony/35 hover:text-ebony"
             )}
           >
-            <span className="text-[10px] tracking-widest uppercase font-sans text-cream/20 w-6">01</span>
+            <span className="text-[10px] tracking-widest uppercase font-sans text-ebony/20 w-6">01</span>
             <span className="font-serif text-2xl font-light">Inicio</span>
           </Link>
           {navLinks.map((link, i) => (
@@ -150,10 +144,10 @@ export default function Header() {
               href={link.href}
               className={cn(
                 "group flex items-center gap-4 py-3 transition-colors",
-                pathname === link.href ? "text-taupe-light" : "text-cream/50 hover:text-cream"
+                pathname === link.href ? "text-taupe" : "text-ebony/35 hover:text-ebony"
               )}
             >
-              <span className="text-[10px] tracking-widest uppercase font-sans text-cream/20 w-6">
+              <span className="text-[10px] tracking-widest uppercase font-sans text-ebony/20 w-6">
                 {String(i + 2).padStart(2, "0")}
               </span>
               <span className="font-serif text-2xl font-light">{link.label}</span>
@@ -163,12 +157,12 @@ export default function Header() {
 
         {/* Bottom info */}
         <div className="px-10 pb-8">
-          <div className="h-px bg-cream/10 mb-6" aria-hidden="true" />
+          <div className="h-px bg-ebony/8 mb-6" aria-hidden="true" />
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-5">
               <a
                 href="tel:+528666335252"
-                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-cream/30 hover:text-cream/60 transition-colors"
+                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-ebony/30 hover:text-ebony/60 transition-colors"
               >
                 <Phone size={12} aria-hidden="true" />
                 (866) 633-5252
@@ -177,7 +171,7 @@ export default function Header() {
                 href="https://wa.me/528662532615"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] tracking-widest uppercase text-cream/30 hover:text-cream/60 transition-colors"
+                className="text-[10px] tracking-widest uppercase text-ebony/30 hover:text-ebony/60 transition-colors"
               >
                 WhatsApp
               </a>
@@ -188,7 +182,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-cream/30 hover:text-cream/60 transition-colors"
+                className="text-ebony/30 hover:text-ebony/60 transition-colors"
               >
                 <Facebook size={14} />
               </a>
@@ -197,7 +191,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-cream/30 hover:text-cream/60 transition-colors"
+                className="text-ebony/30 hover:text-ebony/60 transition-colors"
               >
                 <Instagram size={14} />
               </a>

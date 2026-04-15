@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, ElementType } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -18,6 +19,7 @@ interface Service {
   description: string;
   includes: string[];
   tag?: string;
+  img: string;
 }
 
 const mainServices: Service[] = [
@@ -37,6 +39,7 @@ const mainServices: Service[] = [
       "Coordinación de imprevistos",
     ],
     tag: "Más solicitado",
+    img: "/images/real/salon-pista-monograma.jpg",
   },
   {
     id: "diseno-floral",
@@ -53,6 +56,7 @@ const mainServices: Service[] = [
       "Centros de mesa con diseño único",
       "Instalaciones florales de gran formato",
     ],
+    img: "/images/real/pared-flores.jpg",
   },
   {
     id: "bodas-xv",
@@ -70,6 +74,7 @@ const mainServices: Service[] = [
       "Proveedores especializados y confiables",
     ],
     tag: "Especialidad",
+    img: "/images/real/boda-minas-ceremonia.jpg",
   },
   {
     id: "eventos-corporativos",
@@ -86,6 +91,7 @@ const mainServices: Service[] = [
       "Servicio de banquete y meseros",
       "Coordinación audiovisual y técnica",
     ],
+    img: "/images/real/salon-chandelier-gold.jpg",
   },
   {
     id: "graduaciones",
@@ -102,6 +108,7 @@ const mainServices: Service[] = [
       "Decoración a medida del evento",
       "Coordinación completa del día",
     ],
+    img: "/images/real/mesa-dulces.jpg",
   },
   {
     id: "mobiliario",
@@ -118,6 +125,7 @@ const mainServices: Service[] = [
       "Arcos, estructuras y pedestales",
       "Vajilla, cristalería y decorativos",
     ],
+    img: "/images/real/salon-telas.jpg",
   },
 ];
 
@@ -191,17 +199,27 @@ export default function ServiciosGrid() {
                   </Link>
                 </div>
 
-                {/* Includes */}
-                <div className="bg-cream-warm p-8 md:p-10">
-                  <p className="label text-taupe mb-6">Incluye</p>
-                  <ul className="space-y-4">
-                    {service.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-ebony">
-                        <span className="w-1.5 h-1.5 rounded-full bg-taupe shrink-0 mt-2" aria-hidden="true" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                {/* Photo + Includes */}
+                <div>
+                  <div className="relative aspect-[4/3] overflow-hidden mb-0">
+                    <Image
+                      src={service.img}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="bg-cream-warm p-8 md:p-10">
+                    <p className="label text-taupe mb-6">Incluye</p>
+                    <ul className="space-y-4">
+                      {service.includes.map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-sm text-ebony">
+                          <span className="w-1.5 h-1.5 rounded-full bg-taupe shrink-0 mt-2" aria-hidden="true" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             );

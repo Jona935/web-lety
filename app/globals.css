@@ -10,11 +10,24 @@
   --cream-dark: #D8CDBF;
   --ebony: #1C1916;
   --ebony-light: #2E2A27;
-  --ebony-muted: #6B6560;
-  --taupe: #9B8070;
-  --taupe-light: #BFB0A3;
+  --ebony-muted: #5A5450;      /* darker for better contrast on light bg */
+  --taupe: #7D6355;             /* richer, deeper taupe — more visible on cream */
+  --taupe-light: #8A7261;       /* darkened one tone — more visible on cream */
   --gold: #C4A882;
   scroll-behavior: smooth;
+}
+
+/* ─── Inverted Color Theme (preview toggle) ─── */
+[data-inverted="true"] {
+  --ebony:        #F7F4F0;   /* was dark, now light */
+  --ebony-light:  #EDE7DF;
+  --ebony-muted:  #8A7E75;   /* mid-tone readable on dark */
+  --cream:        #1C1916;   /* was light, now dark */
+  --cream-light:  #211E1B;
+  --cream-warm:   #252220;
+  --cream-dark:   #2A2520;
+  --taupe:        #A8967F;   /* slightly lighter for dark bg */
+  --taupe-light:  #7D6355;   /* slightly darker for light bg */
 }
 
 /* ─── Base ─── */

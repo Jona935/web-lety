@@ -9,68 +9,96 @@ export const metadata: Metadata = {
     "Galería de bodas, quinceañeras y eventos realizados por Lety Maldonado Eventos en Monclova, Cuatrociénegas y Minas de Mármol.",
 };
 
-const categories = ["Todos", "Bodas", "Quinceañeras", "Eventos"];
-
 const portfolioItems = [
   {
     id: 1,
-    title: "Boda Romántica en Hacienda",
-    category: "Bodas",
-    location: "Monclova",
-    year: "2024",
-    description: "Ceremonia al aire libre con decoración floral en tonos blanco y verde sage",
-    span: "md:col-span-2",
-    img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80",
-  },
-  {
-    id: 2,
-    title: "Quinceañera Celestial",
-    category: "Quinceañeras",
-    location: "Cuatrociénegas",
-    year: "2024",
-    description: "Temática de estrellas en azul marino y dorado",
-    span: "",
-    img: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
-  },
-  {
-    id: 3,
-    title: "Boda Íntima de Jardín",
-    category: "Bodas",
-    location: "Minas de Mármol",
-    year: "2024",
-    description: "30 invitados en un jardín privado con decoración boho",
-    span: "",
-    img: "https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=800&q=80",
-  },
-  {
-    id: 4,
-    title: "Gran Quinceañera Rosa",
-    category: "Quinceañeras",
-    location: "Monclova",
-    year: "2023",
-    description: "200 invitados, decoración en rosas y champagne",
-    span: "",
-    img: "https://images.unsplash.com/photo-1478146059778-26028b07395a?w=800&q=80",
-  },
-  {
-    id: 5,
-    title: "Evento Corporativo Aniversario",
-    category: "Eventos",
-    location: "Monclova",
-    year: "2023",
-    description: "Cena de aniversario empresarial para 150 personas",
-    span: "md:col-span-2",
-    img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80",
-  },
-  {
-    id: 6,
     title: "Boda en Minas de Mármol",
     category: "Bodas",
     location: "Minas de Mármol",
-    year: "2023",
-    description: "Paisaje natural de las minas como telón de fondo",
+    year: "2024",
+    description: "Ceremonia al aire libre con arco floral en las majestuosas paredes de mármol",
+    span: "md:col-span-2",
+    img: "/images/real/boda-minas-ceremonia.jpg",
+  },
+  {
+    id: 2,
+    title: "Salón de Cristal",
+    category: "Bodas",
+    location: "Monclova",
+    year: "2024",
+    description: "Salón de lujo con candelabros dorados y muro floral blanco",
     span: "",
-    img: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80",
+    img: "/images/real/salon-chandelier-cake.jpg",
+  },
+  {
+    id: 3,
+    title: "Diseño Floral",
+    category: "Decoración",
+    location: "Cuatrociénegas",
+    year: "2024",
+    description: "Bouquet de rosas blancas y peonías para boda de destino",
+    span: "",
+    img: "/images/real/novia-bouquet.jpg",
+  },
+  {
+    id: 4,
+    title: "Recepción Dorada",
+    category: "Bodas",
+    location: "Minas de Mármol",
+    year: "2024",
+    description: "Recepción al atardecer con luz dorada en las canteras de mármol",
+    span: "",
+    img: "/images/real/minas-recepcion-dorado.jpg",
+  },
+  {
+    id: 5,
+    title: "Minas de Mármol — Noche",
+    category: "Bodas",
+    location: "Minas de Mármol",
+    year: "2024",
+    description: "Celebración nocturna bajo cielo estrellado en las canteras iluminadas",
+    span: "md:col-span-2",
+    img: "/images/real/minas-noche.jpg",
+  },
+  {
+    id: 6,
+    title: "Mesa Imperial Cuatro Ciénegas",
+    category: "Decoración",
+    location: "Cuatrociénegas",
+    year: "2023",
+    description: "Montaje de mesa con flores blancas frente al paisaje de la laguna",
+    span: "",
+    img: "/images/real/mesa-rosas-panorama.jpg",
+  },
+  {
+    id: 7,
+    title: "Pared de Flores",
+    category: "Decoración",
+    location: "Monclova",
+    year: "2023",
+    description: "Muro floral dorado y blanco como telón para los novios",
+    span: "",
+    img: "/images/real/pared-flores.jpg",
+  },
+  {
+    id: 8,
+    title: "Mesa de Dulces",
+    category: "Decoración",
+    location: "Monclova",
+    year: "2023",
+    description: "Candy bar personalizado con monograma y piso de ajedrez",
+    span: "",
+    img: "/images/real/mesa-dulces.jpg",
+  },
+  {
+    id: 9,
+    title: "Beso en el Arco Floral",
+    category: "Bodas",
+    location: "Cuatrociénegas",
+    year: "2023",
+    description: "El momento más especial enmarcado por un arco de pampas y rosas blancas",
+    span: "md:col-span-2",
+    img: "/images/real/boda-beso-arco.jpg",
   },
 ];
 
@@ -93,32 +121,6 @@ export default function PortafolioPage() {
           </AnimatedSection>
         </div>
       </section>
-
-      {/* Filter Tabs — static, JS filter would need client component */}
-      <div className="bg-cream border-b border-cream-warm sticky top-16 md:top-20 z-30">
-        <div className="container-wide">
-          <div
-            className="flex gap-6 overflow-x-auto py-4 scrollbar-none"
-            role="tablist"
-            aria-label="Filtrar por categoría"
-          >
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                role="tab"
-                aria-selected={cat === "Todos"}
-                className={`text-xs tracking-widest uppercase font-medium shrink-0 pb-1 transition-colors duration-200 ${
-                  cat === "Todos"
-                    ? "text-taupe border-b border-taupe"
-                    : "text-ebony-muted hover:text-ebony"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Portfolio Grid */}
       <section className="section-padding bg-cream" aria-label="Galería de eventos">
@@ -161,16 +163,6 @@ export default function PortafolioPage() {
             ))}
           </div>
 
-          {/* Note about real photos */}
-          <AnimatedSection delay={300} className="mt-8 p-5 bg-cream-warm border-l-2 border-taupe/40">
-            <p className="text-sm text-ebony-muted">
-              <strong className="text-ebony">Nota:</strong> Las imágenes de
-              portafolio serán reemplazadas con las fotografías profesionales de
-              tus eventos reales. Esta es la estructura de galería lista para
-              recibir tu contenido.
-            </p>
-          </AnimatedSection>
-
           {/* CTA */}
           <AnimatedSection delay={400} className="mt-12 text-center">
             <p className="text-ebony-muted mb-6">
@@ -180,6 +172,45 @@ export default function PortafolioPage() {
               Comencemos a planear
             </Link>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Video reel section */}
+      <section className="section-padding bg-ebony" aria-labelledby="video-heading">
+        <div className="container-wide">
+          <AnimatedSection className="text-center mb-14">
+            <p className="label text-taupe-light mb-4">En movimiento</p>
+            <h2 id="video-heading" className="font-serif text-display-md text-cream font-light">
+              Momentos que <span className="italic text-taupe-light">viven</span>
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              { src: "/images/real/video-01.mp4", poster: "/images/real/minas-recepcion-dorado.jpg", label: "Minas de Mármol" },
+              { src: "/images/real/video-02.mp4", poster: "/images/real/boda-minas-ceremonia.jpg", label: "Boda Destino" },
+              { src: "/images/real/video-03.mp4", poster: "/images/real/salon-chandelier-cake.jpg", label: "Eventos Monclova" },
+              { src: "/images/real/video-04.mp4", poster: "/images/real/minas-tarde.jpg", label: "Cuatrociénegas" },
+              { src: "/images/real/video-05.mp4", poster: "/images/real/pared-flores.jpg", label: "Diseño Floral" },
+            ].map((v, i) => (
+              <AnimatedSection key={i} delay={i * 80} className={`relative overflow-hidden bg-ebony-light group ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}>
+                <div className="relative aspect-video">
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    poster={v.poster}
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                  >
+                    <source src={v.src} type="video/mp4" />
+                  </video>
+                  <div className="absolute inset-0 bg-gradient-to-t from-ebony/70 to-transparent pointer-events-none" />
+                  <p className="absolute bottom-4 left-4 label-light text-[9px]">{v.label}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
     </>

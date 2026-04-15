@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { MessageCircle, CheckCircle2 } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
-import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Bodas en Cuatrociénegas | Lety Maldonado Eventos",
   description:
-    "Organizadora de bodas en Cuatrociénegas, Coahuila. Planeación integral, decoración y coordinación para tu boda en el Desierto de los Leones y región de Cuatrociénegas.",
+    "Organizadora de bodas destino en Cuatrociénegas, Coahuila. Bodas bajo las estrellas, XV años y bodas destino con planeación integral, decoración y coordinación.",
 };
 
 const highlights = [
@@ -15,47 +15,99 @@ const highlights = [
   "Coordinación de proveedores locales y de Monclova",
   "Logística de transporte para invitados foráneos",
   "Decoración adaptada al entorno desértico y natural",
-  "Más de 10 años realizando eventos en Coahuila",
+  "Más de 11 años realizando eventos en Coahuila",
   "Soporte el día del evento con equipo completo",
+];
+
+const events = [
+  {
+    title: "Bodas Destino",
+    desc: "Cuatrociénegas es el escenario perfecto para una boda destino. Sus paisajes desérticos únicos en México, cielos estrellados incomparables y pozas de agua cristalina crean una atmósfera mágica que ningún otro lugar puede ofrecer. Coordinamos todo para que tus invitados lleguen, disfruten y recuerden tu día para siempre.",
+    img: "/images/real/cuatro-violinista.jpg",
+  },
+  {
+    title: "XV Años en Cuatrociénegas",
+    desc: "Celebra los quince años más especiales en un entorno que sorprenderá a todos tus invitados. Desde la ceremonia hasta la última pieza musical, coordinamos cada detalle con el cuidado que tu celebración merece. Organizamos la logística completa para que tu familia y amigos disfruten sin preocupaciones.",
+    img: "/images/real/minas-tarde.jpg",
+  },
 ];
 
 export default function BodasCuatrocienegasPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-24 bg-ebony relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-ebony-light/60 to-ebony" aria-hidden="true" />
-        <span className="lm-watermark-light right-0 top-1/2 -translate-y-1/2 translate-x-1/3" aria-hidden="true">LM</span>
-        <div className="container-narrow relative z-10">
+      <section className="pt-36 pb-20 bg-cream-warm relative overflow-hidden min-h-[50vh] flex flex-col justify-end">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/real/minas-atardecer.jpg"
+            alt="Boda destino en Cuatrociénegas"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-cream-warm/95 via-cream-warm/60 to-cream-warm/20" />
+        </div>
+        <span className="lm-watermark right-0 top-1/2 -translate-y-1/2 translate-x-1/3 z-0" aria-hidden="true">LM</span>
+        <div className="container-narrow relative z-10 pb-4">
           <AnimatedSection>
-            <p className="label-light mb-4">Bodas · Cuatrociénegas · Coahuila</p>
-            <h1 className="font-serif text-display-lg text-cream-light font-light leading-tight mb-5">
-              Bodas en Cuatrociénegas
+            <p className="label text-taupe mb-4">Bodas Destino · Cuatrociénegas · Coahuila</p>
+            <h1 className="font-serif text-display-lg text-ebony font-light leading-tight mb-5">
+              Bodas en<br />
+              <span className="italic text-taupe">Cuatrociénegas</span>
             </h1>
-            <span className="divider-light mb-6 block" aria-hidden="true" />
-            <p className="font-script text-script-md text-taupe-light">Un escenario único para tu gran día</p>
+            <span className="divider mb-6 block" aria-hidden="true" />
+            <p className="font-script text-script-md text-taupe">Un escenario único para tu gran día</p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Intro */}
       <section className="section-padding bg-cream-light">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
 
-            <div className="lg:col-span-2 space-y-14">
-              <AnimatedSection>
-                <p className="text-ebony-muted leading-relaxed text-base">
-                  Cuatrociénegas es uno de los destinos más únicos de México para celebrar una boda. Con sus paisajes desérticos, pozas de aguas cristalinas y cielos estrellados incomparables, ofrece un escenario natural que pocos lugares del mundo pueden igualar.
-                </p>
-                <p className="text-ebony-muted leading-relaxed text-base mt-4">
-                  En Lety Maldonado Eventos conocemos la región a la perfección. Hemos organizado bodas en haciendas históricas, ranchos privados, jardines bajo las estrellas y espacios al aire libre que aprovechan al máximo la belleza natural del desierto coahuilense.
-                </p>
-                <p className="text-ebony-muted leading-relaxed text-base mt-4">
-                  Nos encargamos de absolutamente todo: desde la búsqueda del venue perfecto hasta la coordinación de proveedores locales, la logística de transporte para tus invitados y la decoración que se integra armoniosamente con el entorno.
-                </p>
+            <div className="lg:col-span-2 space-y-20">
+
+              {/* Event types */}
+              {events.map((ev, i) => (
+                <AnimatedSection key={ev.title} delay={i * 120} className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                  <div className={i % 2 !== 0 ? "md:order-2" : ""}>
+                    <div className="relative aspect-[4/3] overflow-hidden bg-cream-warm">
+                      <Image src={ev.img} alt={ev.title} fill className="object-cover" />
+                    </div>
+                  </div>
+                  <div>
+                    <p className="label text-taupe mb-3">
+                      {i === 0 ? "Bodas Destino" : "XV Años"}
+                    </p>
+                    <h2 className="font-serif text-display-sm text-ebony font-light mb-4">{ev.title}</h2>
+                    <span className="divider mb-5 block" aria-hidden="true" />
+                    <p className="text-ebony-muted leading-relaxed text-sm">{ev.desc}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+
+              {/* Testimonial — Stephanie & Hector */}
+              <AnimatedSection delay={200}>
+                <div className="bg-cream-warm border border-taupe/15 p-10 md:p-14 relative overflow-hidden">
+                  <span className="absolute top-6 left-8 font-serif text-[8rem] leading-none text-taupe/15 select-none" aria-hidden="true">&ldquo;</span>
+                  <blockquote className="relative z-10">
+                    <p className="font-serif text-xl md:text-2xl text-ebony font-light italic leading-snug mb-8">
+                      Con toda tranquilidad dejé todo en manos de Lety. Lo más importante de mi boda quedó
+                      en las mejores manos posibles. Cuatro Ciénegas fue el escenario más mágico que pudimos imaginar.
+                    </p>
+                    <footer className="flex items-center gap-4">
+                      <span className="h-px w-8 bg-taupe" aria-hidden="true" />
+                      <div>
+                        <p className="font-sans font-medium text-ebony text-sm">Stephanie &amp; Hector</p>
+                        <p className="label text-[9px] mt-0.5">Boda Destino · Cuatrociénegas</p>
+                      </div>
+                    </footer>
+                  </blockquote>
+                </div>
               </AnimatedSection>
 
+              {/* Why Cuatro Ciénegas */}
               <AnimatedSection delay={100}>
                 <h2 className="font-serif text-2xl text-ebony font-light mb-6">¿Por qué casarse en Cuatrociénegas?</h2>
                 <ul className="space-y-3">
@@ -68,11 +120,12 @@ export default function BodasCuatrocienegasPage() {
                 </ul>
               </AnimatedSection>
 
+              {/* Coverage grid */}
               <AnimatedSection delay={150}>
-                <SectionHeading script="Nuestra" title="Cobertura" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                <p className="label text-taupe mb-6">Cobertura regional</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
-                    { title: "Cuatrociénegas", desc: "Sede principal con venues exclusivos y paisajes únicos del desierto de Chihuahuan." },
+                    { title: "Cuatrociénegas", desc: "Sede principal con venues exclusivos y paisajes únicos del desierto chihuahuense." },
                     { title: "Minas de Mármol", desc: "Espacios naturales impresionantes a pocos minutos de Cuatrociénegas." },
                     { title: "Monclova", desc: "Capital regional con amplia oferta de venues, hoteles y proveedores especializados." },
                     { title: "Región Noreste", desc: "Coordinamos bodas en toda Coahuila con logística de proveedores de Saltillo y Monterrey." },
@@ -88,7 +141,7 @@ export default function BodasCuatrocienegasPage() {
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <AnimatedSection delay={200} className="sticky top-28">
+              <AnimatedSection delay={200} className="sticky top-28 space-y-6">
                 <div className="bg-cream-warm p-8 border border-cream-dark/40">
                   <p className="label mb-4">Agenda tu consulta</p>
                   <p className="text-sm text-ebony-muted mb-6 leading-relaxed">
@@ -110,14 +163,14 @@ export default function BodasCuatrocienegasPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 p-6 border border-cream-dark/40">
+                <div className="p-6 border border-cream-dark/40">
                   <p className="label mb-4">Servicios relacionados</p>
                   <ul className="space-y-2">
                     {[
-                      { label: "Bodas y XV Años", href: "/service-page/bodas-y-xv-anos" },
-                      { label: "Diseño Floral", href: "/service-page/diseno-floral" },
-                      { label: "Renta de Mobiliario", href: "/service-page/renta-de-mobiliario" },
-                      { label: "Coordinación y Diseño", href: "/service-page/coordinacion-produccion-y-diseno" },
+                      { label: "Bodas y XV Años", href: "/servicios#bodas-xv" },
+                      { label: "Diseño Floral", href: "/servicios#diseno-floral" },
+                      { label: "Renta de Mobiliario", href: "/catalogo" },
+                      { label: "Coordinación y Diseño", href: "/servicios#coordinacion" },
                     ].map((s) => (
                       <li key={s.href}>
                         <Link href={s.href} className="text-sm text-ebony-muted hover:text-ebony transition-colors">
@@ -134,14 +187,14 @@ export default function BodasCuatrocienegasPage() {
       </section>
 
       {/* CTA Bottom */}
-      <section className="section-padding-sm bg-ebony">
+      <section className="section-padding-sm bg-taupe">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="font-script text-script-md text-taupe-light mb-4">¿Sueñas con casarte en Cuatrociénegas?</p>
-            <p className="text-cream/50 text-sm mb-8 max-w-md mx-auto">
+            <p className="font-script text-script-md text-cream mb-4">¿Sueñas con casarte en Cuatrociénegas?</p>
+            <p className="text-cream/70 text-sm mb-8 max-w-md mx-auto">
               Escríbenos y comenzamos a planear juntos la boda de tus sueños en uno de los escenarios más únicos de México.
             </p>
-            <a href="https://wa.me/528662532615" target="_blank" rel="noopener noreferrer" className="btn-outline-light">
+            <a href="https://wa.me/528662532615" target="_blank" rel="noopener noreferrer" className="btn-outline-light inline-flex items-center gap-3">
               <MessageCircle size={14} aria-hidden="true" />
               Escribir a WhatsApp
             </a>

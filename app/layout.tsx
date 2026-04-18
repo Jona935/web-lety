@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans, Pinyon_Script } from "next/font/google";
+import { Playfair_Display, DM_Sans, Sacramento } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-cormorant",
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const pinyon = Pinyon_Script({
+const sacramento = Sacramento({
   subsets: ["latin"],
   variable: "--font-pinyon",
   weight: "400",
@@ -69,7 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${cormorant.variable} ${dmSans.variable} ${pinyon.variable}`}
+      className={`${playfair.variable} ${dmSans.variable} ${sacramento.variable}`}
     >
       <body className="overflow-x-hidden bg-cream-light">
         <a

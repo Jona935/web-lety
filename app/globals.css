@@ -52,16 +52,16 @@
 
   /* Labels */
   .label {
-    font-size: 10px;
-    letter-spacing: 0.35em;
+    font-size: 11px;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     font-family: var(--font-dm-sans), system-ui, sans-serif;
     font-weight: 500;
     color: var(--taupe);
   }
   .label-light {
-    font-size: 10px;
-    letter-spacing: 0.35em;
+    font-size: 11px;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     font-family: var(--font-dm-sans), system-ui, sans-serif;
     font-weight: 500;

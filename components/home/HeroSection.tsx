@@ -137,8 +137,8 @@ export default function HeroSection() {
           ref={headlineRef}
           className="font-serif text-display-lg text-ebony font-light leading-none tracking-wide mb-6 max-w-4xl"
         >
-          Bodas &amp; Eventos en{" "}
-          <span className="italic text-ebony/70">Monclova</span>
+          Bodas &amp; Eventos{" "}
+          <span className="italic text-ebony/70">Extraordinarios</span>
         </h1>
 
         {/* Subtitle */}

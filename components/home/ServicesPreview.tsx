@@ -24,7 +24,7 @@ export default function ServicesPreview() {
           script="Servicios"
           title="Soluciones"
           titleItalic="integrales"
-          subtitle="Todo lo que necesitas para tu evento especial, en un solo lugar."
+          subtitle="Desde el primer detalle hasta el último baile, hacemos que cada momento sea perfecto."
         />
 
         {/* Featured top service */}

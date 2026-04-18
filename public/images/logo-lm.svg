@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <!-- Transparent background — adaptable to any bg color via CSS currentColor -->
+  <text
+    x="80" y="128"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="118"
+    font-weight="400"
+    fill="currentColor"
+    text-anchor="middle"
+    letter-spacing="-6"
+  >LM</text>
+</svg>

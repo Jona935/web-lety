@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="border-b border-ebony/10">
         <div className="container-wide py-14 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <p className="font-script text-script-md text-taupe">
+            <p className="font-serif italic font-light text-script-md text-taupe">
               Hagamos algo extraordinario
             </p>
             <p className="text-sm text-ebony-muted mt-1">
@@ -55,7 +55,7 @@ export default function Footer() {
                 <span className="font-serif text-xl tracking-wide text-ebony/90">
                   Lety Maldonado
                 </span>
-                <span className="font-script text-lg text-taupe mt-0.5">
+                <span className="font-serif italic font-light text-lg text-taupe mt-0.5">
                   Wedding Planner
                 </span>
               </div>

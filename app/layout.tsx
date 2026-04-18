@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, Sacramento } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -19,12 +19,6 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const sacramento = Sacramento({
-  subsets: ["latin"],
-  variable: "--font-pinyon",
-  weight: "400",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -69,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${dmSans.variable} ${sacramento.variable}`}
+      className={`${playfair.variable} ${dmSans.variable}`}
     >
       <body className="overflow-x-hidden bg-cream-light">
         <a

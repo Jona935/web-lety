@@ -115,7 +115,7 @@ export default function HeroSection() {
           <span className="font-serif text-2xl md:text-3xl tracking-widest text-ebony/90">
             Lety Maldonado
           </span>
-          <span className="font-script text-xl md:text-2xl text-taupe">
+          <span className="font-serif italic font-light text-xl md:text-2xl text-taupe">
             Wedding Planner
           </span>
         </div>
@@ -128,7 +128,7 @@ export default function HeroSection() {
         </div>
 
         {/* Script tagline */}
-        <p ref={taglineRef} className="font-script text-script-md text-ebony/65 mb-4">
+        <p ref={taglineRef} className="font-serif italic font-light text-script-md text-ebony/65 mb-4">
           Con toda tranquilidad, yo me encargo de todo
         </p>
 
@@ -170,11 +170,11 @@ export default function HeroSection() {
         >
           {[...Array(4)].map((_, rep) => (
             <span key={rep} className="flex items-center gap-16 shrink-0">
-              <span className="font-script text-xl text-ebony/30">Con toda tranquilidad deja lo más importante en mis manos</span>
+              <span className="font-serif italic font-light text-xl text-ebony/30">Con toda tranquilidad deja lo más importante en mis manos</span>
               <span className="text-taupe/50 text-xs tracking-widest">✦</span>
-              <span className="font-script text-xl text-ebony/30">Yo me encargo de todo</span>
+              <span className="font-serif italic font-light text-xl text-ebony/30">Yo me encargo de todo</span>
               <span className="text-taupe/50 text-xs tracking-widest">✦</span>
-              <span className="font-script text-xl text-ebony/30">Monclova · Cuatrociénegas · Minas de Mármol</span>
+              <span className="font-serif italic font-light text-xl text-ebony/30">Monclova · Cuatrociénegas · Minas de Mármol</span>
               <span className="text-taupe/50 text-xs tracking-widest">✦</span>
             </span>
           ))}

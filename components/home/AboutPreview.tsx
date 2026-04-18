@@ -40,7 +40,7 @@ export default function AboutPreview() {
 
             {/* Floating accent badge */}
             <div className="absolute -bottom-6 -right-4 md:-right-8 bg-ebony p-7 md:p-9">
-              <p className="font-script text-3xl text-cream/80">11+</p>
+              <p className="font-serif italic font-light text-3xl text-cream/80">11+</p>
               <p className="label-light text-[9px] mt-1">años de experiencia</p>
             </div>
 
@@ -53,7 +53,7 @@ export default function AboutPreview() {
 
           {/* Content */}
           <AnimatedSection delay={180}>
-            <p className="font-script text-script-md text-taupe mb-2">Bienvenida</p>
+            <p className="font-serif italic font-light text-script-md text-taupe mb-2">Bienvenida</p>
             <h2 id="about-heading" className="font-serif text-display-md text-ebony font-light leading-tight mb-5">
               Tu boda,<br />
               <span className="italic">sin improvisaciones</span>
@@ -74,7 +74,7 @@ export default function AboutPreview() {
 
             {/* Signature quote from old site */}
             <blockquote className="border-l-2 border-taupe pl-6 mb-10">
-              <p className="font-script text-2xl text-taupe leading-snug">
+              <p className="font-serif italic font-light text-2xl text-taupe leading-snug">
                 &ldquo;Con toda tranquilidad deja lo más importante en mis manos,
                 yo me encargo de todo.&rdquo;
               </p>

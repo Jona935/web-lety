@@ -67,7 +67,7 @@ export default function Header() {
               <span className="font-serif text-lg tracking-wide text-ebony">
                 Lety Maldonado
               </span>
-              <span className="font-script text-base text-taupe">
+              <span className="font-serif italic font-light text-base text-taupe">
                 Wedding Planner
               </span>
             </Link>
@@ -112,7 +112,7 @@ export default function Header() {
         <div className="flex items-center justify-between px-6 pt-5 pb-4">
           <div className="flex flex-col leading-none">
             <span className="font-serif text-lg tracking-wide text-ebony/80">Lety Maldonado</span>
-            <span className="font-script text-base text-taupe">Wedding Planner</span>
+            <span className="font-serif italic font-light text-base text-taupe">Wedding Planner</span>
           </div>
           <button
             onClick={() => setMobileOpen(false)}

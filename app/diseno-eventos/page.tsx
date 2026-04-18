@@ -24,7 +24,7 @@ export default function DisenoEventosPage() {
               Diseño de Eventos
             </h1>
             <span className="divider-light mb-6 block" aria-hidden="true" />
-            <p className="font-script text-script-md text-taupe-light">Donde la creatividad y la elegancia se encuentran</p>
+            <p className="font-serif italic font-light text-script-md text-taupe-light">Donde la creatividad y la elegancia se encuentran</p>
           </AnimatedSection>
         </div>
       </section>
@@ -146,7 +146,7 @@ export default function DisenoEventosPage() {
       <section className="section-padding-sm bg-ebony">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="font-script text-script-md text-taupe-light mb-4">¿Lista para diseñar tu evento?</p>
+            <p className="font-serif italic font-light text-script-md text-taupe-light mb-4">¿Lista para diseñar tu evento?</p>
             <p className="text-cream/50 text-sm mb-8 max-w-md mx-auto">
               La primera consulta es gratuita. Cuéntanos tu visión y creamos la propuesta perfecta para ti.
             </p>

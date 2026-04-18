@@ -56,7 +56,7 @@ export default function BodasCuatrocienegasPage() {
               <span className="italic text-taupe">Cuatrociénegas</span>
             </h1>
             <span className="divider mb-6 block" aria-hidden="true" />
-            <p className="font-script text-script-md text-taupe">Un escenario único para tu gran día</p>
+            <p className="font-serif italic font-light text-script-md text-taupe">Un escenario único para tu gran día</p>
           </AnimatedSection>
         </div>
       </section>
@@ -190,7 +190,7 @@ export default function BodasCuatrocienegasPage() {
       <section className="section-padding-sm bg-taupe">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="font-script text-script-md text-cream mb-4">¿Sueñas con casarte en Cuatrociénegas?</p>
+            <p className="font-serif italic font-light text-script-md text-cream mb-4">¿Sueñas con casarte en Cuatrociénegas?</p>
             <p className="text-cream/70 text-sm mb-8 max-w-md mx-auto">
               Escríbenos y comenzamos a planear juntos la boda de tus sueños en uno de los escenarios más únicos de México.
             </p>

@@ -25,10 +25,10 @@ export default function CTASection() {
           {/* Logo text */}
           <div className="mb-10 flex flex-col items-center leading-none gap-1">
             <span className="font-serif text-2xl tracking-widest text-cream/80">Lety Maldonado</span>
-            <span className="font-script text-xl text-taupe-light">Wedding Planner</span>
+            <span className="font-serif italic font-light text-xl text-taupe-light">Wedding Planner</span>
           </div>
 
-          <p className="font-script text-script-md text-taupe-light mb-4">¿Lista para comenzar?</p>
+          <p className="font-serif italic font-light text-script-md text-taupe-light mb-4">¿Lista para comenzar?</p>
           <h2 id="cta-heading" className="font-serif text-display-lg text-cream-light font-light leading-tight mb-5">
             Tu evento perfecto<br />
             <span className="italic">comienza aquí</span>

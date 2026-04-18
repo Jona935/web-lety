@@ -130,7 +130,7 @@ export default function ProcessSection() {
         <AnimatedSection delay={600} className="mt-14">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 p-8 border border-ebony/8 bg-cream-warm">
             <div className="shrink-0">
-              <p className="font-script text-3xl text-taupe">Entre citas…</p>
+              <p className="font-serif italic font-light text-3xl text-taupe">Entre citas…</p>
             </div>
             <div className="w-px h-10 bg-ebony/10 hidden md:block" aria-hidden="true" />
             <p className="text-sm text-ebony-muted leading-relaxed max-w-xl">

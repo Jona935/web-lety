@@ -111,23 +111,15 @@ export default function HeroSection() {
         <span className="lm-watermark top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">LM</span>
 
         {/* Logo */}
-        <div ref={logoRef} className="mb-10 md:mb-14 flex flex-col items-center gap-3">
+        <div ref={logoRef} className="mb-10 md:mb-14">
           <Image
-            src="/images/logo-lm-dark.svg"
-            alt="Lety Maldonado Eventos"
-            width={88}
-            height={88}
+            src="/images/logo.png"
+            alt="La Magnolia Wedding Planners"
+            width={220}
+            height={220}
             priority
-            className="shrink-0"
+            className="w-44 md:w-56 h-auto object-contain invert"
           />
-          <div className="flex flex-col items-center leading-none gap-1 mt-1">
-            <span className="font-serif text-base md:text-lg tracking-[0.3em] text-ebony/90 uppercase">
-              Lety Maldonado
-            </span>
-            <span className="font-serif italic font-light text-sm md:text-base text-taupe tracking-wider">
-              Wedding Planner
-            </span>
-          </div>
         </div>
 
         {/* Divider */}

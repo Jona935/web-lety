@@ -59,28 +59,20 @@ export default function Header() {
             {/* Logo — hidden on home hero, fades in on scroll */}
             <Link
               href="/"
-              aria-label="Lety Maldonado Eventos — Inicio"
+              aria-label="La Magnolia Wedding Planners — Inicio"
               className={cn(
-                "flex items-center gap-3 transition-all duration-700",
+                "transition-all duration-700",
                 transparent ? "opacity-0 pointer-events-none" : "opacity-100"
               )}
             >
               <Image
-                src="/images/logo-lm-dark.svg"
-                alt="LM"
-                width={36}
-                height={36}
-                className="shrink-0"
+                src="/images/logo.png"
+                alt="La Magnolia Wedding Planners"
+                width={120}
+                height={60}
+                className="h-10 w-auto object-contain invert"
                 priority
               />
-              <div className="flex flex-col leading-none">
-                <span className="font-serif text-sm tracking-widest text-ebony uppercase">
-                  Lety Maldonado
-                </span>
-                <span className="font-serif italic font-light text-xs text-taupe">
-                  Wedding Planner
-                </span>
-              </div>
             </Link>
 
             {/* Desktop Nav */}
@@ -121,13 +113,13 @@ export default function Header() {
       >
         {/* Header row */}
         <div className="flex items-center justify-between px-6 pt-5 pb-4">
-          <div className="flex items-center gap-3">
-            <Image src="/images/logo-lm-dark.svg" alt="LM" width={32} height={32} className="shrink-0" />
-            <div className="flex flex-col leading-none">
-              <span className="font-serif text-sm tracking-widest text-ebony/80 uppercase">Lety Maldonado</span>
-              <span className="font-serif italic font-light text-xs text-taupe">Wedding Planner</span>
-            </div>
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt="La Magnolia Wedding Planners"
+            width={120}
+            height={60}
+            className="h-10 w-auto object-contain invert"
+          />
           <button
             onClick={() => setMobileOpen(false)}
             className="w-10 h-10 flex items-center justify-center border border-ebony/15 text-ebony/50 hover:text-ebony hover:border-ebony/30 transition-colors"

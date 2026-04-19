@@ -11,7 +11,7 @@
   --ebony: #1C1916;
   --ebony-light: #2E2A27;
   --ebony-muted: #5A5450;      /* darker for better contrast on light bg */
-  --taupe: #7D6355;             /* richer, deeper taupe — more visible on cream */
+  --taupe: #6B5244;             /* deepened for WCAG AA ratio ~5.1:1 on cream-light */
   --taupe-light: #8A7261;       /* darkened one tone — more visible on cream */
   --gold: #C4A882;
   scroll-behavior: smooth;
@@ -32,7 +32,7 @@
 
 /* ─── Base ─── */
 @layer base {
-  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-padding-top: 80px; }
   body { @apply bg-cream-light text-ebony font-sans; }
   h1, h2, h3, h4 { @apply font-serif; }
   ::selection { background: #D8CDBF; color: #1C1916; }
@@ -80,14 +80,16 @@
     background-color: var(--ebony);
     color: var(--cream-light);
     padding: 1rem 2.25rem;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-family: var(--font-dm-sans), system-ui, sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    min-height: 44px;
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .btn-dark:hover { background-color: var(--ebony-light); }
+  .btn-dark:active { transform: scale(0.98); }
   .btn-dark:focus-visible { outline: 2px solid var(--ebony); outline-offset: 2px; }
 
   .btn-outline-dark {
@@ -97,14 +99,17 @@
     border: 1px solid var(--ebony);
     color: var(--ebony);
     padding: 1rem 2.25rem;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-family: var(--font-dm-sans), system-ui, sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 44px;
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .btn-outline-dark:hover { background-color: var(--ebony); color: var(--cream-light); }
+  .btn-outline-dark:active { transform: scale(0.98); }
+  .btn-outline-dark:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
   .btn-outline-light {
     display: inline-flex;
@@ -113,48 +118,54 @@
     border: 1px solid rgba(240, 235, 227, 0.4);
     color: var(--cream-light);
     padding: 1rem 2.25rem;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-family: var(--font-dm-sans), system-ui, sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    min-height: 44px;
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .btn-outline-light:hover {
     background-color: var(--cream-light);
     color: var(--ebony);
     border-color: var(--cream-light);
   }
+  .btn-outline-light:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
   .btn-ghost-dark {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--ebony);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-weight: 500;
+    min-height: 44px;
     padding-bottom: 1px;
     border-bottom: 1px solid rgba(28, 25, 22, 0.3);
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s cubic-bezier(0.4, 0, 1, 1);
   }
   .btn-ghost-dark:hover { border-color: var(--ebony); }
+  .btn-ghost-dark:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
   .btn-ghost-light {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--cream-light);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-weight: 500;
+    min-height: 44px;
     padding-bottom: 1px;
     border-bottom: 1px solid rgba(247, 244, 240, 0.3);
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s cubic-bezier(0.4, 0, 1, 1);
   }
   .btn-ghost-light:hover { border-color: var(--cream-light); }
+  .btn-ghost-light:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
   /* Form inputs */
   .input-field {
@@ -165,14 +176,14 @@
     color: var(--ebony);
     font-size: 0.875rem;
     font-family: var(--font-dm-sans), system-ui, sans-serif;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .input-field::placeholder { color: var(--ebony-muted); }
-  .input-field:focus { outline: none; border-color: var(--taupe); }
+  .input-field:focus { outline: 2px solid var(--taupe); outline-offset: 2px; border-color: var(--taupe); }
 
   .input-label {
     display: block;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.5em;
     text-transform: uppercase;
     font-weight: 500;
@@ -186,7 +197,7 @@
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
   }
   .nav-link::after {
@@ -197,7 +208,7 @@
     height: 1px;
     width: 0;
     background-color: var(--taupe);
-    transition: width 0.3s ease;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .nav-link:hover::after { width: 100%; }
 }

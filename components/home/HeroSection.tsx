@@ -21,51 +21,59 @@ export default function HeroSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const ease = "power3.out";
-      gsap.from(logoRef.current,       { opacity: 0, y: 24, duration: 1.1, ease, delay: 0.2 });
-      gsap.from(dividerRef.current,    { opacity: 0, y: 24, duration: 0.8, ease, delay: 0.6 });
-      gsap.from(taglineRef.current,    { opacity: 0, y: 24, duration: 0.9, ease, delay: 0.85 });
-      gsap.from(headlineRef.current,   { opacity: 0, y: 24, duration: 1.0, ease, delay: 1.05 });
-      gsap.from(subtitleRef.current,   { opacity: 0, y: 24, duration: 0.9, ease, delay: 1.3 });
-      gsap.from(ctasRef.current,       { opacity: 0, y: 24, duration: 0.9, ease, delay: 1.5 });
-      gsap.from(statsRef.current,      { opacity: 0, y: 24, duration: 0.8, ease, delay: 1.75 });
 
-      // Parallax on background image
-      gsap.fromTo(
-        imgRef.current,
-        { yPercent: 0 },
-        {
-          yPercent: 25,
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        }
-      );
+      if (!prefersReduced) {
+        gsap.from(logoRef.current,       { opacity: 0, y: 24, duration: 1.1, ease, delay: 0.2 });
+        gsap.from(dividerRef.current,    { opacity: 0, y: 24, duration: 0.8, ease, delay: 0.6 });
+        gsap.from(taglineRef.current,    { opacity: 0, y: 24, duration: 0.9, ease, delay: 0.85 });
+        gsap.from(headlineRef.current,   { opacity: 0, y: 24, duration: 1.0, ease, delay: 1.05 });
+        gsap.from(subtitleRef.current,   { opacity: 0, y: 24, duration: 0.9, ease, delay: 1.3 });
+        gsap.from(ctasRef.current,       { opacity: 0, y: 24, duration: 0.9, ease, delay: 1.5 });
+        gsap.from(statsRef.current,      { opacity: 0, y: 24, duration: 0.8, ease, delay: 1.75 });
 
-      // Hero logo fades up as user scrolls — hands off to nav logo
-      // immediateRender:false prevents conflict with the entrance gsap.from() above.
-      // Without it, both tweens fight over opacity on page load and the logo stays invisible.
-      // Explicit from values ensure scrub-reverse correctly restores opacity:1.
-      gsap.fromTo(
-        logoRef.current,
-        { opacity: 1, y: 0 },
-        {
-          opacity: 0,
-          y: -24,
-          ease: "power2.in",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "6% top",
-            end: "18% top",
-            scrub: true,
-          },
-        }
-      );
+        // Parallax on background image
+        gsap.fromTo(
+          imgRef.current,
+          { yPercent: 0 },
+          {
+            yPercent: 25,
+            ease: "none",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top top",
+              end: "bottom top",
+              scrub: true,
+            },
+          }
+        );
+
+        // Hero logo fades up as user scrolls — hands off to nav logo
+        // immediateRender:false prevents conflict with the entrance gsap.from() above.
+        // Without it, both tweens fight over opacity on page load and the logo stays invisible.
+        // Explicit from values ensure scrub-reverse correctly restores opacity:1.
+        gsap.fromTo(
+          logoRef.current,
+          { opacity: 1, y: 0 },
+          {
+            opacity: 0,
+            y: -24,
+            ease: "power2.in",
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "6% top",
+              end: "18% top",
+              scrub: true,
+            },
+          }
+        );
+      } else {
+        [logoRef, dividerRef, taglineRef, headlineRef, subtitleRef, ctasRef, statsRef].forEach(ref => {
+          if (ref.current) gsap.set(ref.current, { opacity: 1, y: 0 });
+        });
+      }
     }, sectionRef);
 
     return () => ctx.revert();
@@ -74,7 +82,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex flex-col overflow-hidden bg-cream-light"
+      className="relative min-h-[100dvh] flex flex-col overflow-hidden bg-cream-light"
       aria-label="Lety Maldonado Eventos — Wedding & Event Planner"
     >
       {/* Background — video + parallax fallback image */}
@@ -95,7 +103,7 @@ export default function HeroSection() {
             src="/images/real/minas-recepcion-dorado.jpg"
             alt=""
             fill
-            className="object-cover opacity-0"
+            className="object-cover opacity-35"
             priority
             aria-hidden="true"
           />
@@ -145,7 +153,7 @@ export default function HeroSection() {
         {/* Headline */}
         <h1
           ref={headlineRef}
-          className="font-serif text-display-lg text-ebony font-light leading-none tracking-wide mb-6 max-w-4xl"
+          className="font-serif text-display-lg text-ebony font-light leading-none tracking-tight mb-6 max-w-4xl"
         >
           Bodas &amp; Eventos{" "}
           <span className="text-taupe">Extraordinarios</span>

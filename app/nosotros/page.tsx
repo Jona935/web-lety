@@ -6,9 +6,9 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import StatsCounter from "@/components/nosotros/StatsCounter";
 
 export const metadata: Metadata = {
-  title: "Sobre Nosotros",
+  title: "Lety Maldonado — Wedding Planner Certificada en Monclova, Coahuila",
   description:
-    "Conoce a Lety Maldonado, wedding planner con más de 10 años de experiencia en Monclova, Cuatrociénegas y Minas de Mármol.",
+    "Lety Maldonado es wedding planner certificada ABC y diseñadora floral certificada AIFD con más de 11 años de experiencia en Monclova, Cuatrociénegas y Minas de Mármol, Coahuila. Bodas y eventos únicos.",
 };
 
 export default function NosotrosPage() {
@@ -111,7 +111,7 @@ export default function NosotrosPage() {
                   aprendiendo cosas nuevas, asistiendo a congresos y cursos para
                   ofrecerte las más nuevas tendencias.
                 </p>
-                <p className="font-serif text-lg text-ebony italic">
+                <p className="font-serif text-lg text-ebony">
                   Si quieres una boda espectacular, déjalo todo en mis manos, yo
                   te ayudaré en todo momento.
                 </p>

@@ -111,9 +111,12 @@ export default function PortafolioPage() {
           <AnimatedSection>
             <p className="label text-taupe mb-4">Nuestro trabajo</p>
             <h1 className="font-serif text-display-lg text-ebony font-light">
-              Momentos que{" "}
-              <span className="text-taupe">perduran</span>
+              Galería de{" "}
+              <span className="text-taupe">Bodas y Eventos</span>
             </h1>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-xs text-ebony/50 mt-3">
+              Monclova · Cuatrociénegas · Minas de Mármol
+            </p>
             <p className="text-ebony-muted mt-6 max-w-lg mx-auto leading-relaxed">
               Cada evento que organizamos es único. Aquí una muestra del amor
               que ponemos en cada celebración.
@@ -134,7 +137,7 @@ export default function PortafolioPage() {
               >
                 <Image
                   src={item.img}
-                  alt={item.title}
+                  alt={`${item.title} — ${item.description}`}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -181,7 +184,7 @@ export default function PortafolioPage() {
           <AnimatedSection className="text-center mb-14">
             <p className="label text-taupe-light mb-4">En movimiento</p>
             <h2 id="video-heading" className="font-serif text-display-md text-cream font-light">
-              Momentos que <span className="italic text-taupe-light">viven</span>
+              Momentos que <span className="text-taupe-light">viven</span>
             </h2>
           </AnimatedSection>
 

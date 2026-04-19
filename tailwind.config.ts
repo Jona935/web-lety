@@ -23,9 +23,9 @@ const config: Config = {
           subtle: "#9B9590",     // Subtle warm gray
         },
         taupe: {
-          DEFAULT: "#9B8070",   // Warm taupe accent
+          DEFAULT: "#6B5244",   // Warm taupe accent
           light: "#BFB0A3",      // Light taupe
-          dark: "#7A6255",       // Deep taupe
+          dark: "#5A4035",       // Deep taupe
         },
         gold: {
           DEFAULT: "#C4A882",   // Warm champagne gold

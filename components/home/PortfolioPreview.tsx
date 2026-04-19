@@ -54,10 +54,10 @@ export default function PortfolioPreview() {
         {/* Header — split layout */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div>
-            <p className="font-serif italic font-light text-script-md text-taupe mb-2">Portafolio</p>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe mb-2">Portafolio</p>
             <h2 id="portfolio-heading" className="font-serif text-display-md text-ebony font-light leading-tight">
               Momentos que<br />
-              <span className="italic">perduran</span>
+              <span>perduran</span>
             </h2>
           </div>
           <div className="max-w-xs">
@@ -94,11 +94,11 @@ export default function PortfolioPreview() {
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
                 {/* Quote — only on featured item */}
                 {"quote" in item && (
-                  <p className="font-serif italic font-light text-xl text-cream/70 mb-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                  <p className="font-sans font-light tracking-[0.22em] uppercase text-xs text-cream/70 mb-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 )}
-                <p className="label-light text-[9px] mb-1 opacity-60">{item.cat} · {item.loc}</p>
+                <p className="label-light text-xs mb-1 opacity-60">{item.cat} · {item.loc}</p>
                 <h3 className="font-serif text-xl md:text-2xl text-cream font-light">{item.title}</h3>
               </div>
 

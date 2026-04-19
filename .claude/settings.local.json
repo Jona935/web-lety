@@ -28,7 +28,8 @@
       "Bash(cp \"C:/Users/USUARIO/Downloads/Bodas-Cuatro-Cienegas.avif\" \"C:/Users/USUARIO/Documents/proyectos/lety/public/images/cert-abc.avif\")",
       "Bash(cp \"C:/Users/USUARIO/Downloads/bodas-en-cuatrocienegas.avif\" \"C:/Users/USUARIO/Documents/proyectos/lety/public/images/cert-abc-documento.avif\")",
       "Bash(cp \"C:/Users/USUARIO/Downloads/Bodas-Cuatro-Cienegas.avif\" \"C:/Users/USUARIO/Documents/proyectos/lety/public/images/cert-abc-sello.avif\")",
-      "Bash(npx skills:*)"
+      "Bash(npx skills:*)",
+      "Read(//c/Users/USUARIO/.agents/skills/**)"
     ]
   }
 }

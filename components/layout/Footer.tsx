@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="border-b border-ebony/10">
         <div className="container-wide py-14 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <p className="font-serif italic font-light text-script-md text-taupe">
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe">
               Hagamos algo extraordinario
             </p>
             <p className="text-sm text-ebony-muted mt-1">
@@ -55,7 +55,7 @@ export default function Footer() {
                 <span className="font-serif text-xl tracking-wide text-ebony/90">
                   Lety Maldonado
                 </span>
-                <span className="font-serif italic font-light text-lg text-taupe mt-0.5">
+                <span className="font-sans font-light tracking-[0.22em] uppercase text-xs text-taupe mt-0.5">
                   Wedding Planner
                 </span>
               </div>
@@ -68,7 +68,7 @@ export default function Footer() {
                 href="https://www.facebook.com/letymaldonadoeventos"
                 target="_blank" rel="noopener noreferrer"
                 aria-label="Facebook Lety Maldonado Eventos"
-                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-ebony-muted hover:text-ebony transition-colors"
+                className="flex items-center gap-2 text-xs tracking-widest uppercase text-ebony-muted hover:text-ebony transition-colors"
               >
                 <Facebook size={13} aria-hidden="true" /> Facebook
               </a>
@@ -76,7 +76,7 @@ export default function Footer() {
                 href="https://www.instagram.com/letymaldonado/"
                 target="_blank" rel="noopener noreferrer"
                 aria-label="Instagram @letymaldonado"
-                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-ebony-muted hover:text-ebony transition-colors"
+                className="flex items-center gap-2 text-xs tracking-widest uppercase text-ebony-muted hover:text-ebony transition-colors"
               >
                 <Instagram size={13} aria-hidden="true" /> @letymaldonado
               </a>

@@ -31,7 +31,7 @@ export default function NosotrosPage() {
               className="font-serif text-display-lg text-ebony font-light leading-tight"
             >
               Una historia de{" "}
-              <span className="italic text-taupe">amor</span> por los eventos
+              <span className="text-taupe">amor</span> por los eventos
             </h1>
           </AnimatedSection>
         </div>
@@ -55,7 +55,7 @@ export default function NosotrosPage() {
             <AnimatedSection delay={200}>
               <p className="label text-taupe mb-4">Mi historia</p>
               <h2 className="font-serif text-display-sm text-ebony font-light mb-6">
-                Hola, soy <span className="italic text-taupe">Lety Maldonado</span>
+                Hola, soy <span className="text-taupe">Lety Maldonado</span>
               </h2>
               <span className="divider mb-6" aria-hidden="true" />
 
@@ -101,7 +101,7 @@ export default function NosotrosPage() {
               <p className="label text-taupe mb-4">Experiencia</p>
               <h2 className="font-serif text-display-sm text-ebony font-light mb-6">
                 Ojo en el{" "}
-                <span className="italic text-taupe">Detalle</span>
+                <span className="text-taupe">Detalle</span>
               </h2>
               <span className="divider mb-6" aria-hidden="true" />
               <div className="space-y-5 text-ebony-muted leading-relaxed">
@@ -177,7 +177,7 @@ export default function NosotrosPage() {
           <AnimatedSection>
             <h2 className="font-serif text-display-sm text-cream font-light mb-6">
               ¿Listas para crear algo{" "}
-              <span className="italic">inolvidable</span>?
+              <span>inolvidable</span>?
             </h2>
             <Link
               href="/contacto"

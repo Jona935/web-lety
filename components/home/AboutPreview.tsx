@@ -40,23 +40,23 @@ export default function AboutPreview() {
 
             {/* Floating accent badge */}
             <div className="absolute -bottom-6 -right-4 md:-right-8 bg-ebony p-7 md:p-9">
-              <p className="font-serif italic font-light text-3xl text-cream/80">11+</p>
-              <p className="label-light text-[9px] mt-1">años de experiencia</p>
+              <p className="font-serif font-light text-3xl text-cream/80">11+</p>
+              <p className="label-light text-xs mt-1">años de experiencia</p>
             </div>
 
             {/* Certification strip */}
             <div className="absolute top-6 left-0 bg-cream/95 backdrop-blur-sm px-4 py-3 flex items-center gap-3 shadow-sm">
               <Award size={13} className="text-taupe shrink-0" aria-hidden="true" />
-              <p className="text-[10px] tracking-widest uppercase text-ebony-muted font-medium">Certified Wedding Planner</p>
+              <p className="text-xs tracking-widest uppercase text-ebony-muted font-medium">Certified Wedding Planner</p>
             </div>
           </AnimatedSection>
 
           {/* Content */}
           <AnimatedSection delay={180}>
-            <p className="font-serif italic font-light text-script-md text-taupe mb-2">Bienvenida</p>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe mb-2">Bienvenida</p>
             <h2 id="about-heading" className="font-serif text-display-md text-ebony font-light leading-tight mb-5">
               Tu boda,<br />
-              <span className="italic">sin improvisaciones</span>
+              <span>sin improvisaciones</span>
             </h2>
             <span className="divider mb-7" aria-hidden="true" />
 
@@ -74,11 +74,11 @@ export default function AboutPreview() {
 
             {/* Signature quote from old site */}
             <blockquote className="border-l-2 border-taupe pl-6 mb-10">
-              <p className="font-serif italic font-light text-2xl text-taupe leading-snug">
+              <p className="font-serif font-light text-2xl text-taupe leading-snug">
                 &ldquo;Con toda tranquilidad deja lo más importante en mis manos,
                 yo me encargo de todo.&rdquo;
               </p>
-              <footer className="mt-2 label text-[9px]">— Lety Maldonado</footer>
+              <footer className="mt-2 label text-xs">— Lety Maldonado</footer>
             </blockquote>
 
             <ul className="space-y-3 mb-10" aria-label="Características">
@@ -95,7 +95,7 @@ export default function AboutPreview() {
               {certs.map((c) => (
                 <div key={c.label} className="border border-ebony/10 px-4 py-2 flex items-center gap-2 bg-cream-warm">
                   <span className="font-serif text-sm text-ebony font-medium">{c.label}</span>
-                  <span className="text-[10px] text-ebony-muted">{c.full}</span>
+                  <span className="text-xs text-ebony-muted">{c.full}</span>
                 </div>
               ))}
             </div>

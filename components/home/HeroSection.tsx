@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -19,7 +18,6 @@ export default function HeroSection() {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctasRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
-  const scrollHintRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -31,7 +29,6 @@ export default function HeroSection() {
       gsap.from(subtitleRef.current,   { opacity: 0, y: 24, duration: 0.9, ease, delay: 1.3 });
       gsap.from(ctasRef.current,       { opacity: 0, y: 24, duration: 0.9, ease, delay: 1.5 });
       gsap.from(statsRef.current,      { opacity: 0, y: 24, duration: 0.8, ease, delay: 1.75 });
-      gsap.from(scrollHintRef.current, { opacity: 0, y: 24, duration: 0.7, ease, delay: 2.1 });
 
       // Parallax on background image
       gsap.fromTo(
@@ -130,7 +127,7 @@ export default function HeroSection() {
         </div>
 
         {/* Script tagline */}
-        <p ref={taglineRef} className="font-serif italic font-light text-script-md text-ebony/65 mb-4">
+        <p ref={taglineRef} className="font-sans font-light tracking-[0.22em] uppercase text-sm text-ebony/65 mb-4">
           Con toda tranquilidad, yo me encargo de todo
         </p>
 
@@ -140,7 +137,7 @@ export default function HeroSection() {
           className="font-serif text-display-lg text-ebony font-light leading-none tracking-wide mb-6 max-w-4xl"
         >
           Bodas &amp; Eventos{" "}
-          <span className="italic text-ebony/70">Extraordinarios</span>
+          <span className="text-taupe">Extraordinarios</span>
         </h1>
 
         {/* Subtitle */}
@@ -172,11 +169,11 @@ export default function HeroSection() {
         >
           {[...Array(4)].map((_, rep) => (
             <span key={rep} className="flex items-center gap-16 shrink-0">
-              <span className="font-serif italic font-light text-xl text-ebony/30">Con toda tranquilidad deja lo más importante en mis manos</span>
+              <span className="font-sans font-light tracking-[0.22em] uppercase text-xs text-ebony/30">Con toda tranquilidad deja lo más importante en mis manos</span>
               <span className="text-taupe/50 text-xs tracking-widest">✦</span>
-              <span className="font-serif italic font-light text-xl text-ebony/30">Yo me encargo de todo</span>
+              <span className="font-sans font-light tracking-[0.22em] uppercase text-xs text-ebony/30">Yo me encargo de todo</span>
               <span className="text-taupe/50 text-xs tracking-widest">✦</span>
-              <span className="font-serif italic font-light text-xl text-ebony/30">Monclova · Cuatrociénegas · Minas de Mármol</span>
+              <span className="font-sans font-light tracking-[0.22em] uppercase text-xs text-ebony/30">Monclova · Cuatrociénegas · Minas de Mármol</span>
               <span className="text-taupe/50 text-xs tracking-widest">✦</span>
             </span>
           ))}
@@ -201,16 +198,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll hint */}
-      <button
-        ref={scrollHintRef}
-        onClick={() => window.scrollBy({ top: window.innerHeight, behavior: "smooth" })}
-        className="absolute bottom-28 right-8 z-10 flex flex-col items-center gap-2 text-ebony/30 hover:text-ebony/60 transition-colors"
-        aria-label="Scroll — Desplazar hacia abajo"
-      >
-        <span className="text-[8px] tracking-ultra uppercase rotate-90 origin-center mb-1">scroll</span>
-        <ArrowDown size={12} className="animate-bounce" aria-hidden="true" />
-      </button>
     </section>
   );
 }

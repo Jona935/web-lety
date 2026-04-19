@@ -43,7 +43,7 @@ export default function WeddingPlannerMonclovaPage() {
               Wedding Planner en Monclova
             </h1>
             <span className="divider-light mb-6 block" aria-hidden="true" />
-            <p className="font-serif italic font-light text-script-md text-taupe-light">La experiencia que tu boda merece</p>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe-light">La experiencia que tu boda merece</p>
           </AnimatedSection>
         </div>
       </section>
@@ -172,7 +172,7 @@ export default function WeddingPlannerMonclovaPage() {
       <section className="section-padding-sm bg-ebony">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="font-serif italic font-light text-script-md text-taupe-light mb-4">Tu boda comienza con una conversación</p>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe-light mb-4">Tu boda comienza con una conversación</p>
             <p className="text-cream/50 text-sm mb-8 max-w-md mx-auto">
               Cuéntanos tu historia. La primera consulta es gratuita y sin compromiso.
             </p>

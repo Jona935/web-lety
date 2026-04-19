@@ -100,7 +100,7 @@ export default function CatalogoPage() {
             <p className="label text-taupe mb-4">Renta de artículos</p>
             <h1 className="font-serif text-display-lg text-ebony font-light">
               Catálogo de{" "}
-              <span className="italic text-taupe">mobiliario</span>
+              <span className="text-taupe">mobiliario</span>
             </h1>
             <p className="text-ebony-muted text-base mt-6 max-w-xl mx-auto leading-relaxed">
               Encuentra todo lo que necesitas para vestir tu evento con elegancia.
@@ -118,7 +118,7 @@ export default function CatalogoPage() {
             <strong>Disponibilidad sujeta a fechas.</strong> Para confirmar
             disponibilidad y precios, solicita tu cotización personalizada.
           </p>
-          <Link href="/contacto" className="ml-auto btn-ghost text-[10px] shrink-0">
+          <Link href="/contacto" className="ml-auto btn-ghost text-xs shrink-0">
             Cotizar →
           </Link>
         </div>

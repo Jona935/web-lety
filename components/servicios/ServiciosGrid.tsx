@@ -179,7 +179,7 @@ export default function ServiciosGrid() {
                 {/* Content */}
                 <div>
                   {service.tag && (
-                    <span className="inline-block bg-taupe/10 text-taupe text-[10px] tracking-widest uppercase px-3 py-1 mb-4 font-sans">
+                    <span className="inline-block bg-taupe/10 text-taupe text-xs tracking-widest uppercase px-3 py-1 mb-4 font-sans">
                       {service.tag}
                     </span>
                   )}

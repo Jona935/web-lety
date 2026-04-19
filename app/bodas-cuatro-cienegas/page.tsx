@@ -53,10 +53,10 @@ export default function BodasCuatrocienegasPage() {
             <p className="label text-taupe mb-4">Bodas Destino · Cuatrociénegas · Coahuila</p>
             <h1 className="font-serif text-display-lg text-ebony font-light leading-tight mb-5">
               Bodas en<br />
-              <span className="italic text-taupe">Cuatrociénegas</span>
+              <span className="text-taupe">Cuatrociénegas</span>
             </h1>
             <span className="divider mb-6 block" aria-hidden="true" />
-            <p className="font-serif italic font-light text-script-md text-taupe">Un escenario único para tu gran día</p>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe">Un escenario único para tu gran día</p>
           </AnimatedSection>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function BodasCuatrocienegasPage() {
                       <span className="h-px w-8 bg-taupe" aria-hidden="true" />
                       <div>
                         <p className="font-sans font-medium text-ebony text-sm">Stephanie &amp; Hector</p>
-                        <p className="label text-[9px] mt-0.5">Boda Destino · Cuatrociénegas</p>
+                        <p className="label text-xs mt-0.5">Boda Destino · Cuatrociénegas</p>
                       </div>
                     </footer>
                   </blockquote>
@@ -190,7 +190,7 @@ export default function BodasCuatrocienegasPage() {
       <section className="section-padding-sm bg-taupe">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="font-serif italic font-light text-script-md text-cream mb-4">¿Sueñas con casarte en Cuatrociénegas?</p>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-cream mb-4">¿Sueñas con casarte en Cuatrociénegas?</p>
             <p className="text-cream/70 text-sm mb-8 max-w-md mx-auto">
               Escríbenos y comenzamos a planear juntos la boda de tus sueños en uno de los escenarios más únicos de México.
             </p>

@@ -31,14 +31,14 @@ export default function SectionHeading({
       className={cn("mb-16 md:mb-24", center ? "text-center" : "text-left", className)}
     >
       {script && (
-        <p className={cn("font-serif italic font-light text-script-md mb-2", scriptColor)}>
+        <p className={cn("font-sans font-light tracking-[0.22em] uppercase text-sm mb-2", scriptColor)}>
           {script}
         </p>
       )}
       <h2 className={cn("font-serif text-display-md font-light leading-tight", titleColor)}>
         {title}{" "}
         {titleItalic && (
-          <span className="italic">{titleItalic}</span>
+          <span>{titleItalic}</span>
         )}
       </h2>
       <span

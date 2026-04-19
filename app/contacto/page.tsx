@@ -57,7 +57,7 @@ export default function ContactoPage() {
             <p className="label text-taupe mb-4">Hablemos</p>
             <h1 className="font-serif text-display-lg text-ebony font-light">
               Comencemos a{" "}
-              <span className="italic text-taupe">planear</span> juntos
+              <span className="text-taupe">planear</span> juntos
             </h1>
             <p className="text-ebony-muted mt-6 max-w-lg mx-auto leading-relaxed">
               La primera consulta es completamente gratuita y sin compromiso.
@@ -87,7 +87,7 @@ export default function ContactoPage() {
                           <Icon size={14} className="text-taupe" />
                         </div>
                         <div>
-                          <p className="text-[10px] tracking-widest uppercase font-medium text-ebony-muted mb-0.5">
+                          <p className="text-xs tracking-widest uppercase font-medium text-ebony-muted mb-0.5">
                             {info.label}
                           </p>
                           {info.href ? (

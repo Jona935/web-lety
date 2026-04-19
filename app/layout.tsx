@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const playfair = Playfair_Display({
+const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
   variable: "--font-cormorant",
-  weight: ["400", "500", "600", "700"],
+  weight: "400",
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -63,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${dmSans.variable}`}
+      className={`${dmSerif.variable} ${dmSans.variable}`}
     >
       <body className="overflow-x-hidden bg-cream-light">
         <a

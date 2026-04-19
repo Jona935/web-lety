@@ -112,7 +112,7 @@ export default function PortafolioPage() {
             <p className="label text-taupe mb-4">Nuestro trabajo</p>
             <h1 className="font-serif text-display-lg text-ebony font-light">
               Momentos que{" "}
-              <span className="italic text-taupe">perduran</span>
+              <span className="text-taupe">perduran</span>
             </h1>
             <p className="text-ebony-muted mt-6 max-w-lg mx-auto leading-relaxed">
               Cada evento que organizamos es único. Aquí una muestra del amor
@@ -154,7 +154,7 @@ export default function PortafolioPage() {
 
                 {/* Always visible label (bottom) */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-ebony/70 to-transparent group-hover:opacity-0 transition-opacity duration-300">
-                  <p className="text-[10px] tracking-widest uppercase text-cream/70">
+                  <p className="text-xs tracking-widest uppercase text-cream/70">
                     {item.category}
                   </p>
                   <h3 className="font-serif text-lg text-cream">{item.title}</h3>
@@ -206,7 +206,7 @@ export default function PortafolioPage() {
                     <source src={v.src} type="video/mp4" />
                   </video>
                   <div className="absolute inset-0 bg-gradient-to-t from-ebony/70 to-transparent pointer-events-none" />
-                  <p className="absolute bottom-4 left-4 label-light text-[9px]">{v.label}</p>
+                  <p className="absolute bottom-4 left-4 label-light text-xs">{v.label}</p>
                 </div>
               </AnimatedSection>
             ))}

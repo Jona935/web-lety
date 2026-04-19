@@ -105,7 +105,7 @@ export default function ProcessSection() {
               <AnimatedSection key={step.number} delay={i * 90} className="relative group">
                 <div className="p-8 border border-ebony/8 hover:border-taupe/30 transition-colors duration-500 h-full flex flex-col bg-cream-light">
                   {/* Phase label */}
-                  <p className="label text-[9px] mb-5 opacity-60">{step.phase}</p>
+                  <p className="label text-xs mb-5 opacity-60">{step.phase}</p>
 
                   {/* Number + Icon row */}
                   <div className="flex items-center gap-4 mb-6">
@@ -130,7 +130,7 @@ export default function ProcessSection() {
         <AnimatedSection delay={600} className="mt-14">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 p-8 border border-ebony/8 bg-cream-warm">
             <div className="shrink-0">
-              <p className="font-serif italic font-light text-3xl text-taupe">Entre citas…</p>
+              <p className="font-serif font-light text-3xl text-taupe">Entre citas…</p>
             </div>
             <div className="w-px h-10 bg-ebony/10 hidden md:block" aria-hidden="true" />
             <p className="text-sm text-ebony-muted leading-relaxed max-w-xl">

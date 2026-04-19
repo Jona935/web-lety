@@ -20,7 +20,7 @@ export default function ServiciosPage() {
             <p className="label text-taupe mb-4">Lo que ofrecemos</p>
             <h1 className="font-serif text-display-lg text-ebony font-light">
               Servicios{" "}
-              <span className="italic text-taupe">integrales</span>
+              <span className="text-taupe">integrales</span>
             </h1>
             <p className="text-ebony-muted text-base mt-6 max-w-xl mx-auto leading-relaxed">
               Todo lo que necesitas para tu evento perfecto, en un solo lugar.

@@ -22,16 +22,21 @@ export default function CTASection() {
 
       <div className="container-narrow relative z-10 text-center">
         <AnimatedSection>
-          {/* Logo text */}
-          <div className="mb-10 flex flex-col items-center leading-none gap-1">
-            <span className="font-serif text-2xl tracking-widest text-cream/80">Lety Maldonado</span>
-            <span className="font-serif italic font-light text-xl text-taupe-light">Wedding Planner</span>
+          {/* Logo */}
+          <div className="mb-10 flex justify-center">
+            <Image
+              src="/images/logo.png"
+              alt="La Magnolia Wedding Planners"
+              width={160}
+              height={160}
+              className="w-32 h-auto object-contain opacity-80"
+            />
           </div>
 
-          <p className="font-serif italic font-light text-script-md text-taupe-light mb-4">¿Lista para comenzar?</p>
+          <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe-light mb-4">¿Lista para comenzar?</p>
           <h2 id="cta-heading" className="font-serif text-display-lg text-cream-light font-light leading-tight mb-5">
             Tu evento perfecto<br />
-            <span className="italic">comienza aquí</span>
+            <span>comienza aquí</span>
           </h2>
           <span className="divider-light block mx-auto mb-8" aria-hidden="true" />
           <p className="text-cream/50 text-sm leading-relaxed max-w-md mx-auto mb-10">

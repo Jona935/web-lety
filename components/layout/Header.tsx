@@ -141,7 +141,7 @@ export default function Header() {
               pathname === "/" ? "text-taupe" : "text-ebony/35 hover:text-ebony"
             )}
           >
-            <span className="text-[10px] tracking-widest uppercase font-sans text-ebony/20 w-6">01</span>
+            <span className="text-xs tracking-widest uppercase font-sans text-ebony/20 w-6">01</span>
             <span className="font-serif text-2xl font-light">Inicio</span>
           </Link>
           {navLinks.map((link, i) => (
@@ -153,7 +153,7 @@ export default function Header() {
                 pathname === link.href ? "text-taupe" : "text-ebony/35 hover:text-ebony"
               )}
             >
-              <span className="text-[10px] tracking-widest uppercase font-sans text-ebony/20 w-6">
+              <span className="text-xs tracking-widest uppercase font-sans text-ebony/20 w-6">
                 {String(i + 2).padStart(2, "0")}
               </span>
               <span className="font-serif text-2xl font-light">{link.label}</span>
@@ -168,7 +168,7 @@ export default function Header() {
             <div className="flex items-center gap-5">
               <a
                 href="tel:+528666335252"
-                className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-ebony/30 hover:text-ebony/60 transition-colors"
+                className="flex items-center gap-2 text-xs tracking-widest uppercase text-ebony/30 hover:text-ebony/60 transition-colors"
               >
                 <Phone size={12} aria-hidden="true" />
                 (866) 633-5252
@@ -177,7 +177,7 @@ export default function Header() {
                 href="https://wa.me/528662532615"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] tracking-widest uppercase text-ebony/30 hover:text-ebony/60 transition-colors"
+                className="text-xs tracking-widest uppercase text-ebony/30 hover:text-ebony/60 transition-colors"
               >
                 WhatsApp
               </a>

@@ -111,7 +111,7 @@ export default function PreciosPage() {
               >
                 {pkg.featured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-taupe text-cream-light text-[9px] tracking-widest uppercase px-4 py-1 font-sans font-medium">
+                    <span className="bg-taupe text-cream-light text-xs tracking-widest uppercase px-4 py-1 font-sans font-medium">
                       Más popular
                     </span>
                   </div>

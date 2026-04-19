@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
 
           <blockquote
             key={t.id}
-            className="font-serif text-display-sm text-ebony font-light italic leading-snug mb-10 max-w-3xl"
+            className="font-serif text-display-sm text-ebony font-light leading-snug mb-10 max-w-3xl"
           >
             {t.text}
           </blockquote>
@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
             <div className="h-px w-10 bg-taupe" aria-hidden="true" />
             <div>
               <p className="font-sans font-medium text-ebony text-sm">{t.name}</p>
-              <p className="label text-[9px] mt-0.5">{t.event}</p>
+              <p className="label text-xs mt-0.5">{t.event}</p>
             </div>
           </div>
 

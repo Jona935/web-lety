@@ -33,7 +33,7 @@ export default function EventosMonclovaPage() {
               Eventos en Monclova
             </h1>
             <span className="divider-light mb-6 block" aria-hidden="true" />
-            <p className="font-serif italic font-light text-script-md text-taupe-light">La empresa de eventos de referencia en Monclova</p>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe-light">La empresa de eventos de referencia en Monclova</p>
           </AnimatedSection>
         </div>
       </section>
@@ -121,7 +121,7 @@ export default function EventosMonclovaPage() {
       <section className="section-padding-sm bg-ebony">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="font-serif italic font-light text-script-md text-taupe-light mb-4">Tu evento en Monclova, perfectamente coordinado</p>
+            <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe-light mb-4">Tu evento en Monclova, perfectamente coordinado</p>
             <p className="text-cream/50 text-sm mb-8 max-w-md mx-auto">
               Escríbenos hoy y comenzamos a planear juntos el evento que siempre imaginaste.
             </p>

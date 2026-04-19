@@ -39,7 +39,7 @@ export default function ServicesPreview() {
                   <Calendar size={14} className="text-taupe" />
                 </div>
                 <span className="h-px w-6 bg-taupe/40 group-hover:w-10 transition-all duration-300" aria-hidden="true" />
-                <span className="label text-[9px] opacity-60">Servicio destacado</span>
+                <span className="label text-xs opacity-60">Servicio destacado</span>
               </div>
               <h3 className="font-serif text-2xl md:text-3xl text-ebony font-light mb-3 group-hover:text-ebony-dark transition-colors">
                 Coordinación, Producción y Diseño

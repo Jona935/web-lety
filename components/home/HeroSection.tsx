@@ -47,17 +47,22 @@ export default function HeroSection() {
       );
 
       // Hero logo fades up as user scrolls — hands off to nav logo
-      gsap.to(logoRef.current, {
-        opacity: 0,
-        y: -24,
-        ease: "power2.in",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "6% top",
-          end: "18% top",
-          scrub: true,
-        },
-      });
+      // fromTo() with explicit start values ensures scrub reversal restores opacity:1
+      gsap.fromTo(
+        logoRef.current,
+        { opacity: 1, y: 0 },
+        {
+          opacity: 0,
+          y: -24,
+          ease: "power2.in",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "6% top",
+            end: "18% top",
+            scrub: true,
+          },
+        }
+      );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -110,12 +115,12 @@ export default function HeroSection() {
         {/* Logo */}
         <div ref={logoRef} className="mb-10 md:mb-14">
           <Image
-            src="/images/logo-lm-mono.jpg"
+            src="/images/logo-lm-dark.png"
             alt="LM — La Magnolia"
             width={200}
             height={200}
             priority
-            className="w-32 md:w-40 h-auto object-contain invert mix-blend-multiply"
+            className="w-32 md:w-40 h-auto object-contain"
           />
         </div>
 

@@ -66,11 +66,11 @@ export default function Header() {
               )}
             >
               <Image
-                src="/images/logo-lm-mono.jpg"
+                src="/images/logo-lm-dark.png"
                 alt="LM — La Magnolia"
-                width={44}
-                height={44}
-                className="h-9 w-9 object-contain invert mix-blend-multiply"
+                width={56}
+                height={56}
+                className="h-12 w-12 object-contain"
                 priority
               />
             </Link>
@@ -114,11 +114,11 @@ export default function Header() {
         {/* Header row */}
         <div className="flex items-center justify-between px-6 pt-5 pb-4">
           <Image
-            src="/images/logo-lm-mono.jpg"
+            src="/images/logo-lm-dark.png"
             alt="LM — La Magnolia"
             width={40}
             height={40}
-            className="h-9 w-9 object-contain invert mix-blend-multiply"
+            className="h-9 w-9 object-contain"
           />
           <button
             onClick={() => setMobileOpen(false)}

@@ -193,13 +193,14 @@ export default function PortafolioPage() {
               { src: "/images/real/video-04.mp4", poster: "/images/real/minas-tarde.jpg", label: "Cuatrociénegas" },
               { src: "/images/real/video-05.mp4", poster: "/images/real/pared-flores.jpg", label: "Diseño Floral" },
             ].map((v, i) => (
-              <AnimatedSection key={i} delay={i * 80} className={`relative overflow-hidden bg-ebony-light group ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}>
-                <div className="relative aspect-video">
+              <AnimatedSection key={i} delay={i * 80} className={`relative overflow-hidden bg-ebony group ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}>
+                <div className="relative aspect-video bg-ebony">
                   <video
                     autoPlay
                     muted
                     loop
                     playsInline
+                    preload="none"
                     poster={v.poster}
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                   >

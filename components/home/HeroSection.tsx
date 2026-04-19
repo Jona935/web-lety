@@ -116,15 +116,18 @@ export default function HeroSection() {
         <span className="lm-watermark top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">LM</span>
 
         {/* Logo */}
-        <div ref={logoRef} className="mb-10 md:mb-14">
+        <div ref={logoRef} className="mb-10 md:mb-14 flex flex-col items-center gap-4">
           <Image
             src="/images/logo-lm-dark.png"
             alt="LM — La Magnolia"
-            width={320}
-            height={268}
+            width={400}
+            height={335}
             priority
-            className="w-52 md:w-64 h-auto object-contain"
+            className="w-64 md:w-80 h-auto object-contain"
           />
+          <p className="font-sans font-light tracking-[0.28em] uppercase text-xs text-ebony/50">
+            Wedding Planner
+          </p>
         </div>
 
         {/* Divider */}

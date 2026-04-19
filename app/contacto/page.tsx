@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react";
+import { Phone, MessageCircle, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import ContactForm from "@/components/shared/ContactForm";
 
@@ -18,7 +18,7 @@ const contactInfo = [
     description: "Llamadas",
   },
   {
-    icon: Phone,
+    icon: MessageCircle,
     label: "WhatsApp",
     value: "(866) 253-2615",
     href: "https://wa.me/528662532615",
@@ -138,26 +138,6 @@ export default function ContactoPage() {
                   </div>
                 </div>
 
-                {/* Coverage area */}
-                <div className="mt-10">
-                  <p className="label text-taupe mb-4">Área de servicio</p>
-                  <div className="space-y-3">
-                    {[
-                      { city: "Monclova", detail: "Ciudad base · amplia red de proveedores" },
-                      { city: "Cuatrociénegas", detail: "Bodas destino · paisajes únicos" },
-                      { city: "Minas de Mármol", detail: "Espacios naturales exclusivos" },
-                      { city: "Región Noreste", detail: "Coahuila · Saltillo · Monterrey" },
-                    ].map((item) => (
-                      <div key={item.city} className="flex items-start gap-3 py-3 border-b border-cream-dark/40 last:border-0">
-                        <MapPin size={13} className="text-taupe shrink-0 mt-0.5" aria-hidden="true" />
-                        <div>
-                          <p className="text-sm font-medium text-ebony">{item.city}</p>
-                          <p className="text-xs text-ebony-muted mt-0.5">{item.detail}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </AnimatedSection>
             </div>
 

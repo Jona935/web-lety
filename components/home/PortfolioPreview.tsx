@@ -69,7 +69,7 @@ export default function PortfolioPreview() {
         </div>
 
         {/* Creative asymmetric grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-2 auto-rows-[280px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-[280px]">
           {items.map((item, i) => (
             <AnimatedSection
               key={item.id}

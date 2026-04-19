@@ -76,12 +76,14 @@ export default function PortfolioPreview() {
               delay={i * 80}
               className={`relative overflow-hidden group cursor-pointer ${item.size}`}
             >
+              <Link href="/portafolio" className="block absolute inset-0 z-20" aria-label={`Ver ${item.title}`} />
               <Image
                 src={item.img}
                 alt={item.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                {...(i === 0 ? { priority: true } : { loading: "lazy" })}
               />
 
               {/* Dark gradient base */}
@@ -94,7 +96,7 @@ export default function PortfolioPreview() {
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
                 {/* Quote — only on featured item */}
                 {"quote" in item && (
-                  <p className="font-sans font-light tracking-[0.22em] uppercase text-xs text-cream/70 mb-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                  <p className="font-sans font-light tracking-[0.22em] uppercase text-xs text-cream/70 mb-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 translate-y-0 sm:translate-y-2 sm:group-hover:translate-y-0 transition-all duration-500">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 )}

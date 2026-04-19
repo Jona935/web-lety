@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -47,19 +48,38 @@ function buildWhatsAppMessage(data: ContactFormData): string {
 }
 
 export default function ContactForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<ContactFormData>({
+  const [submitted, setSubmitted] = useState(false);
+  const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
+    mode: "onBlur",
   });
+  const { register, handleSubmit, formState: { errors, isSubmitting } } = form;
 
   const onSubmit = (data: ContactFormData) => {
     const message = buildWhatsAppMessage(data);
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, "_blank", "noopener,noreferrer");
+    setSubmitted(true);
+    form.reset();
   };
+
+  if (submitted) {
+    return (
+      <div className="text-center py-12">
+        <p className="font-sans font-light tracking-[0.22em] uppercase text-sm text-taupe mb-3">¡Listo!</p>
+        <h3 className="font-serif text-2xl text-ebony font-light mb-4">Mensaje preparado</h3>
+        <p className="text-sm text-ebony-muted leading-relaxed mb-8 max-w-sm mx-auto">
+          Se abrió WhatsApp con tu mensaje listo para enviar. Te responderemos muy pronto.
+        </p>
+        <button
+          onClick={() => setSubmitted(false)}
+          className="btn-outline-dark"
+        >
+          Enviar otro mensaje
+        </button>
+      </div>
+    );
+  }
 
   return (
     <form
@@ -68,6 +88,17 @@ export default function ContactForm() {
       aria-label="Formulario de contacto vía WhatsApp"
       className="space-y-8"
     >
+      <div
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        className="sr-only"
+      >
+        {Object.keys(form.formState.errors).length > 0
+          ? "Por favor revisa los campos marcados en el formulario"
+          : ""}
+      </div>
+
       {/* Name & Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
@@ -83,7 +114,7 @@ export default function ContactForm() {
             {...register("name")}
           />
           {errors.name && (
-            <p id="name-error" className="text-red-500 text-xs mt-1" role="alert">
+            <p id="name-error" className="text-red-700 text-xs mt-1" role="alert">
               {errors.name.message}
             </p>
           )}
@@ -101,7 +132,7 @@ export default function ContactForm() {
             {...register("email")}
           />
           {errors.email && (
-            <p id="email-error" className="text-red-500 text-xs mt-1" role="alert">
+            <p id="email-error" className="text-red-700 text-xs mt-1" role="alert">
               {errors.email.message}
             </p>
           )}
@@ -123,7 +154,7 @@ export default function ContactForm() {
             {...register("phone")}
           />
           {errors.phone && (
-            <p id="phone-error" className="text-red-500 text-xs mt-1" role="alert">
+            <p id="phone-error" className="text-red-700 text-xs mt-1" role="alert">
               {errors.phone.message}
             </p>
           )}
@@ -145,7 +176,7 @@ export default function ContactForm() {
             ))}
           </select>
           {errors.eventType && (
-            <p id="type-error" className="text-red-500 text-xs mt-1" role="alert">
+            <p id="type-error" className="text-red-700 text-xs mt-1" role="alert">
               {errors.eventType.message}
             </p>
           )}
@@ -191,7 +222,7 @@ export default function ContactForm() {
           {...register("message")}
         />
         {errors.message && (
-          <p id="message-error" className="text-red-500 text-xs mt-1" role="alert">
+          <p id="message-error" className="text-red-700 text-xs mt-1" role="alert">
             {errors.message.message}
           </p>
         )}
@@ -211,6 +242,7 @@ export default function ContactForm() {
         <MessageCircle size={14} aria-hidden="true" />
         Enviar por WhatsApp
       </button>
+
     </form>
   );
 }

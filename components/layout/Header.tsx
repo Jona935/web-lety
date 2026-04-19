@@ -93,10 +93,11 @@ export default function Header() {
 
             {/* Mobile toggle */}
             <button
-              className="lg:hidden p-2 text-ebony transition-colors"
+              className="lg:hidden p-3 text-ebony transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -106,6 +107,10 @@ export default function Header() {
 
       {/* Mobile overlay */}
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menú de navegación"
+        id="mobile-menu"
         className={cn(
           "fixed inset-0 z-[60] bg-cream-light flex flex-col transition-all duration-500",
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -122,7 +127,7 @@ export default function Header() {
           />
           <button
             onClick={() => setMobileOpen(false)}
-            className="w-10 h-10 flex items-center justify-center border border-ebony/15 text-ebony/50 hover:text-ebony hover:border-ebony/30 transition-colors"
+            className="w-11 h-11 flex items-center justify-center border border-ebony/15 text-ebony/50 hover:text-ebony hover:border-ebony/30 transition-colors"
             aria-label="Cerrar menú"
           >
             <X size={18} />
@@ -138,7 +143,7 @@ export default function Header() {
             href="/"
             className={cn(
               "group flex items-center gap-4 py-3 transition-colors",
-              pathname === "/" ? "text-taupe" : "text-ebony/35 hover:text-ebony"
+              pathname === "/" ? "text-taupe" : "text-ebony/65 hover:text-ebony"
             )}
           >
             <span className="text-xs tracking-widest uppercase font-sans text-ebony/20 w-6">01</span>
@@ -150,7 +155,7 @@ export default function Header() {
               href={link.href}
               className={cn(
                 "group flex items-center gap-4 py-3 transition-colors",
-                pathname === link.href ? "text-taupe" : "text-ebony/35 hover:text-ebony"
+                pathname === link.href ? "text-taupe" : "text-ebony/65 hover:text-ebony"
               )}
             >
               <span className="text-xs tracking-widest uppercase font-sans text-ebony/20 w-6">

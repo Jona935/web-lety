@@ -25,11 +25,11 @@ export default function CTASection() {
           {/* Logo */}
           <div className="mb-10 flex justify-center">
             <Image
-              src="/images/logo.png"
-              alt="La Magnolia Wedding Planners"
-              width={160}
-              height={160}
-              className="w-32 h-auto object-contain opacity-80"
+              src="/images/logo-lm-mono.jpg"
+              alt="LM — La Magnolia"
+              width={140}
+              height={140}
+              className="w-28 h-auto object-contain mix-blend-screen opacity-80"
             />
           </div>
 

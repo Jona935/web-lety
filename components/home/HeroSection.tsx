@@ -110,12 +110,12 @@ export default function HeroSection() {
         {/* Logo */}
         <div ref={logoRef} className="mb-10 md:mb-14">
           <Image
-            src="/images/logo.png"
-            alt="La Magnolia Wedding Planners"
-            width={220}
-            height={220}
+            src="/images/logo-lm-mono.jpg"
+            alt="LM — La Magnolia"
+            width={200}
+            height={200}
             priority
-            className="w-44 md:w-56 h-auto object-contain invert"
+            className="w-32 md:w-40 h-auto object-contain invert mix-blend-multiply"
           />
         </div>
 

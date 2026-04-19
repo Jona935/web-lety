@@ -66,11 +66,11 @@ export default function Header() {
               )}
             >
               <Image
-                src="/images/logo.png"
-                alt="La Magnolia Wedding Planners"
-                width={120}
-                height={60}
-                className="h-10 w-auto object-contain invert"
+                src="/images/logo-lm-mono.jpg"
+                alt="LM — La Magnolia"
+                width={44}
+                height={44}
+                className="h-9 w-9 object-contain invert mix-blend-multiply"
                 priority
               />
             </Link>
@@ -114,11 +114,11 @@ export default function Header() {
         {/* Header row */}
         <div className="flex items-center justify-between px-6 pt-5 pb-4">
           <Image
-            src="/images/logo.png"
-            alt="La Magnolia Wedding Planners"
-            width={120}
-            height={60}
-            className="h-10 w-auto object-contain invert"
+            src="/images/logo-lm-mono.jpg"
+            alt="LM — La Magnolia"
+            width={40}
+            height={40}
+            className="h-9 w-9 object-contain invert mix-blend-multiply"
           />
           <button
             onClick={() => setMobileOpen(false)}

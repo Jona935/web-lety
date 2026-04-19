@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import MagneticButton from "@/components/shared/MagneticButton";
 
@@ -25,11 +25,11 @@ export default function CTASection() {
           {/* Logo */}
           <div className="mb-10 flex justify-center">
             <Image
-              src="/images/logo-lm-mono.jpg"
+              src="/images/logo-lm-transparent.png"
               alt="LM — La Magnolia"
               width={140}
               height={140}
-              className="w-28 h-auto object-contain mix-blend-screen opacity-80"
+              className="w-28 h-auto object-contain opacity-90"
             />
           </div>
 
@@ -49,7 +49,6 @@ export default function CTASection() {
               Solicitar cotización gratuita
             </MagneticButton>
             <MagneticButton as="a" href="tel:+528666335252" className="btn-ghost-light">
-              <Phone size={12} aria-hidden="true" />
               (866) 633-5252
             </MagneticButton>
           </div>

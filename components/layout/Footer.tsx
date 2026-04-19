@@ -16,9 +16,11 @@ const services = [
 const navPages = [
   { href: "/nosotros", label: "Quién Soy?" },
   { href: "/servicios", label: "Servicios" },
+  { href: "/diseno-eventos", label: "Diseño de Eventos" },
   { href: "/bodas-cuatro-cienegas", label: "Eventos Cuatro Ciénegas" },
   { href: "/portafolio", label: "Galería" },
   { href: "/precios", label: "Precios" },
+  { href: "/faq", label: "Preguntas Frecuentes" },
   { href: "/contacto", label: "Contacto" },
 ];
 

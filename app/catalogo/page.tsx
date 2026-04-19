@@ -4,9 +4,9 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Catálogo",
+  title: "Renta de Mobiliario para Eventos en Monclova | Lety Maldonado Eventos",
   description:
-    "Catálogo de renta de mobiliario, mantelería y decoración para eventos en Monclova. Sillas, mesas, telas, vajillas y más.",
+    "Renta de mobiliario para bodas y eventos en Monclova: sillas Tiffany, sillas Chiavari, carpas, vajillas de porcelana, mantelería y decoración. Entrega e instalación incluidas. Lety Maldonado Eventos.",
 };
 
 const categories = [

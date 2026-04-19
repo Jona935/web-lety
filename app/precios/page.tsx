@@ -5,9 +5,9 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Precios & Paquetes",
+  title: "Paquetes y Precios de Bodas en Monclova | Lety Maldonado Eventos",
   description:
-    "Paquetes de organización de eventos y bodas en Monclova. Planes para todos los presupuestos con servicio personalizado.",
+    "Paquetes de organización de bodas y eventos en Monclova con cotización gratuita. Planes Esencial, Elegance y Grand con coordinación completa, diseño floral y banquetes incluidos. Lety Maldonado Eventos.",
 };
 
 const packages = [

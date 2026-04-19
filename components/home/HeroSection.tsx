@@ -47,7 +47,9 @@ export default function HeroSection() {
       );
 
       // Hero logo fades up as user scrolls — hands off to nav logo
-      // fromTo() with explicit start values ensures scrub reversal restores opacity:1
+      // immediateRender:false prevents conflict with the entrance gsap.from() above.
+      // Without it, both tweens fight over opacity on page load and the logo stays invisible.
+      // Explicit from values ensure scrub-reverse correctly restores opacity:1.
       gsap.fromTo(
         logoRef.current,
         { opacity: 1, y: 0 },
@@ -55,6 +57,7 @@ export default function HeroSection() {
           opacity: 0,
           y: -24,
           ease: "power2.in",
+          immediateRender: false,
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "6% top",
@@ -117,10 +120,10 @@ export default function HeroSection() {
           <Image
             src="/images/logo-lm-dark.png"
             alt="LM — La Magnolia"
-            width={200}
-            height={200}
+            width={320}
+            height={268}
             priority
-            className="w-32 md:w-40 h-auto object-contain"
+            className="w-52 md:w-64 h-auto object-contain"
           />
         </div>
 
